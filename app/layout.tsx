@@ -30,20 +30,14 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
-  ],
+  keywords: ["crypto", "policy", "DAO", "web3", "regulation"],
   authors: [
     {
       name: "Crypto Policy DAO",
       url: "https://CryptoPolicy.vercel.app",
     },
   ],
-  creator: "shadcn",
+  creator: "cryptopolicydao",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },

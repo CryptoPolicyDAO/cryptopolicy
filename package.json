@@ -1,10 +1,10 @@
 {
-  "name": "taxonomy",
-  "version": "0.2.0",
+  "name": "CryptoPolicyDAO",
+  "version": "0.0.0",
   "private": true,
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "Crypto Policy DAO",
+    "url": "https://CryptoPolicy.vercel.app"
   },
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
