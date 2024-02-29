@@ -1,5 +1,4 @@
 import Link from "next/link"
-import videoFile from "@public/3DLogo.mp4"
 
 import { env } from "@/env.mjs"
 import { siteConfig } from "@/config/site"
@@ -91,14 +90,6 @@ export default async function IndexPage() {
             technology, we need to understand how and where regulation of the
             blockchain connect.
           </p>
-        </div>
-      </section>
-      <section>
-        {" "}
-        <div className="video-center video-container">
-          <video autoPlay loop muted playsInline width="300" height="400">
-            <source src={videoFile} type="video/mp4" />
-          </video>
         </div>
       </section>
       <section id="open-source" className="container py-8 md:py-12 lg:py-24">
