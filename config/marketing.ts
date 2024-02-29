@@ -22,5 +22,9 @@ export const marketingConfig: MarketingConfig = {
       title: "Regulation Matrix",
       href: "/matrix",
     },
+    {
+      title: "Join",
+      href: "/join",
+    },
   ],
 }
