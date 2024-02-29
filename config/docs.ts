@@ -16,37 +16,120 @@ export const docsConfig: DocsConfig = {
       title: "Getting Started",
       items: [
         {
-          title: "Introduction",
+          title: "Welcome",
           href: "/docs",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Regulation Matrix",
       items: [
         {
           title: "Introduction",
           href: "/docs/documentation",
         },
         {
-          title: "Contentlayer",
+          title: "Electricity Layer",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "Components",
+          title: "Settlement Layer",
           href: "/docs/documentation/components",
+          disabled: true,
         },
         {
-          title: "Code Blocks",
+          title: "Node / Validator",
           href: "/docs/documentation/code-blocks",
+          disabled: true,
         },
         {
-          title: "Style Guide",
+          title: "Consensus Layer - Computation Intensive-based",
           href: "/docs/documentation/style-guide",
+          disabled: true,
         },
         {
-          title: "Search",
+          title: "Consensus Layer - Capabilities-based",
+          href: "/docs/documentation/style-guide",
+          disabled: true,
+        },
+        {
+          title: "Consensus Layer - Voting-based",
+          href: "/docs/documentation/style-guide",
+          disabled: true,
+        },
+        {
+          title: "Transaction Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "On-chain Data Storage Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Asset Layer - Stablecoins",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Asset Layer - Fungible Tokens",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Asset Layer - Non-Fungible Tokens",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Exchange Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Protocol Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Application Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Permanent Data Storage Layer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Internet Browser",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Developer",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Programming Language Auditor",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "DeFi Architecture Security",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "DeFi Architecture Standards / Auditor",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "Fiat Onboarding / Offboarding Access",
           href: "/docs/in-progress",
           disabled: true,
         },

@@ -57,7 +57,7 @@ export const metadata = {
     creator: "@cryptopolicydao",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
