@@ -17,7 +17,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
     <div className="w-full">
       {items.map((item, index) => (
         <div key={index} className={cn("pb-8")}>
-          <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-medium">
+          <h4 className="text-md mb-1 rounded-md px-2 py-1 font-bold">
             {item.title}
           </h4>
           {item.items ? (
