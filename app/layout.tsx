@@ -36,7 +36,7 @@ export const metadata = {
       url: "https://CryptoPolicy.vercel.app",
     },
   ],
-  creator: "cryptopolicydao",
+  creator: "CryptoPolicyDAO",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -54,7 +54,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@cryptopolicydao",
+    creator: "@CryptoPolicyDAO",
   },
   icons: {
     icon: "/logo.png",
