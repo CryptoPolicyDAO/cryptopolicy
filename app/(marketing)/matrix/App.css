@@ -29,8 +29,8 @@
   --button-background: #f0f5f9; /* Similar to the background for subtlety */
   --hover-text: #234f88; /* Contrast against the hover background */
   --hover-subtext: #29285c; /* Subtle hover effect */
-  --image1: url("../../../public/c2.png");
-  --image2: url("../../../public/d1.png");
+  --image1: url("../../../public/images/c2.png");
+  --image2: url("../../../public/images/d1.png");
   --outline-color: #1e2a78;
 }
 
@@ -65,8 +65,8 @@
   --button-background: #3d3d3d;
   --hover-text: #a8b2bb;
   --hover-subtext: #80b3c2;
-  --image1: url("../../../public/c2.png");
-  --image2: url("../../../public/d2.png");
+  --image1: url("../../../public/images/c2.png");
+  --image2: url("../../../public/images/d2.png");
   --outline-color: #a2b2c7;
 }
 
