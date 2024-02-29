@@ -213,13 +213,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Electricity</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -236,7 +236,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -249,7 +249,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -264,7 +264,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -279,7 +279,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="e10.png"
                 alt="Logo"
                 style={{
@@ -344,13 +344,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Electricity</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -367,7 +367,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -380,7 +380,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -393,7 +393,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -424,13 +424,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Settlement Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Not being able to update / edit fraudulent transactions
                       </li>
@@ -446,7 +446,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Lack of due diligence</li>
                       <li>Security and attacks</li>
                     </ul>
@@ -457,7 +457,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -471,7 +471,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential displacement of development activities to more
                         permissive jurisdictions
@@ -487,7 +487,7 @@ function Matrix() {
                     above concerns, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description">
+                  <ul className="description list-disc pl-12">
                     <li>
                       Proof of Stake (PoS) consensus algorithms that require
                       significantly less energy
@@ -501,7 +501,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="s1.png"
                 alt="Logo"
                 style={{
@@ -566,13 +566,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Settlement Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Not being able to update / edit fraudulent transactions
                       </li>
@@ -588,7 +588,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Lack of due diligence</li>
                       <li>Security and attacks</li>
                     </ul>
@@ -599,7 +599,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential centralization of the blockchain settlement
                         layer.
@@ -612,7 +612,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential displacement of development activities to more
                         permissive jurisdictions
@@ -628,7 +628,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description">
+                  <ul className="description list-disc pl-12">
                     <li>
                       Proof of Stake (PoS) consensus algorithms that require
                       significantly less energy
@@ -666,13 +666,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Node / Validator Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Not reporting income</li>
                       <li>Fault tolerant consensus</li>
                       <li>Decryption Standards</li>
@@ -684,7 +684,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Private Transactions</li>
                       <li>Selective Transactions</li>
                       <li>MEV Protection</li>
@@ -696,7 +696,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Centralization</li>
                       <li>Inhibiting technological growth</li>
                     </ul>
@@ -707,7 +707,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential displacement of development activities to more
                         permissive jurisdictions
@@ -725,7 +725,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -734,7 +734,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="Node.png"
                 alt="Logo"
                 style={{
@@ -799,13 +799,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Node / Validator Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Not reporting income</li>
                       <li>Fault tolerant consensus</li>
                       <li>Decryption Standards</li>
@@ -817,7 +817,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Private Transactions</li>
                       <li>Selective Transactions</li>
                       <li>MEV Protection</li>
@@ -829,7 +829,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential centralization of the nodes / validators
                         layer.
@@ -846,7 +846,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         not being able to update or edit fraudulent transactions
                       </li>
@@ -861,7 +861,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -886,7 +886,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Computation-intensive Consensus Mechanisms
               </div>
@@ -894,7 +894,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Amount of electricity being used comparatively to
                         similar technology that uses less
@@ -909,7 +909,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         High energy consumption leading to environmental
                         concerns
@@ -924,7 +924,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Stifling innovation and development of energy-efficient
                         consensus mechanisms
@@ -945,7 +945,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of standardization leading to security
                         vulnerabilities
@@ -969,7 +969,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -978,7 +978,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="computation.png"
                 alt="Logo"
                 style={{
@@ -1043,7 +1043,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Computation-intensive Consensus Mechanisms
               </div>
@@ -1051,7 +1051,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Amount of electricity being used comparatively to
                         similar technology that uses less
@@ -1066,7 +1066,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         High energy consumption leading to environmental
                         concerns
@@ -1081,7 +1081,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Stifling innovation and development of energy-efficient
                         consensus mechanisms
@@ -1102,7 +1102,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of standardization leading to security
                         vulnerabilities
@@ -1118,7 +1118,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1143,7 +1143,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Capabilities-based Consensus Mechanisms
               </div>
@@ -1151,7 +1151,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Upgrading consumer security standards</li>
                     </ul>
                   </div>
@@ -1161,7 +1161,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Insufficient protection of user data and privacy</li>
                       <li>
                         Potential exposure to smart contract vulnerabilities
@@ -1177,7 +1177,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Hampering innovation by imposing rigid security
                         standards
@@ -1198,7 +1198,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Proliferation of insecure smart contracts leading to
                         financial losses
@@ -1222,7 +1222,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1231,7 +1231,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="capabilities.png"
                 alt="Logo"
                 style={{
@@ -1296,7 +1296,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Capabilities-based Consensus Mechanisms
               </div>
@@ -1304,7 +1304,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Upgrading consumer security standards</li>
                     </ul>
                   </div>
@@ -1314,7 +1314,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Insufficient protection of user data and privacy</li>
                       <li>
                         Potential exposure to smart contract vulnerabilities
@@ -1330,7 +1330,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Hampering innovation by imposing rigid security
                         standards
@@ -1351,7 +1351,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Proliferation of insecure smart contracts leading to
                         financial losses
@@ -1375,7 +1375,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1400,13 +1400,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Voting-based Consensus Mechanisms</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Ensuring fair and transparent voting processes</li>
                       <li>Preventing voter fraud and manipulation</li>
                       <li>Addressing potential collusion or vote-buying</li>
@@ -1418,7 +1418,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of anonymity in voting leading to privacy concerns
                       </li>
@@ -1434,7 +1434,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Overly strict regulations hindering the flexibility and
                         innovation of voting mechanisms
@@ -1455,7 +1455,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Vulnerability to malicious attacks on the voting process
                       </li>
@@ -1477,7 +1477,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1486,7 +1486,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="voting.png"
                 alt="Logo"
                 style={{
@@ -1551,13 +1551,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Voting-based Consensus Mechanisms</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Ensuring fair and transparent voting processes</li>
                       <li>Preventing voter fraud and manipulation</li>
                       <li>Addressing potential collusion or vote-buying</li>
@@ -1569,7 +1569,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of anonymity in voting leading to privacy concerns
                       </li>
@@ -1585,7 +1585,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Overly strict regulations hindering the flexibility and
                         innovation of voting mechanisms
@@ -1606,7 +1606,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Vulnerability to malicious attacks on the voting process
                       </li>
@@ -1628,7 +1628,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1653,13 +1653,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Transaction Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Ensuring traceability and transparency of transactions
                       </li>
@@ -1683,7 +1683,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Exposure to potential transaction delays or fees</li>
                       <li>
                         Privacy concerns related to transaction history being
@@ -1698,7 +1698,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Stifling innovation and experimentation with new
                         transaction models
@@ -1719,7 +1719,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Increased susceptibility to fraudulent or malicious
                         transactions
@@ -1740,7 +1740,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1749,7 +1749,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="transaction.png"
                 alt="Logo"
                 style={{
@@ -1814,13 +1814,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Transaction Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Not being able to remediate theft or crime within their
                         jurisdiction
@@ -1841,7 +1841,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -1849,7 +1849,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -1857,7 +1857,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -1868,7 +1868,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1893,13 +1893,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">On-chain Data Storage</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Storage space mapping</li>
                       <li>
                         Data sovereignty and jurisdictional challenges in a
@@ -1921,7 +1921,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Exposure of sensitive or personal data to public
                         scrutiny
@@ -1942,7 +1942,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Impeding the adoption of blockchain for legitimate and
                         innovative data storage use cases
@@ -1963,7 +1963,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of standardized data storage practices leading to
                         security vulnerabilities
@@ -1987,7 +1987,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -1996,7 +1996,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="onchain.png"
                 alt="Logo"
                 style={{
@@ -2060,13 +2060,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">On-chain Data Storage</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2074,7 +2074,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2082,7 +2082,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2090,7 +2090,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2101,7 +2101,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2126,13 +2126,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Asset Layer - Stablecoins</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Ensuring stability and value preservation of stablecoins
                       </li>
@@ -2163,7 +2163,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Risk of stablecoin issuer insolvency or mismanagement
                       </li>
@@ -2184,7 +2184,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Hindering the growth and innovation of stablecoin use
                         cases
@@ -2205,7 +2205,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of consumer protection and accountability in
                         stablecoin issuance
@@ -2228,7 +2228,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2237,7 +2237,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="stable.png"
                 alt="Logo"
                 style={{
@@ -2302,13 +2302,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Asset Layer - Stablecoins</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2316,7 +2316,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2324,7 +2324,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2332,7 +2332,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2343,7 +2343,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2368,13 +2368,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Asset Layer - Fungible Tokens</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Mutability presents a scenario of being &quot;derived
                         from the efforts of others&quot; which leans towards
@@ -2392,7 +2392,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Security of transactions: Ensuring that transactions
                         involving fungible tokens are secure, protecting users
@@ -2411,7 +2411,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Overly stringent regulations could stifle innovation in
                         fungible token use cases and hinder the growth of
@@ -2430,7 +2430,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Lack of regulatory oversight could lead to fraudulent or
                         misleading token offerings, potentially resulting in
@@ -2452,7 +2452,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2461,7 +2461,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="fungible.png"
                 alt="Logo"
                 style={{
@@ -2526,13 +2526,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Asset Layer - Fungible Tokens</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2540,7 +2540,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2548,7 +2548,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2556,7 +2556,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2567,7 +2567,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2592,7 +2592,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Asset Layer - Non-Fungible Tokens (NFTs)
               </div>
@@ -2600,7 +2600,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         classification uncertainty for diverse NFT assets like
                         property records, medical records, or even voting
@@ -2620,7 +2620,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Data exposure in NFTs, even with restricted access
                       </li>
@@ -2638,7 +2638,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Stifled innovation due to heavy regulations</li>
                       <li>
                         Barrier to entry for startups due to compliance costs
@@ -2657,7 +2657,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>Vulnerability to NFT fraud without clear rules</li>
                       <li>Ownership ambiguity leading to disputes</li>
                       <li>Lack of potential international economic growth</li>
@@ -2672,7 +2672,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2681,7 +2681,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="nonfungible.png"
                 alt="Logo"
                 style={{
@@ -2746,7 +2746,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 Asset Layer - Non-Fungible Tokens (NFTs)
               </div>
@@ -2754,7 +2754,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2762,7 +2762,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2770,7 +2770,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2778,7 +2778,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description"></ul>
+                    <ul className="description list-disc pl-12"></ul>
                   </div>
                 </li>
               </ul>
@@ -2789,7 +2789,7 @@ function Matrix() {
                     obligations, and if so, what is it?
                   </h3>
 
-                  <ul className="list-disc pl-12 description"></ul>
+                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>
@@ -2814,13 +2814,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Exchange Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -2837,7 +2837,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -2850,7 +2850,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -2865,7 +2865,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -2880,7 +2880,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="exchange.png"
                 alt="Logo"
                 style={{
@@ -2945,13 +2945,13 @@ function Matrix() {
 
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Exchange Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -2968,7 +2968,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -2981,7 +2981,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -2994,7 +2994,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3025,13 +3025,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Protocol Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -3048,7 +3048,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3061,7 +3061,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -3076,7 +3076,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3091,7 +3091,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="protocol.png"
                 alt="Logo"
                 style={{
@@ -3156,13 +3156,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Protocol Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -3179,7 +3179,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3192,7 +3192,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3205,7 +3205,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3236,13 +3236,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Application Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -3259,7 +3259,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3272,7 +3272,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -3287,7 +3287,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3302,7 +3302,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="application.png"
                 alt="Logo"
                 style={{
@@ -3367,13 +3367,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Application Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -3390,7 +3390,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3403,7 +3403,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3416,7 +3416,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3447,13 +3447,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Permanent Storage Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -3470,7 +3470,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3483,7 +3483,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -3498,7 +3498,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3513,7 +3513,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="permanent.png"
                 alt="Logo"
                 style={{
@@ -3578,13 +3578,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Permanent Storage Layer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -3601,7 +3601,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3614,7 +3614,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3627,7 +3627,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3658,13 +3658,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Internet Browser</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -3681,7 +3681,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3694,7 +3694,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -3709,7 +3709,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3724,7 +3724,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="internet.png"
                 alt="Logo"
                 style={{
@@ -3789,13 +3789,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Internet Browser</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -3812,7 +3812,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3825,7 +3825,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3838,7 +3838,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3869,13 +3869,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">The Developer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -3892,7 +3892,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -3905,7 +3905,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -3920,7 +3920,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -3935,7 +3935,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="developer.png"
                 alt="Logo"
                 style={{
@@ -4000,13 +4000,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">The Developer</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -4023,7 +4023,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4036,7 +4036,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4049,7 +4049,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4080,13 +4080,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">DeFi Architecture and Security</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -4103,7 +4103,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4116,7 +4116,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -4131,7 +4131,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4146,7 +4146,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="defi.png"
                 alt="Logo"
                 style={{
@@ -4212,13 +4212,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">DeFi Architecture and Security</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -4235,7 +4235,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4248,7 +4248,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4261,7 +4261,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4292,7 +4292,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 DeFi Architecture Standards / Auditor
               </div>
@@ -4300,7 +4300,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -4317,7 +4317,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4330,7 +4330,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -4345,7 +4345,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4360,7 +4360,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="defi2.png"
                 alt="Logo"
                 style={{
@@ -4425,7 +4425,7 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">
                 DeFi Architecture Standards / Auditor
               </div>
@@ -4433,7 +4433,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -4450,7 +4450,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4463,7 +4463,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4476,7 +4476,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4507,13 +4507,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Fiat Onboarding / Offboarding Access</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting consumers from loss of use due to a
                         geopolitical situation
@@ -4530,7 +4530,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4543,7 +4543,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Inability to use the blockchain to solve real-world
                         problems
@@ -4558,7 +4558,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
@@ -4573,7 +4573,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <img
+              <Image
                 src="fiat.png"
                 alt="Logo"
                 style={{
@@ -4638,13 +4638,13 @@ function Matrix() {
         </div>
         <div className="hover-text">
           <h2>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div className="header">Fiat Onboarding / Offboarding Access</div>
               <ul className="pl-12">
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Protecting Consumers from loss of use due to a
                         geopolitical situation
@@ -4661,7 +4661,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4674,7 +4674,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to over-regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential geopolitical risks leading to electricity
                         access disruptions
@@ -4687,7 +4687,7 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Cons to lack of regulation</h3>
-                    <ul className="list-disc pl-12 description">
+                    <ul className="description list-disc pl-12">
                       <li>
                         Potential risks of concentration and control by certain
                         countries
