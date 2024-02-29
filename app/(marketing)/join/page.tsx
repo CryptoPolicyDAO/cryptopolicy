@@ -54,23 +54,6 @@ export default function Contribute() {
           current revenue under the Treasury tab.
         </p>
       </div>
-      <div
-        className="video-container"
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "70%",
-            height: "70%",
-            borderRadius: "20px",
-          }}
-        ></div>
-      </div>
     </div>
   )
 }
