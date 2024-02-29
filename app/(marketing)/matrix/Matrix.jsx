@@ -1,3 +1,5 @@
+import "./App.css"
+
 function Matrix() {
   const inlineStyles = `
 
@@ -279,7 +281,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="e10.png"
                 alt="Logo"
                 style={{
@@ -501,7 +503,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="s1.png"
                 alt="Logo"
                 style={{
@@ -734,7 +736,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="Node.png"
                 alt="Logo"
                 style={{
@@ -978,7 +980,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="computation.png"
                 alt="Logo"
                 style={{
@@ -1231,7 +1233,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="capabilities.png"
                 alt="Logo"
                 style={{
@@ -1486,7 +1488,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="voting.png"
                 alt="Logo"
                 style={{
@@ -1749,7 +1751,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="transaction.png"
                 alt="Logo"
                 style={{
@@ -1996,7 +1998,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="onchain.png"
                 alt="Logo"
                 style={{
@@ -2237,7 +2239,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="stable.png"
                 alt="Logo"
                 style={{
@@ -2461,7 +2463,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="fungible.png"
                 alt="Logo"
                 style={{
@@ -2681,7 +2683,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="nonfungible.png"
                 alt="Logo"
                 style={{
@@ -2880,7 +2882,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="exchange.png"
                 alt="Logo"
                 style={{
@@ -3091,7 +3093,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="protocol.png"
                 alt="Logo"
                 style={{
@@ -3302,7 +3304,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="application.png"
                 alt="Logo"
                 style={{
@@ -3513,7 +3515,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="permanent.png"
                 alt="Logo"
                 style={{
@@ -3724,7 +3726,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="internet.png"
                 alt="Logo"
                 style={{
@@ -3935,7 +3937,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="developer.png"
                 alt="Logo"
                 style={{
@@ -4146,7 +4148,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="defi.png"
                 alt="Logo"
                 style={{
@@ -4360,7 +4362,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="defi2.png"
                 alt="Logo"
                 style={{
@@ -4573,7 +4575,7 @@ function Matrix() {
         <div className="section-col">
           <div className="section">
             <div className="section-in">
-              <Image
+              <img
                 src="fiat.png"
                 alt="Logo"
                 style={{

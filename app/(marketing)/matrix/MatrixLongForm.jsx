@@ -11,9 +11,9 @@ function MatrixLongForm() {
   }
 
   return (
-    <div className="text-center mx-auto" style={{ maxWidth: "900px" }}>
+    <div className="mx-auto text-center" style={{ maxWidth: "900px" }}>
       <button
-        className={` font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline${
+        className={` focus:shadow-outline rounded px-4 py-2 font-bold focus:outline-none${
           !isExpanded ? " mb-20" : ""
         }`}
         onClick={toggleExpanded}
@@ -28,7 +28,7 @@ function MatrixLongForm() {
       </button>
 
       {isExpanded && (
-        <div className="mt-5 mx-auto">
+        <div className="mx-auto mt-5">
           <h2
             className="text-center text-2xl"
             style={{ color: "var(--header-color)" }}
@@ -39,7 +39,7 @@ function MatrixLongForm() {
           </h2>
           <br></br>
           <p
-            className="text-left section-header"
+            className="section-header text-left"
             style={{
               color: "var(--sub-header-color)",
               maxWidth: "600px",
@@ -49,7 +49,7 @@ function MatrixLongForm() {
             It consists of:
           </p>
           <div
-            className="text-left mt-5"
+            className="mt-5 text-left"
             style={{
               color: "var(--description-color)",
               maxWidth: "600px",
@@ -90,7 +90,7 @@ function MatrixLongForm() {
           </div>
 
           <p
-            className="mt-10 text-2xl text-center"
+            className="mt-10 text-center text-2xl"
             style={{ color: "var(--sub-header-color)" }}
           >
             Each layer demands consideration across various categories, inviting
@@ -98,7 +98,7 @@ function MatrixLongForm() {
           </p>
           <br></br>
           <div
-            className="text-left mt-5"
+            className="mt-5 text-left"
             style={{
               color: "var(--description-color)",
               maxWidth: "600px",
@@ -122,18 +122,18 @@ function MatrixLongForm() {
             Blockchain Regulation Matrix
           </p>
           <h3
-            className="mt-5 mb-5 text-center text-3xl"
+            className="mb-5 mt-5 text-center text-3xl"
             style={{ color: "var(--header-color)" }}
           >
             Centralized Projects
           </h3>
           <h3
-            className="mt-5 mb-10 text-center text-2xl"
+            className="mb-10 mt-5 text-center text-2xl"
             style={{ color: "var(--sub-header-color)" }}
           >
             The content below applies only to centralized projects
           </h3>
-          <div className="text-left mb-5 pl-10">
+          <div className="mb-5 pl-10 text-left">
             <div
               style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
             >
@@ -225,7 +225,7 @@ function MatrixLongForm() {
               </div>
             </ul>
           </div>
-          <div className="text-left mb-5 pl-10">
+          <div className="mb-5 pl-10 text-left">
             <div
               style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
             >
@@ -303,7 +303,7 @@ function MatrixLongForm() {
               </div>
             </ul>
           </div>
-          <div className="text-left mb-5 pl-10">
+          <div className="mb-5 pl-10 text-left">
             <div
               style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
             >
@@ -367,7 +367,7 @@ function MatrixLongForm() {
               </div>
             </ul>
           </div>
-          <div className="text-left mb-5 pl-10">
+          <div className="mb-5 pl-10 text-left">
             <div
               style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
             >
@@ -559,7 +559,7 @@ function MatrixLongForm() {
               <li>
                 Voting Based
                 <ul
-                  className="list-disc pl-12 mb-5"
+                  className="mb-5 list-disc pl-12"
                   style={{ color: "var(--sub-header-color)" }}
                 >
                   <li>
@@ -637,7 +637,7 @@ function MatrixLongForm() {
                 </ul>
               </li>
             </ul>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div
                 style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
               >
@@ -727,13 +727,13 @@ function MatrixLongForm() {
                     obligations, and if so, what is it?
                   </h3>
                   <ul
-                    className="list-disc pl-12 mb-5"
+                    className="mb-5 list-disc pl-12"
                     style={{ color: "var(--description-color)" }}
                   ></ul>
                 </li>
               </ul>
             </div>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div
                 style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
               >
@@ -827,13 +827,13 @@ function MatrixLongForm() {
                   Does blockchain technology currently exist to fulfill these
                   obligations, and if so, what is it?
                   <ul
-                    className="list-disc pl-12 mb-5"
+                    className="mb-5 list-disc pl-12"
                     style={{ color: "var(--description-color)" }}
                   ></ul>
                 </li>
               </ul>
             </div>
-            <div className="text-left mb-5 pl-10">
+            <div className="mb-5 pl-10 text-left">
               <div
                 style={{ color: "var(--sub-header-color)", fontWeight: "bold" }}
               >
@@ -945,7 +945,7 @@ function MatrixLongForm() {
                       Does blockchain technology currently exist to fulfill
                       these obligations, and if so, what is it?
                       <ul
-                        className="list-disc pl-12 mb-5"
+                        className="mb-5 list-disc pl-12"
                         style={{ color: "var(--description-color)" }}
                       >
                         {/* Include specific technology fulfilling these obligations */}
@@ -1039,7 +1039,7 @@ function MatrixLongForm() {
                       Does blockchain technology currently exist to fulfill
                       these obligations, and if so, what is it?
                       <ul
-                        className="list-disc pl-12 mb-5"
+                        className="mb-5 list-disc pl-12"
                         style={{ color: "var(--description-color)" }}
                       ></ul>
                     </li>
@@ -1126,7 +1126,7 @@ function MatrixLongForm() {
                       Does blockchain technology currently exist to fulfill
                       these obligations, and if so, what is it?
                       <ul
-                        className="list-disc pl-12 mb-5"
+                        className="mb-5 list-disc pl-12"
                         style={{ color: "var(--description-color)" }}
                       ></ul>
                     </li>
@@ -1134,7 +1134,7 @@ function MatrixLongForm() {
                 </li>
               </ul>
 
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1232,13 +1232,13 @@ function MatrixLongForm() {
                     Does blockchain technology currently exist to fulfill these
                     obligations, and if so, what is it?
                     <ul
-                      className="list-disc pl-12 mb-5"
+                      className="mb-5 list-disc pl-12"
                       style={{ color: "var(--description-color)" }}
                     ></ul>
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1342,7 +1342,7 @@ function MatrixLongForm() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1441,7 +1441,7 @@ function MatrixLongForm() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1574,7 +1574,7 @@ function MatrixLongForm() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1686,7 +1686,7 @@ function MatrixLongForm() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1773,7 +1773,7 @@ function MatrixLongForm() {
                   </li>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1882,18 +1882,18 @@ function MatrixLongForm() {
                 </ul>
               </div>
               <h3
-                className="mt-5 mb-5 text-center text-3xl"
+                className="my-5 text-center text-3xl"
                 style={{ color: "var(--header-color)" }}
               >
                 Decentralized Projects
               </h3>
               <h3
-                className="mt-5 mb-10 text-center text-2xl"
+                className="mb-10 mt-5 text-center text-2xl"
                 style={{ color: "var(--sub-header-color)" }}
               >
                 The content below applies only to decentralized projects
               </h3>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -1988,7 +1988,7 @@ function MatrixLongForm() {
                   </div>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -2064,7 +2064,7 @@ function MatrixLongForm() {
                   </div>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -2131,7 +2131,7 @@ function MatrixLongForm() {
                   </div>
                 </ul>
               </div>
-              <div className="text-left mb-5 pl-10">
+              <div className="mb-5 pl-10 text-left">
                 <div
                   style={{
                     color: "var(--sub-header-color)",
@@ -2327,7 +2327,7 @@ function MatrixLongForm() {
                   <li>
                     Voting Based
                     <ul
-                      className="list-disc pl-12 mb-5"
+                      className="mb-5 list-disc pl-12"
                       style={{ color: "var(--sub-header-color)" }}
                     >
                       <li>
