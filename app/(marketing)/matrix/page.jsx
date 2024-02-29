@@ -14,14 +14,14 @@ export default function Contribute() {
   return (
     <div>
       <h1
-        className="mb-5 mt-20 text-center title"
+        className="title mb-5 mt-20 text-center"
         style={{ color: "var(--header-color)", fontSize: "2rem" }}
       >
         Blockchain Regulation Matrix
       </h1>
       <div>
         <p
-          className="text-center mx-auto"
+          className="mx-auto text-center"
           style={{
             color: "var(--sub-header-color)",
             maxWidth: "900px",
@@ -38,7 +38,7 @@ export default function Contribute() {
         </p>
         <br></br>
         <p
-          className="text-center mx-auto"
+          className="mx-auto text-center"
           style={{
             color: "var(--sub-header-color)",
             maxWidth: "900px",
@@ -54,7 +54,7 @@ export default function Contribute() {
         </p>
         <br></br>
         <p
-          className="text-center mx-auto"
+          className="mx-auto text-center"
           style={{
             color: "var(--sub-header-color)",
             maxWidth: "900px",
@@ -71,7 +71,7 @@ export default function Contribute() {
       </div>
       <br></br>
       <div
-        className="w-full max-w-lg mx-auto rounded-md px-4 py-3"
+        className="mx-auto w-full max-w-lg rounded-md px-4 py-3"
         style={{
           color: "var(--sub-header-color)",
           backgroundColor: "var(--bac4)",
