@@ -1,31 +1,23 @@
+import "./App.css"
 import Matrix from "./Matrix"
 import MatrixLongForm from "./MatrixLongForm"
 
 export default function Contribute() {
-  const inlineStyles = `
-
-      @media (max-width: 767px) {
-      .Matrix {
-        display: none;
-      }
-    }
-  `
-
   return (
     <div>
       <h1
-        className="title mb-5 mt-20 text-center"
+        className="mb-5 mt-20 text-center"
         style={{ color: "var(--header-color)", fontSize: "2rem" }}
       >
         Blockchain Regulation Matrix
       </h1>
       <div>
         <p
-          className="mx-auto text-center"
+          className="mx-auto my-10 text-center"
           style={{
-            color: "var(--sub-header-color)",
+            color: "var(--description-color)",
+            fontSize: "1.5rem",
             maxWidth: "900px",
-            fontSize: "1rem",
           }}
         >
           The Blockchain Regulation Matrix (BRM) aims to construct a
@@ -38,9 +30,9 @@ export default function Contribute() {
         </p>
         <br></br>
         <p
-          className="mx-auto text-center"
+          className="mx-auto mb-10 text-center"
           style={{
-            color: "var(--sub-header-color)",
+            color: "var(--content-color)",
             maxWidth: "900px",
             fontSize: "1rem",
           }}
@@ -54,9 +46,9 @@ export default function Contribute() {
         </p>
         <br></br>
         <p
-          className="mx-auto text-center"
+          className="mx-auto mb-10 text-center"
           style={{
-            color: "var(--sub-header-color)",
+            color: "var(--content-color)",
             maxWidth: "900px",
             fontSize: "1rem",
           }}
@@ -86,9 +78,9 @@ export default function Contribute() {
         <p>Hover over each of the images below to read more information.</p>
       </div>
       <Matrix />
-      <br></br>
+      <br />
+      <br />
       <MatrixLongForm />
-      <style>{inlineStyles}</style>
     </div>
   )
 }
