@@ -31,7 +31,7 @@
   --hover-subtext: #29285c; /* Subtle hover effect */
   --image1: url("../../../public/images/c2.png");
   --image2: url("../../../public/images/d1.png");
-  --image3: url("../../../public/images/3DLogo.mp4");
+
   --outline-color: #1e2a78;
 }
 
@@ -68,7 +68,7 @@
   --hover-subtext: #80b3c2;
   --image1: url("../../../public/images/c2.png");
   --image2: url("../../../public/images/d2.png");
-  --image3: url("../../../public/images/3DLogo.mp4");
+
   --outline-color: #a2b2c7;
 }
 

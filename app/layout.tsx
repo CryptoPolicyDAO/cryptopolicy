@@ -53,11 +53,11 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    images: [`${siteConfig.url}/logo.png`],
     creator: "@CryptoPolicyDAO",
   },
   icons: {
-    icon: "/logo.png",
+    icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
