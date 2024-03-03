@@ -30,7 +30,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Electricity Layer",
-          href: "/docs/in-progress",
+          href: "/docs/documentation/electricity",
           disabled: false,
         },
         {

@@ -1,6 +1,10 @@
 import "./App.css"
 
-export default function Contribute() {
+export const metadata = {
+  title: "Join",
+}
+
+export default function Join() {
   return (
     <div>
       <h1
