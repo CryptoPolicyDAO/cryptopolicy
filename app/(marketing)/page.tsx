@@ -90,6 +90,28 @@ export default async function IndexPage() {
             technology, we need to understand how and where regulation of the
             blockchain connect.
           </p>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            The backbone of Crypto Policy DAO is the Blockchain Regulation
+            Matrix (BRM) which breaks down the aspects of regulation into layers
+            according to the consumer. The BRM is a tool for understanding the
+            regulatory environment on specific aspects of the blockchain from
+            the consuers perspective, as the main goal of web3 regulation is to
+            protect the consumer.
+          </p>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            Anyone can contribute to the BRM, and we encourage you to do so. The
+            goal is to produce pragmatic legislation that protects the consumer
+            while promoting web3 innovation. One of the ways to protect the
+            consumer is to clearly identify criminal activity and that includes
+            knowing that an exploit happened, how it happened, and who was
+            responsible for it.
+          </p>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            Everyone who contributes to the Crypto Policy DAO automatically
+            becomes a member, and you can contribute by completing the form
+            here. There will be a template for you to elaborate on your thoughts
+            and ideas, so dont worry about the format, just contribute!
+          </p>
         </div>
       </section>
       <section id="open-source" className="container py-8 md:py-12 lg:py-24">
