@@ -35,6 +35,10 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
+              onClick={() => {
+                // Call the unlock function from useLockBody (if modified)
+                unlockBody() // Example using a hypothetical function
+              }}
             >
               {item.title}
             </Link>

@@ -1,12 +1,15 @@
 import * as React from "react"
 
-// @see https://usehooks.com/useLockBodyScroll.
-export function useLockBody() {
+export function useLockBody(unlockFn?: () => void) {
   React.useLayoutEffect((): (() => void) => {
-    const originalStyle: string = window.getComputedStyle(
-      document.body
-    ).overflow
+    const originalStyle = window.getComputedStyle(document.body).overflow
     document.body.style.overflow = "hidden"
-    return () => (document.body.style.overflow = originalStyle)
-  }, [])
+
+    return () => {
+      // Call the provided unlock function if it exists
+      unlockFn?.()
+      // Or use a default unlock behavior if no function is provided
+      document.body.style.overflow = originalStyle
+    }
+  }, [unlockFn]) // Add unlockFn to the dependency array
 }
