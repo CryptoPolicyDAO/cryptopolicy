@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import Link from "next/link"
 
 import { MainNavItem } from "types"
@@ -13,6 +14,8 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ items, children }: MobileNavProps) {
+  const [isBodyLocked, setIsBodyLocked] = useState(true)
+  useLockBody(() => setIsBodyLocked(false))
   useLockBody()
 
   return (
@@ -35,10 +38,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
-              onClick={() => {
-                // Call the unlock function from useLockBody (if modified)
-                unlockBody() // Example using a hypothetical function
-              }}
+              onClick={() => setIsBodyLocked(false)}
             >
               {item.title}
             </Link>
