@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function PricingPage() {
   return (
-    <section className="container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
+    <section className="quando-regular container flex flex-col  gap-6 py-8 md:max-w-[64rem] md:py-12 lg:py-24">
       <div className="mx-auto flex w-full flex-col gap-4 md:max-w-[58rem]">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-          Support web3 regulation
+        <h2 className=" text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+          Support clear, concise, and collaborative web3-friendly regulation
         </h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Your financial contributions empower us to lobby for web3 friendly
