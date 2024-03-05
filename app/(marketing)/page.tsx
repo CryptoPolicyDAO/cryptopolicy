@@ -169,7 +169,7 @@ export default async function IndexPage() {
           )}
           <style>
             @import
-            url(&apos;https://fonts.googleapis.com/css2?family=Quando&display=swap&apos;)
+            url(https://fonts.googleapis.com/css2?family=Quando&display=swap)
           </style>
         </div>
       </section>
