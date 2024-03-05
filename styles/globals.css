@@ -79,3 +79,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+.quando-regular {
+  font-family: "Quando", serif;
+  font-weight: 400;
+  font-style: normal;
+}
