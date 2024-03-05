@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
 export const metadata = {
-  title: "Pricing",
+  title: "Support",
 }
 
 export default function PricingPage() {
@@ -23,7 +23,7 @@ export default function PricingPage() {
       <div className="grid w-full items-start gap-10 rounded-lg border p-10 md:grid-cols-[1fr_200px]">
         <div className="grid gap-6">
           <h3 className="text-xl font-bold sm:text-2xl">
-            What&apos;s included in your contribution
+            What&apos;s included in your monthly financial support:
           </h3>
           <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">
             <li className="flex items-center">
@@ -40,7 +40,7 @@ export default function PricingPage() {
               <Icons.check className="mr-2 h-4 w-4" /> Newsletter
             </li>
             <li className="flex items-center">
-              <Icons.check className="mr-2 h-4 w-4" /> Contribution NFT
+              <Icons.check className="mr-2 h-4 w-4" /> Membership NFT
             </li>
             <li className="flex items-center">
               <Icons.check className="mr-2 h-4 w-4" /> Direct web3 support
@@ -50,9 +50,9 @@ export default function PricingPage() {
         </div>
         <div className="flex flex-col gap-4 text-center">
           <div>
-            <h4 className="text-7xl font-bold">$10</h4>
+            <h4 className="text-5xl ">$10</h4>
             <p className="text-sm font-medium text-muted-foreground">
-              Billed Monthly
+              Monthly Support
             </p>
           </div>
           <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>

@@ -6,53 +6,53 @@ export const metadata = {
 
 export default function Join() {
   return (
-    <div>
+    <div className="quando-regular ">
       <h1
-        className="mb-5 mt-20 text-center"
-        style={{ color: "var(--header-color)", fontSize: "2rem" }}
+        className="mb-5 mt-10 text-center text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+        style={{ color: "var(--header-color)" }}
       >
         Contribute and Join
       </h1>
       <p
-        className="my-10 text-center"
-        style={{ color: "var(--description-color)", fontSize: "1.5rem" }}
+        className="my-10 text-center text-2xl font-bold sm:text-2xl"
+        style={{ color: "var(--description-color)" }}
       >
         Join Crypto Policy DAO to enhance regulatory clarity and promote
         blockchain innovation
       </p>
       <div>
         <p
-          className="mx-auto mb-10 text-center"
+          className="mx-auto mb-10 text-center text-xl"
           style={{
             color: "var(--content-color)",
             maxWidth: "900px",
-            fontSize: "1rem",
           }}
         >
-          Interested in contributing to regulatory innovation in the blockchain
-          space? Join Crypto Policy DAO, where policymakers and blockchain
-          enthusiasts collaborate on regulatory and technical research in the
-          web3 landscape.
+          There are two ways to join Crypto Policy DAO; you can either
+          contribute financially or contribute to our open-source projects. You
+          can find more information about financially supporting the DAO under
+          the Support tab, though more information about contributing to our
+          open-source projects is provided below.
         </p>
         <p
-          className="mx-auto mb-10 text-center"
+          className="mx-auto mb-10 text-center text-xl"
           style={{
             color: "var(--content-color)",
             maxWidth: "900px",
-            fontSize: "1rem",
           }}
         >
-          To become a part of our community, clone our GitHub repository and
-          propose your changes. Submit your alterations via pull requests for
-          our evaluation. Once accepted, you will receive the NFT below and gain
-          access to our members-only chatroom for further collaboration.
+          If you want to contribute to our open-source projects, there are
+          several projects and ways to contribute to each. To become a part of
+          our community, clone our GitHub repository and propose your changes.
+          Submit your alterations via pull requests for our evaluation. Once
+          accepted, you will receive the NFT below and gain access to our
+          members-only chatroom for further collaboration.
         </p>
         <p
-          className="mx-auto text-center"
+          className="mx-auto text-center text-xl"
           style={{
             color: "var(--content-color)",
             maxWidth: "900px",
-            fontSize: "1rem",
           }}
         >
           As the DAO earns revenue for its crypto lobbying efforts, all members
