@@ -22,5 +22,9 @@ export const marketingConfig: MarketingConfig = {
       title: "Support",
       href: "/support",
     },
+    {
+      title: "Account",
+      href: "/account",
+    },
   ],
 }

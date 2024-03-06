@@ -32,6 +32,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "app/(marketing)/matrix/page.jsx"  ],
   "exclude": ["node_modules"]
 }
