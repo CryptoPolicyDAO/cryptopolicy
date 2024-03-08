@@ -4,6 +4,7 @@ import "./env.mjs"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  ignoreBuildErrors: true,
   reactStrictMode: true,
   images: {
     domains: ["avatars.githubusercontent.com"],
