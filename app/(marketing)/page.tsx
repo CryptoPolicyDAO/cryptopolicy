@@ -67,6 +67,13 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
+      <div className="container flex max-w-[40rem] flex-col items-center gap-4">
+        <video autoPlay loop muted style={{ borderRadius: "20px" }}>
+          <source src="/images/logo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <section
         id="features"
         className="quando-regular container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
