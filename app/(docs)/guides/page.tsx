@@ -8,7 +8,7 @@ import { DocsPageHeader } from "@/components/page-header"
 export const metadata = {
   title: "Guides",
   description:
-    "This section includes end-to-end guides for developing Next.js 13 apps.",
+    "This section includes guides for improving our politics through the use of the blockchain.",
 }
 
 export default function GuidesPage() {
@@ -22,7 +22,7 @@ export default function GuidesPage() {
     <div className="py-6 lg:py-10">
       <DocsPageHeader
         heading="Guides"
-        text="This section includes end-to-end guides for developing Next.js 13 apps."
+        text="This section includes guides for improving our gov't & politics through the use of the blockchain."
       />
       {guides?.length ? (
         <div className="grid gap-4 md:grid-cols-2 md:gap-6">
