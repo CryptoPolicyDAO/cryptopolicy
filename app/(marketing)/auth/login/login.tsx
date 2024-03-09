@@ -42,8 +42,8 @@ export default function LoginPage() {
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
           This is the Member NFT
         </p>
-        <div style={{ width: "50%", margin: "0 auto" }}>
-          <video autoPlay loop style={{ width: "100%" }}>
+        <div className="container flex max-w-[40rem] flex-col items-center gap-4">
+          <video autoPlay loop muted style={{ borderRadius: "20px" }}>
             <source src="/images/MemberNFT.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
