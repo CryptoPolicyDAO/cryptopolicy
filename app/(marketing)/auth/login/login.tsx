@@ -47,7 +47,7 @@ export default function LoginPage() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="text-center mx-auto my-10 flex flex-col items-center space-y-4 max-w-[58rem]">
+      <div className="flex mx-auto my-10 flex-col items-center space-y-4 max-w-[58rem] text-center">
         <p className="quando-regular max-w-[85%] leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-2xl">
           If you have not created an account, you can do so by entering your
           email and creating any password you want and hitting the sign up
