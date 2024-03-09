@@ -36,13 +36,13 @@ export default function LoginPage() {
   return (
     <>
       <p
-        className="quando-regular  leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-3xl lg:text-5xl mb-10 mt-10"
+        className="my-10 quando-regular  leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-3xl lg:text-5xl "
         style={{ textAlign: "center" }}
       >
-        Thank you for contributing to Crypto Policy DAO
+        Thank you for contributing to web3-friendly regulation
       </p>
       <p
-        className="quando-regular  leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-3xl mb-10 mt-10"
+        className="my-10 quando-regular  leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-3xl"
         style={{ textAlign: "center" }}
       >
         This is the Member NFT
