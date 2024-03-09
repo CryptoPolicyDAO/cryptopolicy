@@ -112,7 +112,7 @@ export default function LoginPage() {
         >
           Sign up
         </button>
-        <p className="px-8 text-center text-sm text-muted-foreground mt-10 mb-10">
+        <p className="my-10 px-8 text-center text-sm text-muted-foreground ">
           By signing up, you agree to our{" "}
           <Link
             href="/terms"
