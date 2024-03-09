@@ -35,10 +35,12 @@ export default function LoginPage() {
 
   return (
     <>
-      <p className="quando-regular my-10 ">
+      <p className="quando-regular my-10 leading-normal text-muted-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center">
         Thank you for contributing to web3-friendly regulation
       </p>
-      <p className="quando-regular my-10 ">This is the Member NFT</p>
+      <p className="quando-regular my-10 leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-3xl text-center">
+        This is the Member NFT
+      </p>
       <div style={{ width: "50%", margin: "0 auto" }}>
         <video autoPlay loop style={{ width: "100%" }}>
           <source src="/images/MemberNFT.mp4" type="video/mp4" />
@@ -46,7 +48,7 @@ export default function LoginPage() {
         </video>
       </div>
       <div>
-        <p className="quando-regular ">
+        <p className="mx-auto flex max-w-[65%] quando-regular my-10 leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-3xl text-center">
           If you have not created an account, you can do so by entering your
           email and creating any password you want and hitting the sign up
           button. A confirmation email will be sent to you. Otherwise, you can
