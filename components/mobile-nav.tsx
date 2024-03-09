@@ -4,14 +4,23 @@ import Link from "next/link"
 import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { useLockBody } from "@/hooks/use-lock-body"
 import { Icons } from "@/components/icons"
 
 interface MobileNavProps {
   items: MainNavItem[]
   children?: React.ReactNode
+  onCloseMenu: () => void // Define a prop to handle closing the mobile menu
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, children, onCloseMenu }: MobileNavProps) {
+  useLockBody()
+
+  // Function to handle clicking on a link
+  const handleClick = () => {
+    onCloseMenu() // Close the mobile menu when a link is clicked
+  }
+
   return (
     <div
       className={cn(
@@ -19,7 +28,11 @@ export function MobileNav({ items, children }: MobileNavProps) {
       )}
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
-        <Link href="/" className="flex items-center space-x-2">
+        <Link
+          href="/"
+          className="flex items-center space-x-2"
+          onClick={handleClick}
+        >
           <Icons.logo />
           <span className="font-bold">{siteConfig.name}</span>
         </Link>
@@ -32,6 +45,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
+              onClick={handleClick} // Add onClick handler to close the menu
             >
               {item.title}
             </Link>
