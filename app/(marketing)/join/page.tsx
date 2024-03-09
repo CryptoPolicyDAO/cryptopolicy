@@ -27,11 +27,11 @@ export default function Join() {
               maxWidth: "900px",
             }}
           >
-            There are two ways to join Crypto Policy DAO; you can either
-            contribute financially or contribute to our open-source projects.
-            You can find more information about financially supporting the DAO
-            under the Support tab, though more information about contributing to
-            our open-source projects is provided below.
+            There are two ways to join Crypto Policy DAO; you can either support
+            financially or contribute to our open-source projects. You can find
+            more information about financially supporting the DAO under the
+            Support tab, though more information about contributing to our
+            open-source projects is provided below.
           </p>
           <p
             className="mx-auto mb-10 text-center text-xl"
@@ -41,14 +41,18 @@ export default function Join() {
             }}
           >
             If you want to contribute to our open-source projects, there are
-            several projects and ways to contribute to each. To become a part of
-            our community, clone our GitHub repository and propose your changes.
-            Submit your alterations via pull requests for our evaluation. Once
-            accepted, you will receive the NFT below and gain access to our
-            members-only chatroom for further collaboration.
+            several projects and ways to contribute to each. The first way is by
+            providing context and insight into the BRM, which you can find more
+            infomartion about in the{" "}
+            <a href="/documentation" className="underline underline-offset-4">
+              documents
+            </a>{" "}
+            section. The second way to contribute is through the specific topics
+            of research that is being conducted by the DAO, which you can find
+            more about in the documents section as well.
           </p>
           <p
-            className="mx-auto text-center text-xl"
+            className="mx-auto  mb-10 text-center text-xl"
             style={{
               color: "var(--content-color)",
               maxWidth: "900px",

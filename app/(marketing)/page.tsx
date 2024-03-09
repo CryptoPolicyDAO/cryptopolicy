@@ -83,41 +83,45 @@ export default async function IndexPage() {
             About
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Our mission is to be a platform for policymakers and blockchain
-            builders to collaborate on the technical and regulatory research of
-            blockchain technologies that promote a web3-friendly regulatory
-            environment. The speed of blockchain innovation is outpacing the
-            regulatory environment and leaving legislators behind in
+            Our mission is to be a platform that provides regulatory clarity and
+            structure for Web3. The speed of blockchain innovation is outpacing
+            the regulatory environment and leaving legislators behind in
             understanding and creating web3-friendly regulation.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             The underlying technology propelling the blockchain will
             continuously advance regardless of any political regulation, and for
             us to capture the benefits of emerging and innovative blockchain
-            technology, we need to understand how and where regulation of the
-            blockchain connect.
+            technology, we need to understand <strong>how</strong> and{" "}
+            <strong>where</strong> regulation of the blockchain connect.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            The backbone of Crypto Policy DAO is the Blockchain Regulation
-            Matrix (BRM) which breaks down the aspects of regulation into layers
-            according to the consumer. The BRM is a tool for understanding the
-            regulatory environment on specific aspects of the blockchain from
-            the consuers perspective, as the main goal of web3 regulation is to
+            The backbone of Crypto Policy DAO is the{" "}
+            <a href="/matrix" className="underline underline-offset-4">
+              Blockchain Regulation Matrix (BRM),{" "}
+            </a>
+            which breaks down the aspects of regulation into layers according to
+            the consumer. The BRM is a tool for understanding the regulatory
+            environment on specific aspects of the blockchain from the
+            consumer's perspective, as the main goal of web3 regulation is to
             protect the consumer.
           </p>
+
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Anyone can contribute to the BRM, and we encourage you to do so. The
             goal is to produce pragmatic legislation that protects the consumer
-            while promoting web3 innovation. One of the ways to protect the
-            consumer is to clearly identify criminal activity and that includes
+            while promoting Web3 innovation. One of the ways to protect the
+            consumer is to clearly identify criminal activity, which includes
             knowing that an exploit happened, how it happened, and who was
             responsible for it.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Everyone who contributes to the Crypto Policy DAO automatically
-            becomes a member, and you can contribute by completing the form
-            here. There will be a template for you to elaborate on your thoughts
-            and ideas, so dont worry about the format, just contribute!
+            becomes a member, and you can contribute by creating an account and
+            following along with either the guides or research-specific topics
+            listed in your account as well. There will be a template for you to
+            elaborate on your thoughts and ideas, so don't worry about the
+            format, just contribute in any way you can!
           </p>
         </div>
       </section>
