@@ -16,7 +16,7 @@ export const marketingConfig: MarketingConfig = {
     },
     {
       title: "Join",
-      href: "/docs",
+      href: "/join",
     },
     {
       title: "Support",
