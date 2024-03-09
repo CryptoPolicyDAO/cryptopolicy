@@ -4,7 +4,6 @@ import Link from "next/link"
 import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { useLockBody } from "@/hooks/use-lock-body"
 import { Icons } from "@/components/icons"
 
 interface MobileNavProps {
@@ -13,8 +12,6 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ items, children }: MobileNavProps) {
-  useLockBody()
-
   return (
     <div
       className={cn(
