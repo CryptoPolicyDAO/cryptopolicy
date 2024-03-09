@@ -55,8 +55,9 @@ export default function LoginPage() {
       </div>
       <p className="quando-regular mx-auto flex max-w-[55rem] flex-col items-center space-y-4 text-center leading-normal text-muted-foreground text-2xl sm:text-2xl md:text-2xl lg:text-3xl mb-10 mt-10">
         If you have not created an account, you can do so by entering your email
-        and creating any password you want and hit the sign up button.
-        Otherwise, you can log in with your email and password.
+        and creating any password you want and hitting the sign up button. A
+        confirmation email will be sent to you. Otherwise, you can log in with
+        your email and password.
       </p>
       <div
         style={{
