@@ -1,6 +1,5 @@
 "use client"
 
-import "./App.css"
 import Matrix from "./Matrix"
 import MatrixLongForm from "./MatrixLongForm"
 

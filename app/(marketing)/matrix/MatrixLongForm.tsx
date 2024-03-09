@@ -1,6 +1,5 @@
 "use client"
 
-import "./App.css"
 import { useState } from "react"
 
 function MatrixLongForm() {

@@ -1,7 +1,5 @@
 "use client"
 
-import "./App.css"
-
 function Matrix() {
   const inlineStyles = `
 
