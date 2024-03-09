@@ -4,6 +4,7 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
+import { ModeToggle } from "@/components/mode-toggle"
 import { SiteFooter } from "@/components/site-footer"
 
 interface MarketingLayoutProps {
@@ -23,11 +24,13 @@ export default async function MarketingLayout({
               href="/auth/login"
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" }),
+                "mr-4",
                 "px-4"
               )}
             >
               Login
             </Link>
+            <ModeToggle />
           </nav>
         </div>
       </header>
