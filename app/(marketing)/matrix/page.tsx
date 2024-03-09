@@ -79,11 +79,11 @@ export default function Contribute() {
           <br></br>
           <p>Hover over each of the images below to read more information.</p>
         </div>
-        <Matrix />
-        <br />
-        <br />
-        <MatrixLongForm />
       </div>
+      <Matrix />
+      <br />
+      <br />
+      <MatrixLongForm />
     </div>
   )
 }
