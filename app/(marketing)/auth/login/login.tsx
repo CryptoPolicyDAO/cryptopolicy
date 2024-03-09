@@ -36,7 +36,7 @@ export default function LoginPage() {
   return (
     <>
       <div className="quando-regular container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-        <div className="quando-regular leading-normal text-muted-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <div className="leading-normal text-muted-foreground text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           Thank you for contributing to web3-friendly regulation
         </div>
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
