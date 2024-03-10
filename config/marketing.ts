@@ -26,5 +26,9 @@ export const marketingConfig: MarketingConfig = {
       title: "Support",
       href: "/support",
     },
+    {
+      title: "DAO Members",
+      href: "/members",
+    },
   ],
 }
