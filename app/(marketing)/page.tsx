@@ -108,16 +108,16 @@ export default async function IndexPage() {
           </p>
 
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Anyone can contribute to the BRM, and we encourage you to do so. The
-            goal is to produce pragmatic legislation that protects the consumer
-            while promoting Web3 innovation. One of the ways to protect the
-            consumer is to clearly identify criminal activity, which includes
-            knowing that an exploit happened, how it happened, and who was
-            responsible for it.
+            Membership in the DAO will be limited, though once accepted,
+            everyone is expected to contribute to the BRM. The goal is to
+            produce pragmatic legislation that protects the consumer while
+            promoting Web3 innovation. One of the ways to protect the consumer
+            is to clearly identify criminal activity, which includes knowing
+            that an exploit happened, how it happened, and who was responsible
+            for it.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Everyone who contributes to the Crypto Policy DAO automatically
-            becomes a member, and you can contribute by creating an account and
+            Once accepted as a member, the quickest way to contribute will be by
             following along with either the guides or research-specific topics
             listed in your account. There will be a template for you to
             elaborate on your thoughts and ideas, so don't worry about the

@@ -37,17 +37,9 @@ export default function LoginPage() {
     <>
       <div className="quando-regular container flex max-w-[64rem] flex-col items-center gap-4 text-center leading-normal text-muted-foreground">
         <div className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-          Thank you for contributing to web3-friendly regulation
+          Member Login
         </div>
-        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-          This is the Member NFT
-        </p>
-        <div className="container flex max-w-[40rem] flex-col items-center gap-4">
-          <video autoPlay loop muted style={{ borderRadius: "20px" }}>
-            <source src="/images/MemberNFT.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+
         <div>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             If you have not created an account, you can do so by entering your
