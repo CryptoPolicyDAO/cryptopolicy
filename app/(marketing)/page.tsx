@@ -119,9 +119,9 @@ export default async function IndexPage() {
             Everyone who contributes to the Crypto Policy DAO automatically
             becomes a member, and you can contribute by creating an account and
             following along with either the guides or research-specific topics
-            listed in your account as well. There will be a template for you to
+            listed in your account. There will be a template for you to
             elaborate on your thoughts and ideas, so don't worry about the
-            format, just contribute in any way you can!
+            format, just contribute!
           </p>
         </div>
       </section>
@@ -146,12 +146,6 @@ export default async function IndexPage() {
             insights on shaping web3 regulation, so please review our
             documentation and consider contributing.
             <br />
-            <br />
-            The quickest way to contribute is to review the docs and contribute
-            to the section that you have ideas about by submitting a pull
-            request to the github below. There will be a template for you to
-            elaborate on your thoughts and ideas, so dont worry about the
-            format, just contribute!
           </p>
           {stars && (
             <Link

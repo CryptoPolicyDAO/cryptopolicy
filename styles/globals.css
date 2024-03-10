@@ -209,3 +209,7 @@
   align-items: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+.indent::first-letter {
+  margin-left: 2em; /* Adjust indentation amount as needed */
+}

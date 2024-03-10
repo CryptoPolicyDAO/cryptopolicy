@@ -119,7 +119,7 @@ export default async function PostPage({ params }: PostPageProps) {
           {post.title}
         </h1>
         {authors?.length ? (
-          <div className="mt-4 flex space-x-4">
+          <div className="quando-regular mt-4 flex space-x-4">
             {authors.map((author) =>
               author ? (
                 <Link
@@ -150,8 +150,8 @@ export default async function PostPage({ params }: PostPageProps) {
         <Image
           src={post.image}
           alt={post.title}
-          width={720}
-          height={405}
+          width={300}
+          height={300}
           className="my-8 rounded-md border bg-muted transition-colors"
           priority
         />
