@@ -146,16 +146,47 @@ export default async function MemberPage({ params }: MemberPageProps) {
           </div>
         ) : null}
       </div>
-      {members.image && (
-        <Image
-          src={members.image}
-          alt={members.title}
-          width={300}
-          height={300}
-          className="my-8 rounded-md border bg-muted transition-colors justify-center"
-          priority
-        />
-      )}
+      <div className="flex mb-5 justify-center flex-wrap gap-4 max-w-screen-lg mx-auto">
+        {members.image && (
+          <>
+            <div className="flex-1 max-w-[300px]">
+              <Image
+                src={members.image}
+                alt={members.title}
+                layout="responsive"
+                width={300}
+                height={300}
+                className="rounded-md border bg-muted transition-colors justify-center"
+                priority
+              />
+            </div>
+            {/* Add two more images here */}
+            <div className="flex-1 max-w-[300px]">
+              <Image
+                src="/images/weaver2.jpeg"
+                alt="Second Image"
+                layout="responsive"
+                width={300}
+                height={300}
+                className="rounded-md border bg-muted transition-colors justify-center"
+                priority
+              />
+            </div>
+            <div className="flex-1 max-w-[300px]">
+              <Image
+                src="/images/weaver3.jpg"
+                alt="Third Image"
+                layout="responsive"
+                width={300}
+                height={300}
+                className="rounded-md border bg-muted transition-colors justify-center"
+                priority
+              />
+            </div>
+          </>
+        )}
+      </div>
+
       <Mdx code={members.body.code} />
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
