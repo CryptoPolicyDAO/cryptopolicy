@@ -51,7 +51,7 @@ export default async function Members() {
                 )}
                 {member.date && (
                   <p className="text-sm text-muted-foreground">
-                    {formatDate(member.date)}
+                    Member since {formatDate(member.date)}
                   </p>
                 )}
                 <Link href={member.slug} className="absolute inset-0">

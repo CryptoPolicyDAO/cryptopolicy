@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { allAuthors, allPosts } from "contentlayer/generated"
+import { allAuthors, allMembers } from "contentlayer/generated"
 
 import { Mdx } from "@/components/mdx-components"
 
@@ -13,15 +13,15 @@ import { absoluteUrl, cn, formatDate } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-interface PostPageProps {
+interface MemberPageProps {
   params: {
     slug: string[]
   }
 }
 
-async function getPostFromParams(params) {
+async function getMemberFromParams(params) {
   const slug = params?.slug?.join("/")
-  const members = allPosts.find((members) => members.slugAsParams === slug)
+  const members = allMembers.find((members) => members.slugAsParams === slug)
 
   if (!members) {
     null
@@ -32,8 +32,8 @@ async function getPostFromParams(params) {
 
 export async function generateMetadata({
   params,
-}: PostPageProps): Promise<Metadata> {
-  const members = await getPostFromParams(params)
+}: MemberPageProps): Promise<Metadata> {
+  const members = await getMemberFromParams(params)
 
   if (!members) {
     return {}
@@ -76,15 +76,15 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<
-  PostPageProps["params"][]
+  MemberPageProps["params"][]
 > {
-  return allPosts.map((members) => ({
+  return allMembers.map((members) => ({
     slug: members.slugAsParams.split("/"),
   }))
 }
 
-export default async function PostPage({ params }: PostPageProps) {
-  const members = await getPostFromParams(params)
+export default async function MemberPage({ params }: MemberPageProps) {
+  const members = await getMemberFromParams(params)
 
   if (!members) {
     notFound()
@@ -112,7 +112,7 @@ export default async function PostPage({ params }: PostPageProps) {
             dateTime={members.date}
             className="block text-sm text-muted-foreground"
           >
-            Published on {formatDate(members.date)}
+            Member since {formatDate(members.date)}
           </time>
         )}
         <h1 className="quando-regular mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl">
