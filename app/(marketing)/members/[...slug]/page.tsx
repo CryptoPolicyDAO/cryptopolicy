@@ -146,7 +146,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
           </div>
         ) : null}
       </div>
-      <div className="flex mb-5 justify-center flex-wrap gap-4 max-w-screen-lg mx-auto">
+      <div className="mx-auto flex mb-5 flex-wrap gap-4 max-w-screen-lg justify-center ">
         {members.image && (
           <>
             <div className="flex-1 max-w-[300px]">
