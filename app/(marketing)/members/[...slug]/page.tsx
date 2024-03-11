@@ -134,7 +134,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
                     height={42}
                     className="rounded-full bg-white"
                   />
-                  <div className="flex-1 text-left leading-tight">
+                  <div className="quando-regular flex-1 text-left leading-tight">
                     <p className="font-medium">{author.title}</p>
                     <p className="text-[12px] text-muted-foreground">
                       @{author.twitter}

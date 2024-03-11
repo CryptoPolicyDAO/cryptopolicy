@@ -54,6 +54,11 @@ export default async function Members() {
                     Member since {formatDate(member.date)}
                   </p>
                 )}
+                {member.twitter && (
+                  <p className="text-sm text-muted-foreground">
+                    Twitter: {member.twitter}
+                  </p>
+                )}
                 <Link href={member.slug} className="absolute inset-0">
                   <span className="sr-only">View Article</span>
                 </Link>
