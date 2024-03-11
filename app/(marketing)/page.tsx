@@ -86,7 +86,7 @@ export default async function IndexPage() {
             Our mission is to be a platform that provides regulatory clarity and
             structure for Web3. The speed of blockchain innovation is outpacing
             the regulatory environment and leaving legislators behind in
-            understanding and creating web3-friendly regulation.
+            understanding and creating Web3-friendly regulation.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             The underlying technology propelling the blockchain will
@@ -101,26 +101,29 @@ export default async function IndexPage() {
               Blockchain Regulation Matrix (BRM),{" "}
             </a>
             which breaks down the aspects of regulation into layers according to
-            the consumer. The BRM is a tool for understanding the regulatory
-            environment on specific aspects of the blockchain from the
-            consumer's perspective, as the main goal of web3 regulation is to
-            protect the consumer.
+            the consumer. The BRM is a tool to understand the regulatory
+            environment of specific aspects of the blockchain from the
+            consumer's perspective, as the main goal of Web3 regulation should
+            be to protect the consumer.
           </p>
 
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Membership in the DAO will be limited and on an invite-only basis.
-            The goal is to produce pragmatic legislation that protects the
-            consumer while promoting Web3 innovation. One of the ways to protect
-            the consumer is to clearly identify criminal activity, which
-            includes knowing that an exploit happened, how it happened, and who
-            was responsible for it.
+            Membership in the DAO will be limited and on an invitation only
+            basis. The goal is to produce pragmatic legislation that protects
+            the consumer while promoting Web3 innovation. This means that focus
+            will be intent and collaboration will be concise in order to produce
+            more efficient, effective, and timely results.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Once accepted as a member, the quickest way to contribute will be by
-            following along with either the guides or research-specific topics
-            listed in your account. There will be a template for you to
-            elaborate on your thoughts and ideas, so don't worry about the
-            format, just contribute!
+            One of the ways to protect the consumer is to clearly identify
+            criminal activity, which includes knowing that an exploit happened,
+            how it happened, and who was responsible for it. Most legislation
+            out there is reactive and not proactive, and the goal of Crypto
+            Policy DAO is to be at the forefront of consumer protection through
+            proactive Web3-friendly regulation. By producing pragmatic drafts of
+            legislation, we can inform and educate while contributing to the
+            momentum of web3 innovation and helping to protect the Web3
+            consumer.
           </p>
         </div>
       </section>
@@ -130,8 +133,8 @@ export default async function IndexPage() {
             Proudly Open Source
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Crypto Policy DAO is completely open-source, meaning <br /> the code
-            is available on{" "}
+            Crypto Policy DAO is completely open-source, meaning all of our work
+            and any code is available on{" "}
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -140,10 +143,7 @@ export default async function IndexPage() {
             >
               GitHub
             </Link>
-            , and that you are able to contribute to it. <br /> Crypto Policy
-            DAO is designed for you to contribute and share your thoughts and
-            insights on shaping web3 regulation, so please review our
-            documentation and consider contributing.
+            {""} for you to review.
             <br />
           </p>
           {stars && (
