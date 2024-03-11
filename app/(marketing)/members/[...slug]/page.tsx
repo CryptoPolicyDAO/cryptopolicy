@@ -152,7 +152,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
           alt={members.title}
           width={300}
           height={300}
-          className="my-8 rounded-md border bg-muted transition-colors"
+          className="my-8 rounded-md border bg-muted transition-colors justify-center"
           priority
         />
       )}

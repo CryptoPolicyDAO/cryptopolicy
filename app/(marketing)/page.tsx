@@ -108,13 +108,12 @@ export default async function IndexPage() {
           </p>
 
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Membership in the DAO will be limited, though once accepted,
-            everyone is expected to contribute to the BRM. The goal is to
-            produce pragmatic legislation that protects the consumer while
-            promoting Web3 innovation. One of the ways to protect the consumer
-            is to clearly identify criminal activity, which includes knowing
-            that an exploit happened, how it happened, and who was responsible
-            for it.
+            Membership in the DAO will be limited and on an invite-only basis.
+            The goal is to produce pragmatic legislation that protects the
+            consumer while promoting Web3 innovation. One of the ways to protect
+            the consumer is to clearly identify criminal activity, which
+            includes knowing that an exploit happened, how it happened, and who
+            was responsible for it.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Once accepted as a member, the quickest way to contribute will be by
