@@ -53,7 +53,10 @@ export default async function IndexPage() {
             Lobbying for web3 friendly regulation
           </p>
           <div className="space-x-4">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link
+              href="./auth/login"
+              className={cn(buttonVariants({ size: "lg" }))}
+            >
               Contribute
             </Link>
             <Link
