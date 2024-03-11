@@ -161,7 +161,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
               />
             </div>
             {/* Add two more images here */}
-            <div className="flex-1 max-w-[300px]">
+            <div className="max-w-[300px] flex-1 ">
               <Image
                 src="/images/weaver2.jpeg"
                 alt="Second Image"
@@ -172,7 +172,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
                 priority
               />
             </div>
-            <div className="flex-1 max-w-[300px]">
+            <div className="max-w-[300px] flex-1 ">
               <Image
                 src="/images/weaver3.jpg"
                 alt="Third Image"
