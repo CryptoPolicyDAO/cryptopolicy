@@ -111,8 +111,8 @@ export default async function IndexPage() {
             Membership in the DAO will be limited and on an invitation only
             basis. The goal is to produce pragmatic legislation that protects
             the consumer while promoting Web3 innovation. This means that focus
-            will be intent and collaboration will be concise in order to produce
-            more efficient, effective, and timely results.
+            will be intent and collaboration will be concise in order to
+            efficiently produce more effective results.
           </p>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             One of the ways to protect the consumer is to clearly identify
