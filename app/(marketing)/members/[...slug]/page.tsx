@@ -146,45 +146,47 @@ export default async function MemberPage({ params }: MemberPageProps) {
           </div>
         ) : null}
       </div>
-      <div className="mx-auto flex flex-wrap gap-4 mb-10">
-        {members.image && (
-          <>
-            <div className="max-w-[300px] flex-1 ">
-              <Image
-                src={members.image}
-                alt={members.title}
-                layout="responsive"
-                width={300}
-                height={300}
-                className="rounded-md border bg-muted transition-colors"
-                priority
-              />
-            </div>
-            {/* Add two more images here */}
-            <div className="max-w-[300px] flex-1 ">
-              <Image
-                src="/images/weaver2.jpeg"
-                alt="Second Image"
-                layout="responsive"
-                width={300}
-                height={300}
-                className="rounded-md border bg-muted transition-colors"
-                priority
-              />
-            </div>
-            <div className="max-w-[300px] flex-1 ">
-              <Image
-                src="/images/weaver3.jpg"
-                alt="Third Image"
-                layout="responsive"
-                width={300}
-                height={300}
-                className="rounded-md border bg-muted transition-colors"
-                priority
-              />
-            </div>
-          </>
-        )}
+      <div className="mb-10">
+        <div className="mx-auto flex flex-wrap gap-4">
+          {members.image && (
+            <>
+              <div className="max-w-[300px] flex-1 ">
+                <Image
+                  src={members.image}
+                  alt={members.title}
+                  layout="responsive"
+                  width={300}
+                  height={300}
+                  className="rounded-md border bg-muted transition-colors"
+                  priority
+                />
+              </div>
+              {/* Add two more images here */}
+              <div className="max-w-[300px] flex-1 ">
+                <Image
+                  src="/images/weaver2.jpeg"
+                  alt="Second Image"
+                  layout="responsive"
+                  width={300}
+                  height={300}
+                  className="rounded-md border bg-muted transition-colors"
+                  priority
+                />
+              </div>
+              <div className="max-w-[300px] flex-1 ">
+                <Image
+                  src="/images/weaver3.jpg"
+                  alt="Third Image"
+                  layout="responsive"
+                  width={300}
+                  height={300}
+                  className="rounded-md border bg-muted transition-colors"
+                  priority
+                />
+              </div>
+            </>
+          )}
+        </div>
       </div>
 
       <Mdx code={members.body.code} />
