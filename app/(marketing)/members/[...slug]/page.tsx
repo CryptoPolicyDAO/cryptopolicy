@@ -146,17 +146,17 @@ export default async function MemberPage({ params }: MemberPageProps) {
           </div>
         ) : null}
       </div>
-      <div className="mx-auto flex mb-5 flex-wrap gap-4 max-w-screen-lg justify-center ">
+      <div className="mx-auto flex mb-5 flex-wrap gap-4 max-w-screen-lg ">
         {members.image && (
           <>
-            <div className="flex-1 max-w-[300px]">
+            <div className="max-w-[300px] flex-1 ">
               <Image
                 src={members.image}
                 alt={members.title}
                 layout="responsive"
                 width={300}
                 height={300}
-                className="rounded-md border bg-muted transition-colors justify-center"
+                className="rounded-md border bg-muted transition-colors"
                 priority
               />
             </div>
@@ -168,7 +168,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
                 layout="responsive"
                 width={300}
                 height={300}
-                className="rounded-md border bg-muted transition-colors justify-center"
+                className="rounded-md border bg-muted transition-colors"
                 priority
               />
             </div>
@@ -179,7 +179,7 @@ export default async function MemberPage({ params }: MemberPageProps) {
                 layout="responsive"
                 width={300}
                 height={300}
-                className="rounded-md border bg-muted transition-colors justify-center"
+                className="rounded-md border bg-muted transition-colors"
                 priority
               />
             </div>
