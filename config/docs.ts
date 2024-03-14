@@ -35,17 +35,17 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Settlement Layer",
-          href: "/docs/documentation/components",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
           title: "Node / Validator",
-          href: "/docs/documentation/code-blocks",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
           title: "Consensus Layer - Computation Intensive-based",
-          href: "/docs/documentation/style-guide",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
@@ -137,6 +137,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Regulation Matrix - Centralized",
+      href: "/docs/documentation/centralized",
       items: [
         {
           title: "Introduction",
@@ -149,17 +150,17 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Settlement Layer",
-          href: "/docs/documentation/components",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
           title: "Node / Validator",
-          href: "/docs/documentation/code-blocks",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
           title: "Consensus Layer - Computation Intensive-based",
-          href: "/docs/documentation/style-guide",
+          href: "/docs/in-progress",
           disabled: false,
         },
         {
@@ -271,11 +272,12 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Legislation Docs",
+      title: "Legislation Drafts",
+      href: "/docs/drafts",
       items: [
         {
           title: "Introduction",
-          href: "/docs/in-progress",
+          href: "/docs/drafts",
           disabled: false,
         },
       ],
@@ -286,12 +288,12 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "Web3",
-          href: "/docs/in-progress",
+          href: "/docs/definitions/web3",
           disabled: false,
         },
         {
           title: "Insurance",
-          href: "/docs/in-progress",
+          href: "/docs/definitions/insurance",
           disabled: false,
         },
       ],
