@@ -251,6 +251,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Blog Docs",
+      href: "/docs/blog",
       items: [
         {
           title: "Introduction",
@@ -277,28 +278,19 @@ export const docsConfig: DocsConfig = {
           href: "/docs/in-progress",
           disabled: false,
         },
+      ],
+    },
+    {
+      title: "Definitions",
+      href: "/docs/definitions",
+      items: [
         {
-          title: "Layouts",
+          title: "Web3",
           href: "/docs/in-progress",
           disabled: false,
         },
         {
-          title: "Server Components",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "Authentication",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "Database with Prisma",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "API Routes",
+          title: "Insurance",
           href: "/docs/in-progress",
           disabled: false,
         },

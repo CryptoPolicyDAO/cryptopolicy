@@ -133,7 +133,7 @@ export default async function IndexPage() {
             <a href="../docs" className="underline underline-offset-4">
               documents
             </a>{" "}
-            section for all.
+            section for all to use.
           </p>
         </div>
       </section>

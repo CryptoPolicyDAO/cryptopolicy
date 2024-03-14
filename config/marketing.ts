@@ -18,13 +18,14 @@ export const marketingConfig: MarketingConfig = {
       title: "Regulation Matrix",
       href: "/matrix",
     },
-    {
-      title: "Support",
-      href: "/support",
-    },
+
     {
       title: "DAO Members",
       href: "/members",
+    },
+    {
+      title: "Support",
+      href: "/support",
     },
   ],
 }
