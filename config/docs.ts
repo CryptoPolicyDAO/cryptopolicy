@@ -250,7 +250,7 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Blog",
+      title: "Blog Docs",
       items: [
         {
           title: "Introduction",
@@ -258,19 +258,19 @@ export const docsConfig: DocsConfig = {
           disabled: false,
         },
         {
-          title: "Build your own",
+          title: "Why start Crypto Policy DAO",
           href: "/docs/in-progress",
           disabled: false,
         },
         {
-          title: "Writing Posts",
+          title: "Start Here",
           href: "/docs/in-progress",
           disabled: false,
         },
       ],
     },
     {
-      title: "Dashboard",
+      title: "Legislation Docs",
       items: [
         {
           title: "Introduction",
@@ -299,31 +299,6 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "API Routes",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-      ],
-    },
-    {
-      title: "Marketing Site",
-      items: [
-        {
-          title: "Introduction",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "File Structure",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "Tailwind CSS",
-          href: "/docs/in-progress",
-          disabled: false,
-        },
-        {
-          title: "Typography",
           href: "/docs/in-progress",
           disabled: false,
         },

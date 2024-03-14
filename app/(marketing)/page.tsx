@@ -128,6 +128,13 @@ export default async function IndexPage() {
             momentum of web3 innovation and helping to protect the Web3
             consumer.
           </p>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            As we create legislative drafts, they will be posted in the{" "}
+            <a href="../docs" className="underline underline-offset-4">
+              documents
+            </a>{" "}
+            section for all.
+          </p>
         </div>
       </section>
       <section id="open-source" className="container py-8 md:py-12 lg:py-24">

@@ -19,10 +19,6 @@ export const marketingConfig: MarketingConfig = {
       href: "/matrix",
     },
     {
-      title: "Join",
-      href: "/join",
-    },
-    {
       title: "Support",
       href: "/support",
     },
