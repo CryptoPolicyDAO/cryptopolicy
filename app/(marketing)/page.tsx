@@ -76,7 +76,7 @@ export default async function IndexPage() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 flex items-center justify-center opacity-0  transition-opacity duration-300 hover:opacity-100">
-          <p className="text-2xl font-bold text-gray-400">
+          <p className="font-bold text-gray-400 sm:text-sm xl:text-base">
             Created by{" "}
             <Link href="https://twitter.com/motivationalabs" target="_blank">
               Motivational Labs
@@ -111,11 +111,11 @@ export default async function IndexPage() {
             <a href="/matrix" className="underline underline-offset-4">
               Blockchain Regulation Matrix (BRM),{" "}
             </a>
-            which breaks down the aspects of regulation into layers according to
-            the consumer. The BRM is a tool to understand the regulatory
-            environment of specific aspects of the blockchain from the
-            consumer's perspective, as the main goal of Web3 regulation should
-            be to protect the consumer.
+            which approaches the blockchain as a stack that is to be regulated
+            specific to each layer. The BRM is a tool to understand the
+            regulatory environment of specific aspects of the blockchain from
+            the consumer's perspective, as the main goal of Web3 regulation
+            should be to protect the consumer.
           </p>
 
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
