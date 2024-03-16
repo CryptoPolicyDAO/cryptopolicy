@@ -137,7 +137,7 @@ function Matrix() {
         }
         .section-fluid-main {
             position: relative;
-            width: calc(100% - 15px);
+            width: calc(100% - 10px);
           }
           
           .section-fluid-main h1 {
@@ -147,14 +147,14 @@ function Matrix() {
           }
           .image1 {
             background-image: var(--image1);
-            width: "99px",
-            height: "99px",
+            width: "80px",
+            height: "80px",
           }
 
           .image2 {
             background-image: var(--image2);
-            width: "99px",
-            height: "99px",
+            width: "80px",
+            height: "80px",
           }
         }
 
