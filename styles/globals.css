@@ -39,7 +39,8 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
-
+    --hover-text: #234f88;
+    --hover-subtext: #29285c;
     --image1: url("../public/images/c2.png");
     --image2: url("../public/images/d1.png");
   }
@@ -80,7 +81,8 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
-
+    --hover-text: #a8b2bb;
+    --hover-subtext: #80b3c2;
     --image1: url("../public/images/c2.png");
     --image2: url("../public/images/d1.png");
   }
@@ -184,7 +186,7 @@
 }
 
 .paragraph-container {
-  margin-bottom: 20px; /* Adjust spacing */
+  margin-bottom: 20px;
 }
 
 .chart-container {

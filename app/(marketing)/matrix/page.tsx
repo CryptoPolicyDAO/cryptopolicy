@@ -8,7 +8,7 @@ export default function Contribute() {
     <div className="quando-regular">
       <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
         <h1
-          className="mb-5 mt-20 text-center"
+          className="mt-20 text-center"
           style={{ color: "var(--header-color)", fontSize: "2rem" }}
         >
           Blockchain Regulation Matrix
@@ -22,46 +22,38 @@ export default function Contribute() {
               maxWidth: "900px",
             }}
           >
-            The Blockchain Regulation Matrix (BRM) aims to construct a
-            comprehensive framework outlining blockchain&apos;s regulation
-            aspects. It delves into centralized and decentralized protocols,
-            emphasizing compliance without compromising blockchain ethos. This
-            matrix categorizes technology stacks and invites contributions to
-            assess each layer&apos;s government concerns, consumer risks,
-            regulatory pros, and cons.
+            The Blockchain Regulation Matrix (BRM) establishes a framework
+            outlining the concerns of regulating the blockchain from the
+            governments and the consumers perspective. By doing so, it provides
+            a backbone to approach web3 regulation pragmatically and clearly.
+            The BRM outlines regulation aspects of the blockchain by viewing it
+            as a blockchain stack in many layers starting with the electricity
+            supporting the blockchain all the way to offloading your crypto for
+            fiat. With centralization and decentralization on either side of the
+            matrix. the primary objective of the BRM is to understand where and
+            how regulation of the blockchain should be approached in order to
+            provide friendly web3 regulation.
           </p>
           <br></br>
           <p
-            className="mx-auto mb-10 text-center"
+            className="mx-auto text-center"
             style={{
               color: "var(--content-color)",
               maxWidth: "900px",
-              fontSize: "1rem",
+              fontSize: "1.5rem",
             }}
           >
-            This initiative aims to spotlight areas of concern, particularly
-            focusing on aspects related to the Howie test&apos;s significance in
-            determining whether a token qualifies as a security or commodity.
-            However, paramount to all objectives is the identification of spaces
-            within blockchain technology that adhere to its ethos while ensuring
-            regulatory compliance.
+            The first layer of the BRM starts with the electricty supporting the
+            blockchain. As you hover over the images of each row, you'll see the
+            specifics for that topic within that layer. The left side refers to
+            projects that are centralized, while the right side refers to
+            projects that are decentralized. For example, if there was a
+            municipality that wanted to provide electricity to miners in their
+            area, that would be a centralized project. Or if there was a solar
+            farm that wanted to provide electricity to miners, that could be a
+            decentralized project, depending on the structure of the solar farm.
           </p>
           <br></br>
-          <p
-            className="mx-auto mb-10 text-center"
-            style={{
-              color: "var(--content-color)",
-              maxWidth: "900px",
-              fontSize: "1rem",
-            }}
-          >
-            The BRM comprises a conglomerate of technology and resources
-            constituting the foundational structure of the blockchain and all
-            its derivatives. Initially, the BRM dissects the blockchain stack
-            into two core categories: centralized and decentralized.
-            Subsequently, each category is subjected to a predefined set of
-            inquiries across various layers of the blockchain stack.
-          </p>
         </div>
         <br></br>
         <div

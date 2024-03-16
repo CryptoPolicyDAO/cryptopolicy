@@ -16,7 +16,7 @@ function Matrix() {
       
       p{
         font-family: 'Poppins', sans-serif;
-        line-height: 1.7;
+        line-height: 1.2;
         color: var(--effect-2);
         margin: 0;
       }
