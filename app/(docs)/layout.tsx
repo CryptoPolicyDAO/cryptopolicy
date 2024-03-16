@@ -14,8 +14,8 @@ interface DocsLayoutProps {
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <div className="quando-regular flex min-h-screen flex-col">
+      <header className="quando-regular sticky top-0 z-40 w-full border-b bg-background">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav}>
             <DocsSidebarNav items={docsConfig.sidebarNav} />
@@ -30,7 +30,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-7 w-7" />
+                <Icons.gitHub className="size-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </nav>
@@ -39,6 +39,10 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       </header>
       <div className="container flex-1">{children}</div>
       <SiteFooter className="border-t" />
+      <style>
+        @import
+        url(https://fonts.googleapis.com/css2?family=Quando&display=swap)
+      </style>
     </div>
   )
 }

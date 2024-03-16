@@ -90,8 +90,8 @@ export default async function DocPage({ params }: DocPageProps) {
   const toc = await getTableOfContents(doc.body.raw)
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[2fr_200px]">
-      <div className="mx-auto w-full min-w-0">
+    <main className="quando-regular relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[2fr_200px]">
+      <div className="quando-regular mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <Mdx code={doc.body.code} />
         <hr className="my-4 md:my-6" />
@@ -102,6 +102,10 @@ export default async function DocPage({ params }: DocPageProps) {
           <DashboardTableOfContents toc={toc} />
         </div>
       </div>
+      <style>
+        @import
+        url(https://fonts.googleapis.com/css2?family=Quando&display=swap)
+      </style>
     </main>
   )
 }
