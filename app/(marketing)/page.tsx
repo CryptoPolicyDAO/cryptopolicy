@@ -70,11 +70,19 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
-      <div className="container flex max-w-[40rem] flex-col items-center gap-4">
+      <div className="container relative flex max-w-[40rem] flex-col items-center gap-4">
         <video autoPlay loop muted style={{ borderRadius: "20px" }}>
           <source src="/images/logo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0  transition-opacity duration-300 hover:opacity-100">
+          <p className="text-3xl font-bold text-gray-400">
+            Created by{" "}
+            <Link href="https://twitter.com/motivationalabs" target="_blank">
+              Motivational Labs
+            </Link>
+          </p>
+        </div>
       </div>
 
       <section
