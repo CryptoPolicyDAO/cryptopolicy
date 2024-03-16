@@ -137,7 +137,7 @@ function Matrix() {
         }
         .section-fluid-main {
             position: relative;
-            width: calc(100% - 10px);
+            width: calc(100% - 20px);
           }
           
           .section-fluid-main h1 {
@@ -169,7 +169,7 @@ function Matrix() {
         }
         .section-fluid-main {
             position: relative;
-            width: calc(100% - 10px);
+            width: calc(100% - 20px);
           }
           
           .section-fluid-main h1 {
