@@ -137,7 +137,7 @@ function Matrix() {
         }
         .section-fluid-main {
             position: relative;
-            width: calc(100% - 20px);
+            width: calc(100% - 15px);
           }
           
           .section-fluid-main h1 {
