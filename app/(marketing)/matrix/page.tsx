@@ -5,56 +5,36 @@ import MatrixLongForm from "./MatrixLongForm"
 
 export default function Contribute() {
   return (
-    <div className="quando-regular">
-      <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-        <h1
-          className="mt-20 text-center"
-          style={{ color: "var(--header-color)", fontSize: "2rem" }}
-        >
+    <section className="quando-regular container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24">
+      <div className="mx-auto flex max-w-[60rem] flex-col items-center space-y-4 text-center">
+        <h2 className="quando-regular text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Blockchain Regulation Matrix
-        </h1>
-        <div>
-          <p
-            className="mx-auto my-10 text-center"
-            style={{
-              color: "var(--description-color)",
-              fontSize: "1.5rem",
-              maxWidth: "900px",
-            }}
-          >
-            The Blockchain Regulation Matrix (BRM) establishes a framework
-            outlining the concerns of regulating the blockchain from the
-            governments and the consumers perspective. By doing so, it provides
-            a backbone to approach web3 regulation pragmatically and clearly.
-            The BRM outlines regulation aspects of the blockchain by viewing it
-            as a blockchain stack in many layers starting with the electricity
-            supporting the blockchain all the way to offloading your crypto for
-            fiat. With centralization and decentralization on either side of the
-            matrix. the primary objective of the BRM is to understand where and
-            how regulation of the blockchain should be approached in order to
-            provide friendly web3 regulation.
-          </p>
-          <br></br>
-          <p
-            className="mx-auto text-center"
-            style={{
-              color: "var(--content-color)",
-              maxWidth: "900px",
-              fontSize: "1.5rem",
-            }}
-          >
-            The first layer of the BRM starts with the electricty supporting the
-            blockchain. As you hover over the images of each row, you'll see the
-            specifics for that topic within that layer. The left side refers to
-            projects that are centralized, while the right side refers to
-            projects that are decentralized. For example, if there was a
-            municipality that wanted to provide electricity to miners in their
-            area, that would be a centralized project. Or if there was a solar
-            farm that wanted to provide electricity to miners, that could be a
-            decentralized project, depending on the structure of the solar farm.
-          </p>
-          <br></br>
-        </div>
+        </h2>
+        <p className="quando-regular max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          The Blockchain Regulation Matrix (BRM) establishes a framework
+          outlining the concerns of regulating the blockchain from both the
+          government and the consumer perspective, and in doing so, provides a
+          pragmatic and clear approach to Web3 regulation. The BRM outlines
+          regulation aspects of the blockchain by viewing it as a blockchain
+          stack in many layers starting with the electricity physically
+          supporting the blockchain at the base layer, all the way to the
+          process of offloading crypto to fiat currency. With centralization and
+          decentralization on either side of the matrix, the primary objective
+          of the BRM is to understand where and how regulation of the blockchain
+          should be developed specific to each layer.
+        </p>
+        <p className="quando-regular max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          Beginning with the electricty supporting the blockchain, as you hover
+          over the images of each row, you'll see the specifics for that topic
+          within that layer. The left side refers to projects that are
+          centralized, while the right side refers to projects that are
+          decentralized. For example, if there was an organization or business
+          that wanted to provide electricity to miners in their area, that would
+          be a centralized project. However, if there was a solar farm operating
+          as a DAO that wanted to provide electricity to miners, that could be a
+          decentralized project.
+        </p>
+
         <br></br>
         <div
           className="mx-auto w-full max-w-lg rounded-md px-4 py-3"
@@ -71,11 +51,16 @@ export default function Contribute() {
           <br></br>
           <p>Hover over each of the images below to read more information.</p>
         </div>
+
+        <Matrix />
+        <br />
+        <br />
+        <MatrixLongForm />
       </div>
-      <Matrix />
-      <br />
-      <br />
-      <MatrixLongForm />
-    </div>
+      <style>
+        @import
+        url(https://fonts.googleapis.com/css2?family=Quando&display=swap)
+      </style>
+    </section>
   )
 }

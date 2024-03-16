@@ -324,8 +324,8 @@ function Matrix() {
             className="text-3xl"
             style={{ maxWidth: "400px", color: "var(--hover-subtext)" }}
           >
-            This row applies only to companies that are producing the
-            electricity that powers the blockchain.
+            This row applies only to entities that are producing the electricity
+            that powers the blockchain.
           </h2>
         </div>
         <div className="section-col">
