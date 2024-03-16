@@ -158,6 +158,38 @@ function Matrix() {
           }
         }
 
+        @media (max-width: 620px) {
+        .section-col{
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .hover-text h2{
+          font-size: 3vw;
+        }
+        .section-fluid-main {
+            position: relative;
+            width: calc(100% - 10px);
+          }
+          
+          .section-fluid-main h1 {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+          }
+          .image1 {
+            background-image: var(--image1);
+            width: "80px",
+            height: "80px",
+          }
+
+          .image2 {
+            background-image: var(--image2);
+            width: "80px",
+            height: "80px",
+          }
+        }
+
         .section-row .section-col {
           position: relative;
           width: 100%;
