@@ -76,7 +76,7 @@ export default async function IndexPage() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 flex items-center justify-center opacity-0  transition-opacity duration-300 hover:opacity-100">
-          <p className="text-3xl font-bold text-gray-400">
+          <p className="text-2xl font-bold text-gray-400">
             Created by{" "}
             <Link href="https://twitter.com/motivationalabs" target="_blank">
               Motivational Labs

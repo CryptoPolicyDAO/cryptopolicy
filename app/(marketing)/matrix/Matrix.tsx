@@ -127,21 +127,18 @@ function Matrix() {
       
           
       @media (max-width: 767px) {
-        .section-col {
+        .section-col{
           -ms-flex: 0 0 100%;
           flex: 0 0 100%;
           max-width: 100%;
         }
-
-        .hover-text h2 {
+        .hover-text h2{
           font-size: 3vw;
         }
-
         .section-fluid-main {
-          width: calc(100% - 20px); /* Decrease width for mobile */
-          padding: 30px 0; /* Adjust padding for mobile */
-        }
-      }
+            position: relative;
+            width: calc(100% - 20px);
+          }
           
           .section-fluid-main h1 {
             position: sticky;
