@@ -1,10 +1,12 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 
 import { login, signup } from "./actions"
 
 export default function LoginPage() {
+  const [showSignupButton, setShowSignupButton] = useState(false)
   const handleLogin = async (event) => {
     event.preventDefault() // Prevent default form submission
 
@@ -33,6 +35,10 @@ export default function LoginPage() {
     }
   }
 
+  const toggleSignupButton = () => {
+    setShowSignupButton(!showSignupButton) // Toggle button visibility
+  }
+
   return (
     <>
       <div className="quando-regular container flex max-w-[64rem] flex-col items-center gap-4 text-center leading-normal text-muted-foreground">
@@ -42,10 +48,7 @@ export default function LoginPage() {
 
         <div>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            If you have not created an account, you can do so by entering your
-            email and creating any password you want and hitting the sign up
-            button. A confirmation email will be sent to you. Otherwise, you can
-            log in with your email and password.
+            This is the member login page.
           </p>
         </div>
 
@@ -101,34 +104,38 @@ export default function LoginPage() {
               Log in
             </button>
           </form>
-          <button
-            style={{
-              border: "1px solid black",
-              padding: "10px",
-              width: "300px",
-              textAlign: "center",
-            }}
-            onClick={handleSignup}
-          >
-            Sign up
-          </button>
-          <p className="my-10 px-8 text-center text-sm text-muted-foreground ">
-            By signing up, you agree to our{" "}
-            <Link
-              href="/terms"
-              className="hover:text-brand underline underline-offset-4"
+          {showSignupButton && (
+            <button
+              style={{
+                border: "1px solid black",
+                padding: "10px",
+                width: "300px",
+                textAlign: "center",
+              }}
+              onClick={handleSignup}
             >
-              Terms of Service
-            </Link>{" "}
-            and{" "}
-            <Link
-              href="/privacy"
-              className="hover:text-brand underline underline-offset-4"
-            >
-              Privacy Policy
-            </Link>
-            .
-          </p>
+              Sign up
+            </button>
+          )}
+          {showSignupButton && (
+            <p className="my-10 px-8 text-center text-sm text-muted-foreground ">
+              By signing up, you agree to our{" "}
+              <Link
+                href="/terms"
+                className="hover:text-brand underline underline-offset-4"
+              >
+                Terms of Service
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/privacy"
+                className="hover:text-brand underline underline-offset-4"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+          )}
         </div>
       </div>
     </>
