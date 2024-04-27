@@ -44,7 +44,7 @@ export default async function IndexPage() {
             className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
             target="_blank"
           >
-            Follow us on Twitter
+            Twitter
           </Link>
           <h1 className="quando-regular text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             Crypto Policy DAO
@@ -53,12 +53,6 @@ export default async function IndexPage() {
             Lobbying for web3 friendly regulation
           </p>
           <div className="space-x-4">
-            <Link
-              href="./auth/login"
-              className={cn(buttonVariants({ size: "lg" }))}
-            >
-              Contribute
-            </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"
