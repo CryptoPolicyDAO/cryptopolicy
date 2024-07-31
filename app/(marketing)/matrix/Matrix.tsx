@@ -263,6 +263,10 @@ function Matrix() {
                         Amount of electricity required to maintain the
                         blockchain and the amount per transaction
                       </li>
+                      <li>
+                        Concentration of electricity supplied to a blockchain
+                        from within countries or areas.
+                      </li>
                     </ul>
                   </div>
                 </li>
@@ -2015,16 +2019,6 @@ function Matrix() {
                   </div>
                 </li>
               </ul>
-              <ul className="pl-12">
-                <li className="topic">
-                  <h3>
-                    Does blockchain technology currently exist to fulfill these
-                    obligations, and if so, what is it?
-                  </h3>
-
-                  <ul className="description list-disc pl-12"></ul>
-                </li>
-              </ul>
             </div>
           </h2>
         </div>
@@ -2101,7 +2095,10 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Government Concerns</h3>
-                    <ul className="description list-disc pl-12"></ul>
+                    <ul className="description list-disc pl-12">
+                      <li>That misinformation cannot be censored</li>
+                      <li>Illicit profits from non-original work </li>
+                    </ul>
                   </div>
                 </li>
               </ul>
@@ -2109,7 +2106,12 @@ function Matrix() {
                 <li className="topic">
                   <div>
                     <h3>Consumer Risks</h3>
-                    <ul className="description list-disc pl-12"></ul>
+                    <ul className="description list-disc pl-12">
+                      <li>
+                        Original artists not being able to censor copycats.
+                      </li>
+                      <li></li>
+                    </ul>
                   </div>
                 </li>
               </ul>
@@ -2127,16 +2129,6 @@ function Matrix() {
                     <h3>Cons to lack of regulation</h3>
                     <ul className="description list-disc pl-12"></ul>
                   </div>
-                </li>
-              </ul>
-              <ul className="pl-12">
-                <li className="topic">
-                  <h3>
-                    Does blockchain technology currently exist to fulfill these
-                    obligations, and if so, what is it?
-                  </h3>
-
-                  <ul className="description list-disc pl-12"></ul>
                 </li>
               </ul>
             </div>

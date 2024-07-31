@@ -15,7 +15,7 @@ export const marketingConfig: MarketingConfig = {
       href: "/docs",
     },
     {
-      title: "Regulation Matrix",
+      title: "Blockchain Regulation Matrix",
       href: "/matrix",
     },
 

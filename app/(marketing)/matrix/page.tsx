@@ -38,13 +38,13 @@ export default function Contribute() {
         className="mx-auto w-full max-w-lg rounded-md px-4 py-3"
         style={{
           color: "var(--sub-header-color)",
-          backgroundColor: "var(--bac4)",
+          backgroundColor: "var(--bac3)",
           fontSize: "1rem",
         }}
       >
         <p>
           There are two illustrations of the Blockchain Regulation Matrix below,
-          a short-form immediately below and a long-form after.
+          a short-form immediately below and a long-form afterwards.
         </p>
         <br></br>
         <p>Hover over each of the images below to read more information.</p>
