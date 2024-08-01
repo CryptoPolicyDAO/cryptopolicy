@@ -9,9 +9,9 @@ authors:
 
 <Callout>What is Audit Liability and why is it important?</Callout>
 
-#### Understanding the nuances between developer intent and code execution is critical in establishing clear Audit Liability standards in the web3 space.
+#### Understanding the nuances between developer intent and code execution is critical in establishing clear Audit Liability standards in web3.
 
-The expectation of an audit is that every error is understood and corrected. However, when dealing with
+The expectation of an smart contract audit is that every error is understood and corrected. Though, when dealing with
 programming languages, fully comprehending all potential actions of a smart contract can be challenging. Developers aim
 to ensure their contracts operate as intended and are free from vulnerabilities that could result in loss of funds or
 unintended outcomes. However, smart contracts operate based on the defined logic principles and syntax of the programming language
@@ -26,13 +26,8 @@ are essential for accurate and effective audits and especially for establishing 
 
 Auditor Liability begins with the auditing scope and ends with the implementation of the corrections, so establishing
 the parameters that define it is necessary in order to understand if an audit is thorough, comprehensive, and utilizing up to-date smart contract
-best practices. So, there should be a standard understanding of what is occuring during an audit and what the level of security expectations should
+best practices. There should be a standard understanding of what is occuring during an audit and what the level of security expectations should
 be.
-
-When developing a protocol and writing a smart contract, there are typically two primary goals: to ensure the contract
-functions as intended and to eliminate vulnerabilities that could result in loss of funds or unintended consequences.
-Smart contracts operate based on defined logical principles and the syntax of the programming language used.
-This implies that contracts have specific purposes and actions that they can perform, constrained by these predefined rules.
 
 #### Integer Overflow
 
@@ -115,62 +110,69 @@ Mock Kingdom Smart Contract
 │
 ├─ Initialize Game (Constructor)
 │  ├─ Set owner
-│  │  └─ Risk: Centralization
-│  │     ├─ Mitigation 1: Implement multi-sig wallet
+│  │  ├─ Asset Layer Risk: None
+│  │  └─ Administrative Risk: Centralization (Known since Ethereum's inception, 2015)
+│  │     ├─ Mitigation 1: Implement multi-sig wallet (Introduced by BitGo in 2013)
 │  │     │  └─ Resulting Risk: Coordination failure
 │  │     │     └─ Potential Outcome: Delayed decision-making
-│  │     └─ Mitigation 2: Implement DAO governance
+│  │     └─ Mitigation 2: Implement DAO governance (First major DAO: The DAO, April 30, 2016)
 │  │        └─ Resulting Risk: Voter apathy
 │  │           └─ Potential Outcome: Minority control
 │  │
 │  ├─ Initialize player stats (use SafeMath)
-│  │  └─ Risk: Integer overflow/underflow
-│  │     ├─ Mitigation 1: Use OpenZeppelin's SafeMath library
-│  │     │  └─ Resulting Risk: Increased gas costs
-│  │     │     └─ Potential Outcome: Higher transaction fees
-│  │     └─ Mitigation 2: Use Solidity 0.8.x built-in overflow checks
-│  │        └─ Resulting Risk: Compatibility issues with older compilers
-│  │           └─ Potential Outcome: Limited portability
+│  │  ├─ Asset Layer Risk: Integer overflow/underflow (BEC Token hack, April 22, 2018)
+│  │  │  ├─ Mitigation 1: Use OpenZeppelin's SafeMath library (SafeMath became a library: April 19, 2017)
+│  │  │  │  └─ Resulting Risk: Increased gas costs
+│  │  │  │     └─ Potential Outcome: Higher transaction fees
+│  │  │  └─ Mitigation 2: Use Solidity 0.8.x built-in overflow checks (Released: December 16, 2020)
+│  │  │     └─ Resulting Risk: Compatibility issues with older compilers
+│  │  │        └─ Potential Outcome: Limited portability
+│  │  └─ Administrative Risk: None
 │  │
 │  └─ Mint initial game tokens (check for overflow)
-│     └─ Risk: Token supply manipulation
-│        ├─ Mitigation 1: Implement supply cap
-│        │  └─ Resulting Risk: Inflexibility in token economics
-│        │     └─ Potential Outcome: Difficulty in adjusting to game growth
-│        └─ Mitigation 2: Implement minting limits per time period
-│           └─ Resulting Risk: Complex tracking mechanism
-│              └─ Potential Outcome: Increased contract complexity
+│     ├─ Asset Layer Risk: Token supply manipulation (Highlighted by SmartBillions hack, October 2017)
+│     │  ├─ Mitigation 1: Implement supply cap (Used in Bitcoin protocol since 2009)
+│     │  │  └─ Resulting Risk: Inflexibility in token economics
+│     │  │     └─ Potential Outcome: Difficulty in adjusting to game growth
+│     │  └─ Mitigation 2: Implement minting limits per time period (Used in MakerDAO, December 2017)
+│     │     └─ Resulting Risk: Complex tracking mechanism
+│     │        └─ Potential Outcome: Increased contract complexity
+│     └─ Administrative Risk: Unauthorized minting
+│        └─ Mitigation: Implement role-based access control (OpenZeppelin, 2018)
+│           └─ Resulting Risk: Centralization of minting authority
+│              └─ Potential Outcome: Single point of failure for token issuance
 │
 ├─ Join Game (Function)
 │  ├─ Check if player exists
 │  │  ├─ Yes: Revert transaction
-│  │  │  └─ Risk: Denial of Service (DoS)
-│  │  │     ├─ Mitigation 1: Implement cooldown period for join attempts
-│  │  │     │  └─ Resulting Risk: Legitimate players locked out
-│  │  │     │     └─ Potential Outcome: Reduced player onboarding
-│  │  │     └─ Mitigation 2: Implement gas-efficient existence check
-│  │  │        └─ Resulting Risk: Increased storage costs
-│  │  │           └─ Potential Outcome: Higher deployment/operation costs
+│  │  │  ├─ Asset Layer Risk: Denial of Service (DoS) (GovernMental Ponzi scheme, April 2016)
+│  │  │  │  ├─ Mitigation 1: Implement cooldown period (CryptoKitties, November 28, 2017)
+│  │  │  │  │  └─ Resulting Risk: Legitimate players locked out
+│  │  │  │  │     └─ Potential Outcome: Reduced player onboarding
+│  │  │  │  └─ Mitigation 2: Implement gas-efficient existence check (EIP-1052, May 2018)
+│  │  │  │     └─ Resulting Risk: Increased storage costs
+│  │  │  │        └─ Potential Outcome: Higher deployment/operation costs
+│  │  │  └─ Administrative Risk: None
 │  │  │
 │  │  └─ No: Create new player
-│  │     ├─ Assign initial resources (use SafeMath)
-│  │     │  └─ Risk: Resource exploitation
-│  │     │     ├─ Mitigation 1: Implement progressive resource allocation
-│  │     │     │  └─ Resulting Risk: Complex onboarding process
-│  │     │     │     └─ Potential Outcome: New player confusion
-│  │     │     └─ Mitigation 2: Implement initial resource limits
-│  │     │        └─ Resulting Risk: Initial gameplay limitations
-│  │     │           └─ Potential Outcome: Reduced early-game engagement
-│  │     │
-│  │     └─ Emit NewPlayerEvent
-│  │        └─ Risk: Event spam
-│  │           ├─ Mitigation 1: Implement event throttling
-│  │           │  └─ Resulting Risk: Delayed event propagation
-│  │           │     └─ Potential Outcome: Inconsistent front-end updates
-│  │           └─ Mitigation 2: Batch event emissions
-│  │              └─ Resulting Risk: Increased transaction size
-│  │                 └─ Potential Outcome: Higher gas costs for users
-
+│  │     ├─ Asset Layer Risk: Resource exploitation (Multiple game hacks, e.g., Fomo3D, July 2018)
+│  │     │  ├─ Mitigation 1: Implement progressive resource allocation (Axie Infinity, 2018)
+│  │     │  │  └─ Resulting Risk: Complex onboarding process
+│  │     │  │     └─ Potential Outcome: New player confusion
+│  │     │  └─ Mitigation 2: Implement initial resource limits (Common in DeFi since Compound, September 2018)
+│  │     │     └─ Resulting Risk: Initial gameplay limitations
+│  │     │        └─ Potential Outcome: Reduced early-game engagement
+│  │     └─ Administrative Risk: None
+│  │
+│  └─ Emit NewPlayerEvent
+│     ├─ Asset Layer Risk: Event spam (Ethereum network congestion, CryptoKitties, December 2017)
+│     │  ├─ Mitigation 1: Implement event throttling (EIP-1699 proposed, October 2018)
+│     │  │  └─ Resulting Risk: Delayed event propagation
+│     │  │     └─ Potential Outcome: Inconsistent front-end updates
+│     │  └─ Mitigation 2: Batch event emissions (Uniswap V2, May 2020)
+│     │     └─ Resulting Risk: Increased transaction size
+│     │        └─ Potential Outcome: Higher gas costs for users
+│     └─ Administrative Risk: None
 
 ```
 
