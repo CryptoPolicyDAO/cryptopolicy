@@ -1,7 +1,7 @@
 ---
 title: Auditor Liability
 description: How do you define Auditor Liability and its importance
-image: /images/blog/naic.png
+image: /images/blog/audit.png
 date: "2024-7-31"
 authors:
   - cryptopolicydao
@@ -9,15 +9,115 @@ authors:
 
 <Callout>What is Audit Liability and why is it important?</Callout>
 
-### Audit Liability begins with the auditing scope and ends with the implementation of the of the corrections.
+#### Understanding the nuances between developer intent and code execution is critical in establishing clear Audit Liability standards in the web3 space.
 
-The expectation of receiving an audit is that every error is understood and corrected, however, when a programming langauge is
-Turing Complete, is it possible to fully understand the potential actions of the smart contract?
+The expectation of an audit is that every error is understood and corrected. However, when dealing with
+programming languages, fully comprehending all potential actions of a smart contract can be challenging. Developers aim
+to ensure their contracts operate as intended and are free from vulnerabilities that could result in loss of funds or
+unintended outcomes. However, smart contracts operate based on the defined logic principles and syntax of the programming language
+used, meaning certain operations are strictly bound by these rules.
 
----
+Auditors must go beyond merely identifying potential errors. They need to grasp the developer's intended user journey
+and app expectations to ensure the contract behaves as expected. For example, an integer overflow might be a deliberate
+feature in some scenarios, like resetting a counter, rather than a vulnerability. Misinterpreting these intentions can
+lead to misguided corrections. Therefore, a thorough understanding and clear communication between developers and auditors
+are essential for accurate and effective audits.
 
+Audit Liability begins with the auditing scope and ends with the implementation of the corrections.
+The expectation of an audit is not just to identify and correct every error but to understand the potential
+actions of the smart contract, especially when dealing with Turing Complete programming languages.
+Given their complexity, it is challenging to fully predict and comprehend every possible behavior that a smart contract might exhibit.
+
+When developing a protocol and writing a smart contract, there are typically two primary goals: to ensure the contract
+functions as intended and to eliminate vulnerabilities that could result in loss of funds or unintended consequences.
+Smart contracts operate based on defined logical principles and the syntax of the programming language used.
+This implies that contracts have specific purposes and actions that they can perform, constrained by these predefined rules.
+
+For instance, in Solidity, a common issue is integer overflow and underflow. Before the introduction of the SafeMath library,
+developers had to manually handle these edge cases. An overflow can occur when an arithmetic operation exceeds the maximum
+limit of the data type, leading to incorrect results and potential vulnerabilities. By using libraries like SafeMath,
+developers can prevent these issues by automatically reverting transactions that cause overflows. In Vyper, on the other hand,
+integer overflow and underflow are inherently prevented as the language includes built-in checks that revert
+transactions on such operations. This design choice simplifies development and enhances security, but it still necessitates
+a comprehensive audit to ensure there are no other logical errors or overlooked vulnerabilities. By leveraging the strengths
+of each language and adhering to best practices, developers can better manage audit liabilities and improve the robustness
+of their smart contracts.
+
+#### Integer Overflow
+
+Integer overflow occurs when a calculation exceeds the maximum value that can be stored in a variable.
+In Solidity, for example, the `uint8` data type can store values from 0 to 255, so if you add 1 to 255,
+it overflows and wraps around to 0 leading to an error, or possible exploit.
+
+```solidity
+uint8 max = 255;
+uint8 result = max + 1;
+```
+
+However, in actuality, this is what is happening:
+
+```solidity
+result = 255 + 1 = 0
+```
+
+#### Integer underflow
+
+Integer underflow occurs when a calculation goes below the minimum value that can be stored in a variable.
+Using the same uint8 data type in Solidity, if you subtract 1 from 0, it underflows and wraps around to 255.
+
+```solidity
+uint8 min = 0;
+uint8 result = min - 1;
+```
+
+As well, In this scenario, since uint8 cannot store negative numbers,
+subtracting 1 from 0 causes it to wrap around to the highest value, which is 255.
+
+```solidity
+result = 0 - 1 = 255
+```
+
+#### Example with the SafeMath OpenZeppeling import
+
+When programming with Solidity, developers can utilize the OpenZeppelin SafeMath import standard and utilize smart contract best practices that are
+open-source and tested by multiple smart contract experts. This means that any operation that overflows or underflows will not succeed
+and will revert the transaction. The main point of this is to illustrate the difference of what is intended to happen when the
+developer codes the smart contract and what is actually happening using the logic and syntax of a particular smart contract language.
+
+```silidity
+using SafeMath for uint8;
+
+uint8 max = 255;
+uint8 result = max.add(1); // This will revert the transaction
+
+uint8 min = 0;
+uint8 result = min.sub(1); // This will revert the transaction
+```
+
+| Language          | Integer Overflow/Underflow Vulnerability | Mitigation Method                          |
+| ----------------- | ---------------------------------------- | ------------------------------------------ |
+| Solidity          | Yes (pre-0.8.0) / No (0.8.0+)            | Library (SafeMath) / Syntax (0.8.0+)       |
+| Vyper             | No                                       | Syntax                                     |
+| Rust              | Yes                                      | Syntax (Debug mode)/Library (Release mode) |
+| C++               | Yes                                      | Manual / Library / Compiler options        |
+| Tezos (Michelson) | No                                       | Syntax                                     |
+| Move (Libra)      | No                                       | Syntax                                     |
+
+#### Conclusion
+
+The difference between a developer's intended code and the actual implementation can create significant vulnerabilities,
+highlighting the necessity for auditors to fully grasp the developer's vision. This is crucial in smart contract auditing,
+where issues like integer overflow and underflow can either be a critical vulnerability or an intended feature.
+For example, developers might design a system where an overflow is meant to reset a counter, but if auditors are
+unaware of this intention, they might flag it as a vulnerability. Therefore, establishing clear audit liability
+standards is vital to ensure that audits accurately reflect the developer's intended user journey and application expectations,
+preventing unnecessary corrections and enhancing overall security.
 Sources
 
 1.
 2.
 3.
+
+```
+
+```
