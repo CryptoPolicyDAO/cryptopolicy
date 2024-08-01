@@ -17,31 +17,22 @@ to ensure their contracts operate as intended and are free from vulnerabilities 
 unintended outcomes. However, smart contracts operate based on the defined logic principles and syntax of the programming language
 used, meaning certain operations are strictly bound by these rules.
 
-Auditors must go beyond merely identifying potential errors. They need to grasp the developer's intended user journey
-and app expectations to ensure the contract behaves as expected. For example, an integer overflow might be a deliberate
+Auditors must go beyond merely identifying potential errors, they need to grasp the developer's intended user journey
+and expectations of the app to ensure the smart contracts behave as expected. For example, in the programming language Solidity,
+a common issue is integer overflow and underflow, and an integer overflow might be a deliberate
 feature in some scenarios, like resetting a counter, rather than a vulnerability. Misinterpreting these intentions can
-lead to misguided corrections. Therefore, a thorough understanding and clear communication between developers and auditors
-are essential for accurate and effective audits.
+lead to misguided corrections and unintended actions. Therefore, a thorough understanding and clear communication between developers and auditors
+are essential for accurate and effective audits and especially for establishing Auditor Liability.
 
-Audit Liability begins with the auditing scope and ends with the implementation of the corrections.
-The expectation of an audit is not just to identify and correct every error but to understand the potential
-actions of the smart contract, especially when dealing with Turing Complete programming languages.
-Given their complexity, it is challenging to fully predict and comprehend every possible behavior that a smart contract might exhibit.
+Auditor Liability begins with the auditing scope and ends with the implementation of the corrections, so establishing
+the parameters that define it is necessary in order to understand if an audit is thorough, comprehensive, and utilizing up to-date smart contract
+best practices. So, there should be a standard understanding of what is occuring during an audit and what the level of security expectations should
+be.
 
 When developing a protocol and writing a smart contract, there are typically two primary goals: to ensure the contract
 functions as intended and to eliminate vulnerabilities that could result in loss of funds or unintended consequences.
 Smart contracts operate based on defined logical principles and the syntax of the programming language used.
 This implies that contracts have specific purposes and actions that they can perform, constrained by these predefined rules.
-
-For instance, in Solidity, a common issue is integer overflow and underflow. Before the introduction of the SafeMath library,
-developers had to manually handle these edge cases. An overflow can occur when an arithmetic operation exceeds the maximum
-limit of the data type, leading to incorrect results and potential vulnerabilities. By using libraries like SafeMath,
-developers can prevent these issues by automatically reverting transactions that cause overflows. In Vyper, on the other hand,
-integer overflow and underflow are inherently prevented as the language includes built-in checks that revert
-transactions on such operations. This design choice simplifies development and enhances security, but it still necessitates
-a comprehensive audit to ensure there are no other logical errors or overlooked vulnerabilities. By leveraging the strengths
-of each language and adhering to best practices, developers can better manage audit liabilities and improve the robustness
-of their smart contracts.
 
 #### Integer Overflow
 
@@ -84,6 +75,12 @@ open-source and tested by multiple smart contract experts. This means that any o
 and will revert the transaction. The main point of this is to illustrate the difference of what is intended to happen when the
 developer codes the smart contract and what is actually happening using the logic and syntax of a particular smart contract language.
 
+In Vyper, on the other hand, integer overflow and underflow are inherently prevented as the language includes built-in checks that revert
+transactions on such operations. This design choice simplifies development and enhances security, but it still necessitates
+a comprehensive audit to ensure there are no other logical errors or overlooked vulnerabilities. By leveraging the strengths
+of each language and adhering to best practices, developers can better manage audit liabilities and improve the robustness
+of their smart contracts.
+
 ```silidity
 using SafeMath for uint8;
 
@@ -94,6 +91,8 @@ uint8 min = 0;
 uint8 result = min.sub(1); // This will revert the transaction
 ```
 
+#### Comparison of programming languages
+
 | Language          | Integer Overflow/Underflow Vulnerability | Mitigation Method                          |
 | ----------------- | ---------------------------------------- | ------------------------------------------ |
 | Solidity          | Yes (pre-0.8.0) / No (0.8.0+)            | Library (SafeMath) / Syntax (0.8.0+)       |
@@ -103,21 +102,80 @@ uint8 result = min.sub(1); // This will revert the transaction
 | Tezos (Michelson) | No                                       | Syntax                                     |
 | Move (Libra)      | No                                       | Syntax                                     |
 
-#### Conclusion
+#### Auditor Liability
 
 The difference between a developer's intended code and the actual implementation can create significant vulnerabilities,
-highlighting the necessity for auditors to fully grasp the developer's vision. This is crucial in smart contract auditing,
-where issues like integer overflow and underflow can either be a critical vulnerability or an intended feature.
-For example, developers might design a system where an overflow is meant to reset a counter, but if auditors are
-unaware of this intention, they might flag it as a vulnerability. Therefore, establishing clear audit liability
-standards is vital to ensure that audits accurately reflect the developer's intended user journey and application expectations,
-preventing unnecessary corrections and enhancing overall security.
+highlighting the necessity for auditors to fully grasp the developer's vision. This is crucial in smart contract auditing
+as both parties should rely on the audit with almost equal weight.
+
+#### Example Logic Tree aligned with Expected User Journey
+
+```solidity
+Mock Kingdom Smart Contract
+│
+├─ Initialize Game (Constructor)
+│  ├─ Set owner
+│  │  └─ Risk: Centralization
+│  │     ├─ Mitigation 1: Implement multi-sig wallet
+│  │     │  └─ Resulting Risk: Coordination failure
+│  │     │     └─ Potential Outcome: Delayed decision-making
+│  │     └─ Mitigation 2: Implement DAO governance
+│  │        └─ Resulting Risk: Voter apathy
+│  │           └─ Potential Outcome: Minority control
+│  │
+│  ├─ Initialize player stats (use SafeMath)
+│  │  └─ Risk: Integer overflow/underflow
+│  │     ├─ Mitigation 1: Use OpenZeppelin's SafeMath library
+│  │     │  └─ Resulting Risk: Increased gas costs
+│  │     │     └─ Potential Outcome: Higher transaction fees
+│  │     └─ Mitigation 2: Use Solidity 0.8.x built-in overflow checks
+│  │        └─ Resulting Risk: Compatibility issues with older compilers
+│  │           └─ Potential Outcome: Limited portability
+│  │
+│  └─ Mint initial game tokens (check for overflow)
+│     └─ Risk: Token supply manipulation
+│        ├─ Mitigation 1: Implement supply cap
+│        │  └─ Resulting Risk: Inflexibility in token economics
+│        │     └─ Potential Outcome: Difficulty in adjusting to game growth
+│        └─ Mitigation 2: Implement minting limits per time period
+│           └─ Resulting Risk: Complex tracking mechanism
+│              └─ Potential Outcome: Increased contract complexity
+│
+├─ Join Game (Function)
+│  ├─ Check if player exists
+│  │  ├─ Yes: Revert transaction
+│  │  │  └─ Risk: Denial of Service (DoS)
+│  │  │     ├─ Mitigation 1: Implement cooldown period for join attempts
+│  │  │     │  └─ Resulting Risk: Legitimate players locked out
+│  │  │     │     └─ Potential Outcome: Reduced player onboarding
+│  │  │     └─ Mitigation 2: Implement gas-efficient existence check
+│  │  │        └─ Resulting Risk: Increased storage costs
+│  │  │           └─ Potential Outcome: Higher deployment/operation costs
+│  │  │
+│  │  └─ No: Create new player
+│  │     ├─ Assign initial resources (use SafeMath)
+│  │     │  └─ Risk: Resource exploitation
+│  │     │     ├─ Mitigation 1: Implement progressive resource allocation
+│  │     │     │  └─ Resulting Risk: Complex onboarding process
+│  │     │     │     └─ Potential Outcome: New player confusion
+│  │     │     └─ Mitigation 2: Implement initial resource limits
+│  │     │        └─ Resulting Risk: Initial gameplay limitations
+│  │     │           └─ Potential Outcome: Reduced early-game engagement
+│  │     │
+│  │     └─ Emit NewPlayerEvent
+│  │        └─ Risk: Event spam
+│  │           ├─ Mitigation 1: Implement event throttling
+│  │           │  └─ Resulting Risk: Delayed event propagation
+│  │           │     └─ Potential Outcome: Inconsistent front-end updates
+│  │           └─ Mitigation 2: Batch event emissions
+│  │              └─ Resulting Risk: Increased transaction size
+│  │                 └─ Potential Outcome: Higher gas costs for users
+
+
+```
+
 Sources
 
 1.
 2.
 3.
-
-```
-
-```
