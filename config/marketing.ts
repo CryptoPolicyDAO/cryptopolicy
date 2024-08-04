@@ -14,11 +14,15 @@ export const marketingConfig: MarketingConfig = {
       title: "Documentation",
       href: "/docs",
     },
+
     {
       title: "Blockchain Regulation Matrix",
       href: "/matrix",
     },
-
+    {
+      title: "Bureaucratic Friction",
+      href: "/friction",
+    },
     {
       title: "DAO Members",
       href: "/members",
