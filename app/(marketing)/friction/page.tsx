@@ -178,31 +178,199 @@ const Friction = () => {
   const [matrix, setMatrix] = useState({
     Stablecoins: {
       MeasuringBureaucraticFriction: {
-        Production: { Before: 0, After: 0 },
-        Implementation: { Before: 0, After: 0 },
-        DataStorage: { Before: 0, After: 0 },
+        Administrative: {
+          Production: {
+            Response: {
+              "Increases response rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+            Retrieval: {
+              "Increases retrieval rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+          },
+          Implementation: {
+            Administrative: {
+              "Implemention training to current training ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Maintenance of processed records ratio": { Before: 0, After: 0 },
+            },
+            Financial: {
+              "New cost per constituent ratio per use increase": {
+                Before: 0,
+                After: 0,
+              },
+              "Cost per constituent annual maintenance increase": {
+                Before: 0,
+                After: 0,
+              },
+            },
+          },
+          "Data Storage": {
+            "Per Use by Constituent": {
+              "Storage Consumption per use ratio": { Before: 0, After: 0 },
+              "Storage Consumption per constituent ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Storage per update ratio": { Before: 0, After: 0 },
+            },
+          },
+        },
+        "Data Storage": {
+          Production: {
+            Response: {
+              "Increases response rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+            Retrieval: {
+              "Increases retrieval rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+          },
+          Implementation: {
+            Administrative: {
+              "Implemention training to current training ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Maintenance of processed records ratio": { Before: 0, After: 0 },
+            },
+            Financial: {
+              "New cost per constituent ratio per use increase": {
+                Before: 0,
+                After: 0,
+              },
+              "Cost per constituent annual maintenance increase": {
+                Before: 0,
+                After: 0,
+              },
+            },
+          },
+          "Data Storage": {
+            "Per Use by Constituent": {
+              "Storage Consumption per use ratio": { Before: 0, After: 0 },
+              "Storage Consumption per constituent ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Storage per update ratio": { Before: 0, After: 0 },
+            },
+          },
+        },
+        Security: {
+          Production: {
+            Response: {
+              "Increases response rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases response rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+            Retrieval: {
+              "Increases retrieval rate when requests > permitted with excess staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with expected staff":
+                { Before: 0, After: 0 },
+              "Increases retrieval rate when requests > permitted with less than expected staff":
+                { Before: 0, After: 0 },
+            },
+          },
+          Implementation: {
+            Administrative: {
+              "Implemention training to current training ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Maintenance of processed records ratio": { Before: 0, After: 0 },
+            },
+            Financial: {
+              "New cost per constituent ratio per use increase": {
+                Before: 0,
+                After: 0,
+              },
+              "Cost per constituent annual maintenance increase": {
+                Before: 0,
+                After: 0,
+              },
+            },
+          },
+          "Data Storage": {
+            "Per Use by Constituent": {
+              "Storage Consumption per use ratio": { Before: 0, After: 0 },
+              "Storage Consumption per constituent ratio": {
+                Before: 0,
+                After: 0,
+              },
+              "Storage per update ratio": { Before: 0, After: 0 },
+            },
+          },
+        },
       },
       ReductionOfBureaucraticFriction: {
-        Production: { Before: 0, After: 0 },
-        Implementation: { Before: 0, After: 0 },
-        DataStorage: { Before: 0, After: 0 },
+        // Same structure as MeasuringBureaucraticFriction
       },
       RiskManagement: {
-        Security: { Before: 0, After: 0 },
-        InvestmentFDIC: { Before: 0, After: 0 },
+        // Same structure as MeasuringBureaucraticFriction
       },
     },
-    // Repeat the structure for other research topics...
+    MedicalRecords: {
+      // Same structure as Stablecoins
+    },
+    TrustlessVoting: {
+      // Same structure as Stablecoins
+    },
+    IDVerification: {
+      // Same structure as Stablecoins
+    },
+    DataStorage: {
+      // Same structure as Stablecoins
+    },
+    Insurance: {
+      // Same structure as Stablecoins
+    },
   })
 
   // Update models based on matrix input
   useEffect(() => {
-    const newModels = { ...models }
+    const newModels = JSON.parse(JSON.stringify(models))
     Object.entries(matrix).forEach(([topic, categories]) => {
-      Object.entries(categories).forEach(([category, areas]) => {
-        Object.entries(areas).forEach(([area, values]) => {
-          const areaTotal = values.After - values.Before
-          newModels[topic][category][area] = areaTotal
+      Object.entries(categories).forEach(([category, researchAreas]) => {
+        Object.entries(researchAreas).forEach(([researchArea, areas]) => {
+          const areaTotal = Object.values(areas).reduce(
+            (acc, area) =>
+              acc +
+              Object.values(area).reduce(
+                (subAcc, subject) =>
+                  subAcc +
+                  Object.values(subject).reduce(
+                    (sum, q) => sum + (q.After - q.Before),
+                    0
+                  ),
+                0
+              ),
+            0
+          )
+          newModels[topic][category][researchArea] = areaTotal
         })
       })
     })
@@ -211,7 +379,7 @@ const Friction = () => {
 
   // Update research priority based on models
   useEffect(() => {
-    const newResearchPriority = { ...researchPriority }
+    const newResearchPriority = JSON.parse(JSON.stringify(researchPriority))
     Object.entries(models).forEach(([topic, categories]) => {
       Object.entries(categories).forEach(([category, areas]) => {
         newResearchPriority[topic][category] = Object.values(areas).reduce(
@@ -224,20 +392,22 @@ const Friction = () => {
   }, [models])
 
   // Handler for matrix input changes
-  const handleMatrixChange = (topic, category, area, field, value) => {
-    setMatrix((prevMatrix) => ({
-      ...prevMatrix,
-      [topic]: {
-        ...prevMatrix[topic],
-        [category]: {
-          ...prevMatrix[topic][category],
-          [area]: {
-            ...prevMatrix[topic][category][area],
-            [field]: parseInt(value) || 0,
-          },
-        },
-      },
-    }))
+  const handleMatrixChange = (
+    topic,
+    category,
+    researchArea,
+    area,
+    subject,
+    question,
+    field,
+    value
+  ) => {
+    setMatrix((prevMatrix) => {
+      const newMatrix = JSON.parse(JSON.stringify(prevMatrix))
+      newMatrix[topic][category][researchArea][area][subject][question][field] =
+        parseInt(value) || 0
+      return newMatrix
+    })
   }
 
   return (
@@ -631,276 +801,228 @@ const Friction = () => {
         </div>
         <h2>Part C: Matrix</h2>
         <div className="matrix-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Research Topic</th>
-                <th colSpan="3">Measuring Bureaucratic Friction</th>
-                <th colSpan="3">Reduction of Bureaucratic Friction</th>
-                <th colSpan="3">Risk Management</th>
-              </tr>
-              <tr>
-                <th></th>
-                <th>Area</th>
-                <th>Before</th>
-                <th>After</th>
-                <th>Area</th>
-                <th>Before</th>
-                <th>After</th>
-                <th>Area</th>
-                <th>Before</th>
-                <th>After</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(matrix).map(([topic, categories]) => (
-                <React.Fragment key={topic}>
-                  <tr>
-                    <td rowSpan="3">{topic}</td>
-                    <td>Production</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.MeasuringBureaucraticFriction.Production
-                            .Before
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "MeasuringBureaucraticFriction",
-                            "Production",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.MeasuringBureaucraticFriction.Production
-                            .After
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "MeasuringBureaucraticFriction",
-                            "Production",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>Production</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction.Production
-                            .Before
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "Production",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction.Production
-                            .After
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "Production",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>Security</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={categories.RiskManagement.Security.Before}
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "RiskManagement",
-                            "Security",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={categories.RiskManagement.Security.After}
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "RiskManagement",
-                            "Security",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Implementation</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction
-                            .Implementation.Before
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "Implementation",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction
-                            .Implementation.After
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "Implementation",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>Investment/FDIC</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={categories.RiskManagement.InvestmentFDIC.Before}
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "RiskManagement",
-                            "InvestmentFDIC",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={categories.RiskManagement.InvestmentFDIC.After}
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "RiskManagement",
-                            "InvestmentFDIC",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Data Storage</td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction.DataStorage
-                            .Before
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "DataStorage",
-                            "Before",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        value={
-                          categories.ReductionOfBureaucraticFriction.DataStorage
-                            .After
-                        }
-                        onChange={(e) =>
-                          handleMatrixChange(
-                            topic,
-                            "ReductionOfBureaucraticFriction",
-                            "DataStorage",
-                            "After",
-                            e.target.value
-                          )
-                        }
-                      />
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </React.Fragment>
+          {Object.entries(matrix).map(([topic, categories]) => (
+            <div key={topic}>
+              <h3>{topic}</h3>
+              {Object.entries(categories).map(([category, researchAreas]) => (
+                <div key={`${topic}-${category}`}>
+                  <h4>{category}</h4>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Research Topic</th>
+                        <th>Research Area</th>
+                        <th>Area</th>
+                        <th>Subject</th>
+                        <th>Question</th>
+                        <th>Before</th>
+                        <th>After</th>
+                        <th>Amount</th>
+                        <th>Sum</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(researchAreas).map(
+                        ([researchArea, areas]) => (
+                          <React.Fragment
+                            key={`${topic}-${category}-${researchArea}`}
+                          >
+                            {Object.entries(areas).map(
+                              ([area, subjects], areaIndex) => (
+                                <React.Fragment
+                                  key={`${topic}-${category}-${researchArea}-${area}`}
+                                >
+                                  {Object.entries(subjects).map(
+                                    ([subject, questions], subjectIndex) => (
+                                      <React.Fragment
+                                        key={`${topic}-${category}-${researchArea}-${area}-${subject}`}
+                                      >
+                                        {Object.entries(questions).map(
+                                          (
+                                            [question, values],
+                                            questionIndex
+                                          ) => (
+                                            <tr
+                                              key={`${topic}-${category}-${researchArea}-${area}-${subject}-${question}`}
+                                            >
+                                              {areaIndex === 0 &&
+                                                subjectIndex === 0 &&
+                                                questionIndex === 0 && (
+                                                  <td
+                                                    rowSpan={Object.values(
+                                                      areas
+                                                    ).reduce(
+                                                      (acc, area) =>
+                                                        acc +
+                                                        Object.values(
+                                                          area
+                                                        ).reduce(
+                                                          (subAcc, subject) =>
+                                                            subAcc +
+                                                            Object.keys(subject)
+                                                              .length,
+                                                          0
+                                                        ),
+                                                      0
+                                                    )}
+                                                  >
+                                                    {topic}
+                                                  </td>
+                                                )}
+                                              {areaIndex === 0 &&
+                                                subjectIndex === 0 &&
+                                                questionIndex === 0 && (
+                                                  <td
+                                                    rowSpan={Object.values(
+                                                      areas
+                                                    ).reduce(
+                                                      (acc, area) =>
+                                                        acc +
+                                                        Object.values(
+                                                          area
+                                                        ).reduce(
+                                                          (subAcc, subject) =>
+                                                            subAcc +
+                                                            Object.keys(subject)
+                                                              .length,
+                                                          0
+                                                        ),
+                                                      0
+                                                    )}
+                                                  >
+                                                    {researchArea}
+                                                  </td>
+                                                )}
+                                              {subjectIndex === 0 &&
+                                                questionIndex === 0 && (
+                                                  <td
+                                                    rowSpan={Object.values(
+                                                      subjects
+                                                    ).reduce(
+                                                      (acc, questions) =>
+                                                        acc +
+                                                        Object.keys(questions)
+                                                          .length,
+                                                      0
+                                                    )}
+                                                  >
+                                                    {area}
+                                                  </td>
+                                                )}
+                                              {questionIndex === 0 && (
+                                                <td
+                                                  rowSpan={
+                                                    Object.keys(questions)
+                                                      .length
+                                                  }
+                                                >
+                                                  {subject}
+                                                </td>
+                                              )}
+                                              <td>{question}</td>
+                                              <td>
+                                                <input
+                                                  type="number"
+                                                  value={values.Before}
+                                                  onChange={(e) =>
+                                                    handleMatrixChange(
+                                                      topic,
+                                                      category,
+                                                      researchArea,
+                                                      area,
+                                                      subject,
+                                                      question,
+                                                      "Before",
+                                                      e.target.value
+                                                    )
+                                                  }
+                                                />
+                                              </td>
+                                              <td>
+                                                <input
+                                                  type="number"
+                                                  value={values.After}
+                                                  onChange={(e) =>
+                                                    handleMatrixChange(
+                                                      topic,
+                                                      category,
+                                                      researchArea,
+                                                      area,
+                                                      subject,
+                                                      question,
+                                                      "After",
+                                                      e.target.value
+                                                    )
+                                                  }
+                                                />
+                                              </td>
+                                              <td>
+                                                {values.After - values.Before}
+                                              </td>
+                                              {areaIndex === 0 &&
+                                                subjectIndex === 0 &&
+                                                questionIndex === 0 && (
+                                                  <td
+                                                    rowSpan={Object.values(
+                                                      areas
+                                                    ).reduce(
+                                                      (acc, area) =>
+                                                        acc +
+                                                        Object.values(
+                                                          area
+                                                        ).reduce(
+                                                          (subAcc, subject) =>
+                                                            subAcc +
+                                                            Object.keys(subject)
+                                                              .length,
+                                                          0
+                                                        ),
+                                                      0
+                                                    )}
+                                                  >
+                                                    {Object.values(
+                                                      areas
+                                                    ).reduce(
+                                                      (acc, area) =>
+                                                        acc +
+                                                        Object.values(
+                                                          area
+                                                        ).reduce(
+                                                          (subAcc, subject) =>
+                                                            subAcc +
+                                                            Object.values(
+                                                              subject
+                                                            ).reduce(
+                                                              (sum, q) =>
+                                                                sum +
+                                                                (q.After -
+                                                                  q.Before),
+                                                              0
+                                                            ),
+                                                          0
+                                                        ),
+                                                      0
+                                                    )}
+                                                  </td>
+                                                )}
+                                            </tr>
+                                          )
+                                        )}
+                                      </React.Fragment>
+                                    )
+                                  )}
+                                </React.Fragment>
+                              )
+                            )}
+                          </React.Fragment>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
               ))}
-            </tbody>
-          </table>
+            </div>
+          ))}
         </div>
       </div>
     </div>

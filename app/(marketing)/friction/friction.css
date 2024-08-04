@@ -147,3 +147,61 @@ th {
 input[type="number"] {
   width: 60px;
 }
+
+/* Light theme styles */
+input[type="number"] {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+  padding: 4px;
+  width: 60px;
+}
+
+/* Dark theme styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+  }
+
+  .header {
+    color: #4a90e2;
+  }
+
+  .content {
+    color: #d0d0d0;
+  }
+
+  table {
+    color: #f0f0f0;
+    background-color: #2a2a2a;
+    border-color: #444444;
+  }
+
+  thead th {
+    background-color: #3a3a3a;
+  }
+
+  th,
+  td {
+    border-color: #444444;
+  }
+
+  tr:nth-child(even) {
+    background-color: #333333;
+  }
+
+  tr:hover {
+    background-color: #404040;
+  }
+
+  .section-title {
+    color: #4a90e2;
+  }
+
+  input[type="number"] {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-color: #555555;
+  }
+}
