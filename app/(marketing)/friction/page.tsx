@@ -1,8 +1,199 @@
-import React from "react"
+"use client"
+
+import React, { useEffect, useState } from "react"
 
 import "./friction.css"
 
 const Friction = () => {
+  // State for Part B (Models)
+  const [models, setModels] = useState({
+    Stablecoins: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+    MedicalRecords: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+    TrustlessVoting: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+    IDVerification: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+    DataStorage: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+    Insurance: {
+      MeasuringBureaucraticFriction: {
+        Administrative: 0,
+        DataStorage: 0,
+        Security: 0,
+        IdVerification: 0,
+        TransactionExpediency: 0,
+      },
+      ReductionOfBureaucraticFriction: {
+        IndividualRegulationEfficiency: 0,
+        DepartmentEfficiency: 0,
+        PerConstituent: 0,
+        PerEmployee: 0,
+        PerDollarTaxed: 0,
+      },
+      RiskManagement: {
+        Individual: 0,
+        LocalGovt: 0,
+        State: 0,
+        Federal: 0,
+      },
+    },
+  })
+
+  // State for Part C (Matrix)
+  const [matrix, setMatrix] = useState({
+    Stablecoins: {
+      Administrative: {
+        Production: { Before: 0, After: 0 },
+        Implementation: { Before: 0, After: 0 },
+        DataStorage: { Before: 0, After: 0 },
+      },
+      DataStorage: {
+        Production: { Before: 0, After: 0 },
+        Implementation: { Before: 0, After: 0 },
+        DataStorage: { Before: 0, After: 0 },
+      },
+      Security: {
+        Production: { Before: 0, After: 0 },
+        Implementation: { Before: 0, After: 0 },
+        DataStorage: { Before: 0, After: 0 },
+      },
+    },
+    // Repeat the structure for other research topics...
+  })
+
+  // Update models based on matrix input
+  useEffect(() => {
+    const newModels = { ...models }
+    Object.keys(matrix).forEach((topic) => {
+      Object.keys(matrix[topic]).forEach((area) => {
+        newModels[topic][area] = Object.values(matrix[topic][area]).reduce(
+          (sum, subArea) => sum + (subArea.After - subArea.Before),
+          0
+        )
+      })
+    })
+    setModels(newModels)
+  }, [matrix])
+
+  // Handler for matrix input changes
+  const handleMatrixChange = (topic, area, subArea, field, value) => {
+    setMatrix((prevMatrix) => ({
+      ...prevMatrix,
+      [topic]: {
+        ...prevMatrix[topic],
+        [area]: {
+          ...prevMatrix[topic][area],
+          [subArea]: {
+            ...prevMatrix[topic][area][subArea],
+            [field]: parseInt(value) || 0,
+          },
+        },
+      },
+    }))
+  }
+
   return (
     <div>
       <h1 className="header">Bureaucratic Research Model Summary</h1>
@@ -20,8 +211,11 @@ const Friction = () => {
         </p>
         <br />
         <p>
-          Bureaucratic Friction + Friction-Reduction Yield + Risk Management =
-          Proposed Public Policy
+          <strong>
+            {" "}
+            Bureaucratic Friction + Friction-Reduction Yield + Risk Management =
+            Proposed Public Policy
+          </strong>
         </p>
         <br />
         <p>
@@ -37,6 +231,7 @@ const Friction = () => {
           third step will be to mitigate the security, vulnerability, and
           privacy concerns when considering step one and two.
         </p>
+        <br></br>
         <p>
           To better illustrate our approach, an initial opportunity to introduce
           blockchain technology could be to increase compensation packages for
@@ -74,16 +269,14 @@ const Friction = () => {
 
         <div className="text-left mb-5 pl-10">
           <div className="section-title">
-            Levels to organizing public policy from the constituent’s
+            Levels to organizing public policy from the constituents
             perspective:
           </div>
           <ul className="list-disc pl-12">
+            <li>Consumer to Automated Money Maker (ie Binance, pancakeswap)</li>
+            <li>Consumer to Regulated Exchange (ie Coinbase, Crypto.Com)</li>
             <li>
-              Consumer to Automated Money Maker (ie – Binance, pancakeswap)
-            </li>
-            <li>Consumer to Regulated Exchange (ie – Coinbase, Crypto.Com)</li>
-            <li>
-              Consumer to local municipalities (ie – utilities, property taxes)
+              Consumer to local municipalities (ie utilities, property taxes)
             </li>
             <li>Consumer to Federal Government</li>
             <li>Consumer to consumer (peer-to-peer)</li>
@@ -155,8 +348,7 @@ const Friction = () => {
             </li>
             <ul className="list-disc pl-12">
               <li>
-                Barriers to Learn (ie – no mandatory quarterly financial
-                reports)
+                Barriers to Learn (ie no mandatory quarterly financial reports)
               </li>
               <ul className="list-disc pl-12">
                 <li>For individuals</li>
@@ -171,7 +363,7 @@ const Friction = () => {
             <li>Understand the levels of anonymity within cryptocurrency</li>
             <ul className="list-disc pl-12">
               <li>Anonymous to third parties on the blockchain</li>
-              <li>Anonymous-to-KYC levels to Gov’t</li>
+              <li>Anonymous-to-KYC levels to Govt</li>
               <li>
                 Bridge the gap between legally using crypto while still being
                 anonymous on the blockchain
@@ -185,7 +377,7 @@ const Friction = () => {
               <li>Residual Yield (passive income)</li>
             </ul>
             <li>
-              Risks – Creating a policy outline that addresses and can monitor
+              Risks Creating a policy outline that addresses and can monitor
               known risks
             </li>
             <ul className="list-disc pl-12">
@@ -197,7 +389,7 @@ const Friction = () => {
                 <li>Blockchain/Protocol Smart Contract Security</li>
                 <li>Social Engineering Attacks</li>
               </ul>
-              <li>No Regulation or Government Backstop (ie – FDIC)</li>
+              <li>No Regulation or Government Backstop (ie FDIC)</li>
               <li>Environmental Energy Concerns</li>
               <li>Protocol Financial/Credit Security & Rating</li>
               <li>Cryptocurrency Insurance</li>
@@ -400,6 +592,353 @@ const Friction = () => {
             choosing for ourselves.
           </p>
           <br />
+          <h2>Part B: Models</h2>
+          <div className="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th colSpan={3}>Measuring Bureaucratic Friction</th>
+                  <th colSpan={3}>Reduction of Bureaucratic Friction</th>
+                  <th colSpan={3}>Risk Management</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Research Topic</td>
+                  <td>Research Area</td>
+                  <td>Score</td>
+                  <td>Research Area</td>
+                  <td>Score</td>
+                  <td>Research Area</td>
+                  <td>Score</td>
+                </tr>
+                <tr>
+                  <td>Stablecoins</td>
+                  <td>Administrative</td>
+                  <td>0</td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td>Per Dollar Taxed</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Medical Records</td>
+                  <td>Administrative</td>
+                  <td></td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Trustless Voting</td>
+                  <td>Administrative</td>
+                  <td></td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>ID Verification</td>
+                  <td>Administrative</td>
+                  <td></td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Data Storage</td>
+                  <td>Administrative</td>
+                  <td></td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Insurance</td>
+                  <td>Administrative</td>
+                  <td></td>
+                  <td>Individual Regulation Efficiency</td>
+                  <td></td>
+                  <td>Individual</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Data Storage</td>
+                  <td></td>
+                  <td>Department Efficiency</td>
+                  <td></td>
+                  <td>Local Gov't</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Security</td>
+                  <td></td>
+                  <td>Per Constituent</td>
+                  <td></td>
+                  <td>State</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Id Verification</td>
+                  <td></td>
+                  <td>Per Employee</td>
+                  <td></td>
+                  <td>Federal</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Transaction Expediency</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <h2>Part C:</h2>
           <p className="mb-20">
             This is the matrix that we believe fits accordingly to the topics
@@ -412,6 +951,65 @@ const Friction = () => {
             though for now, this matrix is asking for a generic "before" and
             "after" result based on your judgment.
           </p>
+        </div>
+        <h2>Part C: Matrix</h2>
+        <div className="matrix-container">
+          {Object.entries(matrix).map(([topic, areas]) => (
+            <div key={topic} className="matrix-topic">
+              <h3>{topic}</h3>
+              {Object.entries(areas).map(([area, subAreas]) => (
+                <div key={area} className="matrix-area">
+                  <h4>{area}</h4>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Sub-Area</th>
+                        <th>Before</th>
+                        <th>After</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(subAreas).map(([subArea, values]) => (
+                        <tr key={subArea}>
+                          <td>{subArea}</td>
+                          <td>
+                            <input
+                              type="number"
+                              value={values.Before}
+                              onChange={(e) =>
+                                handleMatrixChange(
+                                  topic,
+                                  area,
+                                  subArea,
+                                  "Before",
+                                  e.target.value
+                                )
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="number"
+                              value={values.After}
+                              onChange={(e) =>
+                                handleMatrixChange(
+                                  topic,
+                                  area,
+                                  subArea,
+                                  "After",
+                                  e.target.value
+                                )
+                              }
+                            />
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>
