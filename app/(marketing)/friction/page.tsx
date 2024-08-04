@@ -5,6 +5,39 @@ import React, { useEffect, useState } from "react"
 import "./friction.css"
 
 const Friction = () => {
+  // State for Part A (Research Priority)
+  const [researchPriority, setResearchPriority] = useState({
+    Stablecoins: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+    MedicalRecords: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+    TrustlessVoting: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+    IDVerification: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+    DataStorage: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+    Insurance: {
+      MeasuringBureaucraticFriction: 0,
+      ReductionOfBureaucraticFriction: 0,
+      RiskManagement: 0,
+    },
+  })
   // State for Part B (Models)
   const [models, setModels] = useState({
     Stablecoins: {
@@ -168,14 +201,44 @@ const Friction = () => {
     const newModels = { ...models }
     Object.keys(matrix).forEach((topic) => {
       Object.keys(matrix[topic]).forEach((area) => {
-        newModels[topic][area] = Object.values(matrix[topic][area]).reduce(
+        const areaTotal = Object.values(matrix[topic][area]).reduce(
           (sum, subArea) => sum + (subArea.After - subArea.Before),
           0
         )
+        if (
+          newModels[topic].MeasuringBureaucraticFriction[area] !== undefined
+        ) {
+          newModels[topic].MeasuringBureaucraticFriction[area] = areaTotal
+        } else if (
+          newModels[topic].ReductionOfBureaucraticFriction[area] !== undefined
+        ) {
+          newModels[topic].ReductionOfBureaucraticFriction[area] = areaTotal
+        } else if (newModels[topic].RiskManagement[area] !== undefined) {
+          newModels[topic].RiskManagement[area] = areaTotal
+        }
       })
     })
     setModels(newModels)
-  }, [matrix, models])
+  }, [matrix])
+
+  // Update research priority based on models
+  useEffect(() => {
+    const newResearchPriority = { ...researchPriority }
+    Object.keys(models).forEach((topic) => {
+      newResearchPriority[topic].MeasuringBureaucraticFriction = Object.values(
+        models[topic].MeasuringBureaucraticFriction
+      ).reduce((sum, value) => sum + value, 0)
+      newResearchPriority[topic].ReductionOfBureaucraticFriction =
+        Object.values(models[topic].ReductionOfBureaucraticFriction).reduce(
+          (sum, value) => sum + value,
+          0
+        )
+      newResearchPriority[topic].RiskManagement = Object.values(
+        models[topic].RiskManagement
+      ).reduce((sum, value) => sum + value, 0)
+    })
+    setResearchPriority(newResearchPriority)
+  }, [models])
 
   // Handler for matrix input changes
   const handleMatrixChange = (topic, area, subArea, field, value) => {
@@ -470,117 +533,26 @@ const Friction = () => {
             right of each topic are the final scores that are being aggregated
             from what is entered in Part C.
           </p>
-          <br />{" "}
+          <br /> <h2>Part A: Research Priority</h2>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th colSpan={2}>Measuring Bureaucratic Friction</th>
-                  <th>+</th>
-                  <th colSpan={2}>Reduction of Bureaucratic Friction</th>
-                  <th>+</th>
-                  <th colSpan={2}>Risk Management</th>
+                  <th>Research Topic</th>
+                  <th>Measuring Bureaucratic Friction</th>
+                  <th>Reduction of Bureaucratic Friction</th>
+                  <th>Risk Management</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Research Topic</td>
-                  <td>Score</td>
-                  <td></td>
-                  <td>Research Topic</td>
-                  <td>Score</td>
-                  <td></td>
-                  <td>Research Topic</td>
-                  <td>Score</td>
-                </tr>
-                {[
-                  "Stablecoins",
-                  "Medical Records",
-                  "Trustless Voting",
-                  "ID Verification",
-                  "Data Storage",
-                  "Insurance",
-                ].map((topic) => (
+                {Object.entries(researchPriority).map(([topic, scores]) => (
                   <tr key={topic}>
                     <td>{topic}</td>
-                    <td>0</td>
-                    <td></td>
-                    <td>{topic}</td>
-                    <td>0</td>
-                    <td></td>
-                    <td>{topic}</td>
-                    <td>0</td>
+                    <td>{scores.MeasuringBureaucraticFriction}</td>
+                    <td>{scores.ReductionOfBureaucraticFriction}</td>
+                    <td>{scores.RiskManagement}</td>
                   </tr>
                 ))}
-              </tbody>
-            </table>
-            <table>
-              <thead>
-                <tr>
-                  <th>Examples of Research Areas</th>
-                  <th></th>
-                  <th></th>
-                  <th>Examples of Research Areas</th>
-                  <th></th>
-                  <th></th>
-                  <th>Examples of Research Areas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Property Records / Deeds</td>
-                  <td></td>
-                  <td></td>
-                  <td>Administrative Reduction</td>
-                  <td></td>
-                  <td></td>
-                  <td>Privacy</td>
-                </tr>
-                <tr>
-                  <td>Comprehensive Enforcement</td>
-                  <td></td>
-                  <td></td>
-                  <td>Balances updated live</td>
-                  <td></td>
-                  <td></td>
-                  <td>Security</td>
-                </tr>
-                <tr>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td>Material Resource Reduction</td>
-                  <td></td>
-                  <td></td>
-                  <td>Ease of Use</td>
-                </tr>
-                <tr>
-                  <td>Implementation</td>
-                  <td></td>
-                  <td></td>
-                  <td>Reduction of Human Element</td>
-                  <td></td>
-                  <td></td>
-                  <td>Anonymity</td>
-                </tr>
-                <tr>
-                  <td>Regulation Enforceability</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Correlation</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Energy Consumption</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -594,350 +566,31 @@ const Friction = () => {
           <br />
           <h2>Part B: Models</h2>
           <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th colSpan={3}>Measuring Bureaucratic Friction</th>
-                  <th colSpan={3}>Reduction of Bureaucratic Friction</th>
-                  <th colSpan={3}>Risk Management</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Research Topic</td>
-                  <td>Research Area</td>
-                  <td>Score</td>
-                  <td>Research Area</td>
-                  <td>Score</td>
-                  <td>Research Area</td>
-                  <td>Score</td>
-                </tr>
-                <tr>
-                  <td>Stablecoins</td>
-                  <td>Administrative</td>
-                  <td>0</td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td>Per Dollar Taxed</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Medical Records</td>
-                  <td>Administrative</td>
-                  <td></td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Trustless Voting</td>
-                  <td>Administrative</td>
-                  <td></td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>ID Verification</td>
-                  <td>Administrative</td>
-                  <td></td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Data Storage</td>
-                  <td>Administrative</td>
-                  <td></td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Insurance</td>
-                  <td>Administrative</td>
-                  <td></td>
-                  <td>Individual Regulation Efficiency</td>
-                  <td></td>
-                  <td>Individual</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Data Storage</td>
-                  <td></td>
-                  <td>Department Efficiency</td>
-                  <td></td>
-                  <td>Local Gov't</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Security</td>
-                  <td></td>
-                  <td>Per Constituent</td>
-                  <td></td>
-                  <td>State</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Id Verification</td>
-                  <td></td>
-                  <td>Per Employee</td>
-                  <td></td>
-                  <td>Federal</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Transaction Expediency</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            {Object.entries(models).map(([topic, categories]) => (
+              <div key={topic}>
+                <h3>{topic}</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Area</th>
+                      <th>Score</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(categories).map(([category, areas]) =>
+                      Object.entries(areas).map(([area, score]) => (
+                        <tr key={`${topic}-${category}-${area}`}>
+                          <td>{category}</td>
+                          <td>{area}</td>
+                          <td>{score}</td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            ))}
           </div>
           <h2>Part C:</h2>
           <p className="mb-20">
