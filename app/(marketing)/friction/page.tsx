@@ -175,7 +175,7 @@ const Friction = () => {
       })
     })
     setModels(newModels)
-  }, [matrix])
+  }, [matrix, models])
 
   // Handler for matrix input changes
   const handleMatrixChange = (topic, area, subArea, field, value) => {
@@ -267,7 +267,7 @@ const Friction = () => {
         </p>
         <br />
 
-        <div className="text-left mb-5 pl-10">
+        <div className="mb-5 pl-10 text-left">
           <div className="section-title">
             Levels to organizing public policy from the constituents
             perspective:
@@ -282,7 +282,7 @@ const Friction = () => {
             <li>Consumer to consumer (peer-to-peer)</li>
           </ul>
         </div>
-        <div className="text-left mb-5 pl-10">
+        <div className="mb-5 pl-10 text-left">
           <div className="section-title">
             Levels to organizing public policy from the government's
             perspective:
@@ -314,7 +314,7 @@ const Friction = () => {
             </ul>
           </ul>
         </div>
-        <div className="text-left mb-5 pl-10">
+        <div className="mb-5 pl-10 text-left">
           <div className="section-title">Research Priorities</div>
           <ul className="list-disc pl-12">
             <li>Bureaucratic Friction:</li>
@@ -340,7 +340,7 @@ const Friction = () => {
             </ul>
           </ul>
         </div>
-        <div className="text-left mb-5 pl-10">
+        <div className="mb-5 pl-10 text-left">
           <div className="section-title">Initial Research Objectives</div>
           <ul className="list-disc pl-12">
             <li>
@@ -443,7 +443,7 @@ const Friction = () => {
             </ul>
           </ul>
         </div>
-        <div className="text-left mb-5 pl-10">
+        <div className="mb-5 pl-10 text-left">
           <p>
             This is the start of the research model for you to interact with.
             This research model is in three parts starting with the Research
