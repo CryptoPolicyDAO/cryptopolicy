@@ -13,18 +13,18 @@ authors:
 
 The expectation of a smart contract audit often exceeds reality, as developers may not fully grasp the
 concept of defining a user journey or the extent of potential vulnerabilities, which is crucial in establishing clear
-boundaries for Auditor Liability. Though, when dealing with
-programming languages, fully comprehending all potential actions of a smart contract can be challenging. Developers aim
-to ensure their contracts operate as intended and are free from vulnerabilities that could result in loss of funds or
-unintended outcomes. However, smart contracts operate based on the defined logic principles and syntax of the programming language
-used, meaning certain operations are strictly bound by these rules.
+boundaries for Auditor Liability. Though, when dealing with programming languages, fully comprehending all potential actions of
+a smart contract can be challenging. Developers aim to ensure their contracts operate as intended and are free from vulnerabilities
+that could result in loss of funds or unintended outcomes. However, smart contracts operate based on the defined logic principles and
+syntax of the programming language used, meaning certain operations are strictly bound by these rules. The importance of clearly defining
+Auditor Liability cannot be overstated, as it directly impacts the trust and security of smart contracts in the web3 ecosystem.
 
 Auditors must go beyond merely identifying potential errors, they need to grasp the developer's intended user journey
 and expectations of the app to ensure the smart contracts behave as expected. For example, in the programming language Solidity,
 a common issue is integer overflow and underflow, and an integer overflow might be a deliberate
 feature in some scenarios, like resetting a counter, rather than a vulnerability. Misinterpreting these intentions can
-lead to misguided corrections and unintended actions. Therefore, a thorough understanding and clear communication between developers and auditors
-are essential for accurate and effective audits and especially for establishing Auditor Liability.
+lead to misguided corrections and unintended actions. A deep understanding of the developer's goals and the application’s context
+is essential for auditors to accurately assess and report on the contract's safety and functionality.
 
 Auditor Liability begins with the auditing scope and ends with the implementation of the corrections, so establishing
 the parameters that define it is necessary in order to understand if an audit is thorough, comprehensive, and utilizing up to-date smart contract
@@ -42,7 +42,7 @@ uint8 max = 255;
 uint8 result = max + 1;
 ```
 
-However, in actuality, this is what is happening:
+However, in actuality, this is what is occurring:
 
 ```solidity
 result = 255 + 1 = 0
@@ -108,9 +108,110 @@ and educating them on the historical context and importance of these standards.
 Auditor Liability encompasses not only identifying vulnerabilities but also bridging the gap between
 a developer's often incomplete vision and the actual code implementation, necessitating a deep
 understanding of both intended functionality and potential exploit history. This is crucial in smart contract auditing
-as both parties should rely on the audit with almost equal weight.
+as both parties should rely on the audit with almost equal weight. Furthermore, continuous education and updates on evolving best practices and emerging
+vulnerabilities are vital for both developers and auditors to maintain a high standard of security in smart contract deployments.
 
-#### Example Logic Tree aligned with Expected User Journey
+#### Logic Tree
+
+To illustrate how a logical tree could define the intended outcome of smart contracts, we will use the
+standard ERC20 token as an example below:
+
+```solidity
+ERC20 Token Contract Initialization in Solidity
+│
+├─ Constructor: ERC20("MyToken", "MTK")
+│  ├─ Set Token Name: "MyToken"
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer Risk: None
+│  │  ├─ Admin Layer Risk: None
+│  │  └─ Risk Mitigation Techniques: Not applicable
+│  │
+│  ├─ Set Token Symbol: "MTK"
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer Risk: None
+│  │  ├─ Admin Layer Risk: None
+│  │  └─ Risk Mitigation Techniques: Not applicable
+│  │
+│  └─ Mint Initial Supply: 1000000 * 10 ** decimals()
+│     ├─ Language Syntax: Solidity 0.8.0+ prevents overflow/underflow
+│     ├─ Asset Layer:
+│     │  ├─ Vulnerability: Token supply manipulation
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Use OpenZeppelin's ERC20 standard
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement supply cap
+│     ├─ Admin Layer:
+│     │  ├─ Vulnerability: Unauthorized minting
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Use Ownable contract
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+│     │  ├─ Vulnerability: Coordination failure
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│     │  ├─ Vulnerability: Single point of failure for token issuance
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+│
+├─ ERC20 Functionality (OpenZeppelin)
+│  ├─ Balance Of
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer Risk: None
+│  │  ├─ Admin Layer Risk: None
+│  │  └─ Risk Mitigation Techniques: Not applicable
+│  │
+│  ├─ Transfer
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer:
+│  │  │  ├─ Vulnerability: Token transfer manipulation
+│  │  │  │  ├─ Risk Mitigation - Negate through open-source standard: Use OpenZeppelin's ERC20 standard
+│  │  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│  │  ├─ Admin Layer:
+│  │  │  ├─ Vulnerability: Unauthorized transfers
+│  │  │  │  ├─ Risk Mitigation - Negate through open-source standard: Use Ownable contract
+│  │  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+│  │  ├─ Vulnerability: Coordination failure
+│  │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│  │  ├─ Vulnerability: Single point of failure for token issuance
+│  │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+│  │
+│  ├─ Allowance
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer:
+│  │  │  ├─ Vulnerability: Token allowance manipulation
+│  │  │  │  ├─ Risk Mitigation - Negate through open-source standard: Use OpenZeppelin's ERC20 standard
+│  │  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│  │  ├─ Admin Layer Risk: None
+│  │  └─ Risk Mitigation Techniques: Not applicable
+│  │
+│  ├─ Approve
+│  │  ├─ Language Syntax: Not applicable
+│  │  ├─ Asset Layer:
+│  │  │  ├─ Vulnerability: Token approval manipulation
+│  │  │  │  ├─ Risk Mitigation - Negate through open-source standard: Use OpenZeppelin's ERC20 standard
+│  │  │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│  │  ├─ Admin Layer Risk: None
+│  │  └─ Risk Mitigation Techniques: Not applicable
+│  │
+│  └─ TransferFrom
+│     ├─ Language Syntax: Not applicable
+│     ├─ Asset Layer:
+│     │  ├─ Vulnerability: Unauthorized token transfers
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Use OpenZeppelin's ERC20 standard
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│     ├─ Admin Layer:
+│     │  ├─ Vulnerability: Unauthorized transfers
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Use Ownable contract
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+│     │  ├─ Vulnerability: Coordination failure
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Not applicable
+│     │  ├─ Vulnerability: Single point of failure for token issuance
+│     │  │  ├─ Risk Mitigation - Negate through open-source standard: Not applicable
+│     │  │  ├─ Risk Mitigation - Negate through manual code prevention: Implement multi-sig wallet
+
+```
+
+This example further illustrates how a developer could benefit from using a logic tree when writing their smart contracts
+and especially when they provide an auditor with their code. Here is a fictitious example:
 
 ```solidity
 Mock Kingdom Smart Contract
@@ -183,8 +284,16 @@ Mock Kingdom Smart Contract
 
 ```
 
+There needs to be a way to define and outline the steps and actions a developer takes to illustrate how they
+expect their code to operate as intended. This means defining the logical barriers that are needed to prevent
+errors and unintended consequences and the logical tree aboev provides a solution to that.
+
+Auditor Liability should include a review of whether the developers have followed best practices,
+such as using well-audited libraries like OpenZeppelin, and whether the code aligns with the intended
+user-journey and security protocols.
+
 Sources
 
-1.
-2.
+1. OpenZeppelin: https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20
+2. Vyper Programing Language: https://docs.vyperlang.org/
 3.
