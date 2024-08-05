@@ -449,29 +449,22 @@ const Friction = () => {
         </p>
         <br></br>
         <p>
-          To better illustrate our approach, an initial opportunity to introduce
-          blockchain technology could be to increase compensation packages for
-          all of our teachers and first responders. By introducing a percentage
-          of pay in certain cryptocurrencies, similar to a 401K plan, this could
-          allow for an increase in pay that could yield significant future
-          returns. However, so far in our model, this only satisfies step one.
-          An opportunity to offer a new form of compensation with blockchain
-          technology creates an immediate need for education, and without fully
-          embracing education in this example, the benefits of utilizing the
-          blockchain could be underutilized. For employers, in some instances,
-          just by offering healthcare benefits and a 401K in compensation
-          packages, employers will have to educate their employees on how to
-          receive and use those additional benefits, though the learning curve
-          for introducing blockchain technology will be steeper than a
-          traditional 401k. So, just because introducing cryptocurrency as an
-          additional pay benefit in step one might sound great, it could
-          potentially be underutilized, or misused, without proper and efficient
-          education. And in our last variable regarding risk management,
-          utilizing cryptocurrency as a payment brings on significant risks to
-          both the government and the employee receiving that pay. The risks are
-          broad and vary from the actual blockchain layer to currency exchange
-          risk to theft, but we will attempt to understand and mitigate these
-          risks throughout our research and proposal of public policy.
+          To better illustrate our approach, consider an opportunity to use
+          blockchain technology for state and federal ID verification. By
+          storing personal identification data on the blockchain, we can create
+          a system where individuals have a secure and immutable digital ID.
+          This system would simplify the process of verifying identities for
+          various services, such as voting, accessing government benefits, or
+          even routine tasks like age verification. Implementing blockchain for
+          ID verification would drastically reduce bureaucratic friction by
+          eliminating the need for repetitive identity checks and paperwork.
+          However, while this satisfies our first step, the second step requires
+          ensuring the system's usability and accessibility for all citizens.
+          Without proper education and infrastructure, the benefits of
+          blockchain-based IDs could be underutilized. Lastly, risk management
+          involves addressing concerns about data security, privacy, and the
+          potential for misuse. Our research will focus on how to mitigate these
+          risks while maximizing the system's efficiency.
         </p>
         <br />
         <p>
