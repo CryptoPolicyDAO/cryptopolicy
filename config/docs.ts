@@ -280,6 +280,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/drafts",
           disabled: false,
         },
+        {
+          title: "Wallets and Regulation",
+          href: "/docs/drafts/wallets",
+          disabled: false,
+        },
       ],
     },
     {
