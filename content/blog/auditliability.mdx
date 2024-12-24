@@ -7,7 +7,7 @@ authors:
   - cryptopolicydao
 ---
 
-<Callout>What is Audit Liability and why is it important?</Callout>
+<Callout>What is Auditor Liability and why is it important?</Callout>
 
 ##### Understanding the nuances between developer intent and code execution is critical in establishing clear Audit Liability standards in web3.
 
@@ -19,8 +19,9 @@ that could result in loss of funds or unintended outcomes. However, smart contra
 syntax of the programming language used, meaning certain operations are strictly bound by these rules. The importance of clearly defining
 Auditor Liability cannot be overstated, as it directly impacts the trust and security of smart contracts in the web3 ecosystem.
 
-Auditors must go beyond merely identifying potential errors, they need to grasp the developer's intended user journey
-and expectations of the app to ensure the smart contracts behave as expected. For example, in the programming language Solidity,
+Auditors must go beyond merely identifying potential errors, they need to grasp the developer's intended user-journey
+and expectations of the dApp (decentralized app - because its an app deployed on decentralized blockchain tech as opposed to centralized
+tech like Google Cloud or AWS) to ensure the smart contracts behave as expected. For example, in the programming language Solidity,
 a common issue is integer overflow and underflow, and an integer overflow might be a deliberate
 feature in some scenarios, like resetting a counter, rather than a vulnerability. Misinterpreting these intentions can
 lead to misguided corrections and unintended actions. A deep understanding of the developer's goals and the application’s context
@@ -35,7 +36,7 @@ including educating developers on the importance of defining user journeys and s
 
 Integer overflow occurs when a calculation exceeds the maximum value that can be stored in a variable.
 In Solidity, for example, the `uint8` data type can store values from 0 to 255, so if you add 1 to 255,
-it overflows and wraps around to 0, which could be intentional or in could be unintentional and lead to a possible exploit.
+it overflows and wraps around to 0, which could be intentional or it could be unintentional and lead to a possible exploit.
 
 ```solidity
 uint8 max = 255;
@@ -58,7 +59,7 @@ uint8 min = 0;
 uint8 result = min - 1;
 ```
 
-As well, In this scenario, since uint8 cannot store negative numbers,
+As well, in this scenario, since uint8 cannot store negative numbers,
 subtracting 1 from 0 causes it to wrap around to the highest value, which is 255.
 
 ```solidity
@@ -83,7 +84,7 @@ uint8 result = min.sub(1); // This will revert the transaction
 ```
 
 Even though OpenZeppelin's SafeMath exist for Solidity, it is not present in all pogramming languages for various reasons, though some
-are because its not needed. For example, in Vyper, Tezos, and Move integer overflow and underflow are inherently prevented as the language includes built-in checks that revert
+are because it is not needed. For example, in Vyper, Tezos, and Move integer overflow and underflow are inherently prevented as the language includes built-in checks that revert
 transactions on such operations. This design choice simplifies development and enhances security, but it still necessitates
 a comprehensive audit to ensure there are no other logical errors or overlooked vulnerabilities.
 
@@ -110,6 +111,10 @@ a developer's often incomplete vision and the actual code implementation, necess
 understanding of both intended functionality and potential exploit history. This is crucial in smart contract auditing
 as both parties should rely on the audit with almost equal weight. Furthermore, continuous education and updates on evolving best practices and emerging
 vulnerabilities are vital for both developers and auditors to maintain a high standard of security in smart contract deployments.
+
+Auditor Liability is not just about identifying flaws; it’s about understanding and documenting the logic behind every decision made in the code.
+As such, we are suggesting the use of a Logic Tree as a roadmap, laying out each step in the contract’s execution and highlighting areas where risks might emerge.
+By incorporating this approach, both developers and auditors can ensure a more transparent and secure deployment process.
 
 #### Logic Tree
 
@@ -284,16 +289,26 @@ Mock Kingdom Smart Contract
 
 ```
 
-There needs to be a way to define and outline the steps and actions a developer takes to illustrate how they
+A logic tree like the one above is a way to define and outline the steps and actions a developer takes to illustrate how they
 expect their code to operate as intended. This means defining the logical barriers that are needed to prevent
-errors and unintended consequences and the logical tree aboev provides a solution to that.
+errors and unintended consequences and the logical tree above provides a solution to that.
 
 Auditor Liability should include a review of whether the developers have followed best practices,
 such as using well-audited libraries like OpenZeppelin, and whether the code aligns with the intended
 user-journey and security protocols.
 
-Sources
+#### How do we hold the auditor accountable and define liability?
+
+At this point, a logic tree only holds the developer accountable, though the intention is for a logic tree to establish
+accountability for both the developer and the auditor. And this is especially important because with all profession's
+whose business is their professional opinion, liability must be clearly defined so that it can be clearly enforced.
+
+In other professions there are boards, committees, and governing bodies to establish and define professional
+liability and the same must be done with web3 auditors. The logic tree above is a basis to defining and implementing
+auditor liability and should be used accordingly. By creating a web3 agency the government can address the growing need
+to hold auditors accountable for their professional opinions and to establish more trust in web3 that is greatly needed.
+
+#### Sources
 
 1. OpenZeppelin: https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#IERC20
 2. Vyper Programing Language: https://docs.vyperlang.org/
-3.
