@@ -23,10 +23,10 @@ export const marketingConfig: MarketingConfig = {
       title: "Bureaucratic Friction",
       href: "/friction",
     },
-    {
-      title: "DAO Members",
-      href: "/members",
-    },
+    //{
+    //  title: "DAO Members",
+    //  href: "/members",
+    //},
     {
       title: "Support",
       href: "/support",

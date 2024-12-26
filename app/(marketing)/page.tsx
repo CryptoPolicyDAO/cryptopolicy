@@ -48,10 +48,10 @@ export default async function IndexPage() {
               Twitter
             </Link>
             <h1 className="quando-regular text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-              Crypto Policy DAO
+              Crypto Policy Center
             </h1>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-              Lobbying for web3 friendly regulation
+              Lobbying for Web3-friendly Regulation
             </p>
             <div className="space-x-4">
               <Link
@@ -77,9 +77,9 @@ export default async function IndexPage() {
               About
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Our mission is to be a platform that provides regulatory clarity
-              and structure for Web3. The speed of blockchain innovation is
-              outpacing the regulatory environment and leaving legislators
+              Our mission is to be a lobbying-firm that provides regulatory
+              clarity and structure for Web3. The speed of blockchain innovation
+              is outpacing the regulatory environment and leaving legislators
               behind in understanding and creating Web3-friendly regulation.
             </p>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
@@ -90,7 +90,7 @@ export default async function IndexPage() {
               and <strong>where</strong> regulation of the blockchain connect.
             </p>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              The backbone of Crypto Policy DAO is the{" "}
+              The backbone of Crypto Policy Center is the{" "}
               <a href="/matrix" className="underline underline-offset-4">
                 Blockchain Regulation Matrix (BRM),{" "}
               </a>
@@ -102,22 +102,23 @@ export default async function IndexPage() {
             </p>
 
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Membership in the DAO will be limited and on an invitation only
-              basis. The goal is to produce pragmatic legislation that protects
-              the consumer while promoting Web3 innovation. This means that
-              focus will be intent and collaboration will be concise in order to
-              efficiently produce more effective results.
+              Membership in Crypto Policy Center will be limited and on an
+              invitation-only basis. The goal is to produce pragmatic
+              legislation that protects the consumer while promoting Web3
+              innovation. This means that focus will be intent and collaboration
+              will be concise in order to efficiently produce more effective
+              results.
             </p>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               One of the ways to protect the consumer is to clearly identify
               criminal activity, which includes knowing that an exploit
               happened, how it happened, and who was responsible for it. Most
               legislation out there is reactive and not proactive, and the goal
-              of Crypto Policy DAO is to be at the forefront of consumer
-              protection through proactive Web3-friendly regulation. By
-              producing pragmatic drafts of legislation, we can inform and
-              educate while contributing to the momentum of web3 innovation and
-              helping to protect the Web3 consumer.
+              of Crypto Policy Center is to be at the forefront of consumer
+              protection through proactive Web3-friendly lobbying and
+              regulation. By producing pragmatic drafts of legislation, we can
+              inform and educate while contributing to the momentum of web3
+              innovation and helping to protect the Web3 consumer.
             </p>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               As we create legislative drafts, they will be posted in the{" "}
@@ -134,7 +135,7 @@ export default async function IndexPage() {
               Proudly Open Source
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              Crypto Policy DAO is completely open-source, meaning all of our
+              Crypto Policy Center is completely open-source, meaning all of our
               work and any code is available on{" "}
               <Link
                 href={siteConfig.links.github}
