@@ -1,5 +1,9 @@
 "use client"
 
+import React from "react"
+
+import CentralizedElectricity from "../brm/centralized/CentralizedElectricity"
+
 function Matrix() {
   const inlineStyles = `
 
