@@ -2,15 +2,8 @@
 
 import React from "react"
 
-// --------------- EXAMPLE IMPORTS ---------------
-// For each layer, import the centralized and decentralized versions:
 import CentralizedElectricity from "../brm/centralized/CentralizedElectricity"
 import DecentralizedElectricity from "../brm/decentralized/DecentralizedElectricity"
-
-// If you have more layers, continue importing them below:
-// import CentralizedNodeValidator from "../brm/centralized/NodeValidator";
-// import DecentralizedNodeValidator from "../brm/decentralized/NodeValidator";
-// ... and so on.
 
 export default function Matrix() {
   const inlineStyles = `
@@ -121,9 +114,9 @@ export default function Matrix() {
       transition: transform 250ms linear, opacity 250ms ease;
     }
 
-    .section-col:hover + .hover-text h2 {
-      opacity: 1;
-      transform: scale(1);
+    .section-col:hover .hover-text h2 {
+    opacity: 1;
+    transform: scale(1);
     }
 
     /* Responsiveness */
@@ -202,18 +195,12 @@ export default function Matrix() {
     <>
       <style>{inlineStyles}</style>
       <div className="section-fluid-main">
-        {/* ------------------- EXAMPLE 1: ELECTRICITY ------------------- */}
         <div className="section-row">
-          {/* Left column: Centralized Electricity */}
           <CentralizedElectricity />
 
-          {/* Middle “connection” column or design element, 
-              if you want to keep the line or an icon. 
-              Otherwise you can remove this. */}
           <div className="section-col">
             <div className="section">
               <div className="section-in">
-                {/* Example center icon or line, same as your old structure */}
                 <img
                   src="e10.png"
                   alt="Icon or Logo"
@@ -242,55 +229,8 @@ export default function Matrix() {
             ></div>
           </div>
 
-          {/* Right column: Decentralized Electricity */}
           <DecentralizedElectricity />
         </div>
-
-        {/* ------------------- EXAMPLE 2: SETTLEMENT LAYER ------------------- */}
-        <div className="section-row">
-          {/* Left column: Centralized Settlement */}
-
-          {/* Middle “connection” column or design element */}
-          <div className="section-col">
-            <div className="section">
-              <div className="section-in">
-                <img
-                  src="s1.png"
-                  alt="Settlement Icon"
-                  style={{
-                    display: "block",
-                    width: "99px",
-                    height: "auto",
-                    margin: "0 auto",
-                  }}
-                />
-              </div>
-            </div>
-            <div
-              className="line"
-              style={{
-                left: "-3%",
-                transform: "translate(-50%, -50%)",
-              }}
-            ></div>
-            <div
-              className="line"
-              style={{
-                right: "-1%",
-                transform: "translate(50%, 50%)",
-              }}
-            ></div>
-          </div>
-
-          {/* Right column: Decentralized Settlement */}
-        </div>
-
-        {/* Repeat the above pattern for Node/Validator, Transaction, etc. */}
-        {/* <div className="section-row">
-          <CentralizedNodeValidator />
-          ... middle ...
-          <DecentralizedNodeValidator />
-        </div> */}
       </div>
     </>
   )
