@@ -28,6 +28,46 @@ Not all crypto tokens are built the same and that is especially true for "stable
 - **Crypto-backed**: meaning that other crypto tokens represent the liquidity and pricing functionality of that stablecoin.
 - **Commodity-backed**: meaning that a commodity like gold or silver represents the value and pricing functionality of that stablecoin.
 
+There are many stablecoins out there but for the sake of this article we are focusing on USDT, DAI, USDC, and UST, and especially during this time period:
+
+- **USDC** (11/02/2018 – 5/28/2022)
+- **USDT** (11/9/2017 – 5/28/2022)
+- **DAI** (11/19/2019 – 5/28/2022)
+- **UST** (Terra) (11/26/2020 – 5/28/2022)
+
+The stable-ness of the USDT, DAI, USDC, and UST (Terra) tokens were assessed through a multiple regression model with market cap and
+transaction volume taken at daily increments. The desire here is to understand the ballast, or weight, that an individual stablecoins
+market cap has on the impact that the transaction volume has on the price swing for that day, if there is any. As cryptocurrency is
+becoming more adopted, we want to know if they are scalable to maintain their peg with the increasing transaction volume and market cap.
+
+This report analyzes the weight, or significance, that the market cap has on the influence between the price swing, or the high and low prices,
+for any particular day, so that we can attempt to create a forecasting model to predict future price swings based on an individual tokens market cap.
+The assumption to start this all was that as a tokens market cap increases, the less of an affect the daily transaction volume has on the swing in
+a stablecoins price, which would be the ballast of that token.
+
+What are we even referring to when we are discussing the “stability” of a stablecoin? Is the stability based on a time-horizon,
+the volume per transaction, aggregate volume per DEX, or could it even be based on the collateralization that we are told of?
+Most of this report will be based on data that is correlated in relation and not necessarily casually related, though more analysis will
+be done progressing towards producing causally related data reports and risk models. For example, this report does not take into consideration collateral,
+pricing mechanisms/oracles, depth of pools, individual transaction volumes, price swing cover, or if the transaction are buys/sells,
+though they will all be analyzed and discussed in future reports.
+
+In order to understand depegging we have to analyze the times the stablecoins have depegged, and we did that by analyzing the "ballast factor" of a stabelcoin,
+with the results below:
+
+Below are the scale ranges for USDT, USDC, and DAI:
+
+|                                                   | USDT     | USDC     | DAI     |
+| ------------------------------------------------- | -------- | -------- | ------- |
+| **Max Ballast or Worst Factor**                   | 56,338   | 16.12    | 42.21   |
+| **Min Ballast or Best Factor**                    | 0.00008  | 0.00052  | 0.00178 |
+| **Highest Price Swing at \$500–600 million mcap** | 0.138309 | 0.131202 | 0.0270  |
+
+Immediately interpreting the results, we see that USDC has a shallow ballast with its worst factor being 16.12,
+though the ballast factor does not get as low, or as close to 0 as we would like for it to be. DAI has a ballast range
+furthest from 0 while its worst ballast factor is more than twice that of USDC. USDT has widest ballast range with the worst factor being 56,338,
+however, its ballast range does come the closest to 0.
+
 ## Why Do We Need Stablecoin Regulation?
 
 When reading about the [Wallets and Regulation](/blog/wallets) post, we see how individual users are responsible for their own digital
