@@ -28,6 +28,22 @@ Not all crypto tokens are built the same and that is especially true for "stable
 - **Crypto-backed**: meaning that other crypto tokens represent the liquidity and pricing functionality of that stablecoin.
 - **Commodity-backed**: meaning that a commodity like gold or silver represents the value and pricing functionality of that stablecoin.
 
+### How does a stablecoin get "backed" by other liquidity and how does it stay stable?
+
+Each token that is created is just a token until its creator wants it to be purchased by the public, thats when the mechanism to determine and enforce the tokens
+price needs to be established and constructed. Traditionally, when a non-stable token is to be purchased by the public, the pricing mechanism and equation
+used is the Constant Product Formula, or the x \* y = k equation. In this formula, x represents the quantity of the token you want to sell
+and y represents the token used to buy it, while k remains constant across all trades within the liquidity pool. Because this formula is enforced by the smart contract,
+it is immutable and self-executing—meaning no centralized authority can alter it. Each trade automatically updates the token balances,
+causing the price to shift and update in real-time, and every transaction is recorded on the blockchain for anyone to inspect. This transparent,
+onchain mechanism holds the token price accountable to actual market activity rather than human intervention or external manipulation.
+
+Stablecoins, however, rely heavily on offchain components like external oracles, real-world collateral, or algorithmic controls to maintain their peg.
+While these can be effective in theory, they are more complex and not as easily audited on a continuous basis, making it challenging to verify the
+promised stability or backing. By contrast, the Constant Product Formula operates entirely onchain, making it straightforward for market participants
+to verify that trades are executed according to immutable smart contract rules. This contrast highlights why non-stable coins benefit from immediate,
+trustless price discovery, while stablecoins often require more layers of oversight and regulation to ensure they remain truly “stable.”
+
 There are many stablecoins out there but for the sake of this article we are focusing on USDT, DAI, USDC, and UST, and especially during this time period:
 
 - **USDC** (11/02/2018 – 5/28/2022)
@@ -52,7 +68,7 @@ be done progressing towards producing causally related data reports and risk mod
 pricing mechanisms/oracles, depth of pools, individual transaction volumes, price swing cover, or if the transaction are buys/sells,
 though they will all be analyzed and discussed in future reports.
 
-In order to understand depegging we have to analyze the times the stablecoins have depegged, and we did that by analyzing the "ballast factor" of a stabelcoin,
+In order to understand depegging we have to analyze the times the stablecoins have depegged, and we did that by analyzing the **"ballast factor"** of a stabelcoin,
 with the results below:
 
 Below are the scale ranges for USDT, USDC, and DAI:
