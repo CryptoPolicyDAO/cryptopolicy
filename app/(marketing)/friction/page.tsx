@@ -428,9 +428,10 @@ const Friction = () => {
         <br />
         <p className="equation">
           <strong>
-            {" "}
-            Bureaucratic Friction + Friction-Reduction Yield + Risk Management =
-            Proposed Public Policy
+            Bureaucratic Friction <span className="spaced-symbol">+</span>{" "}
+            Friction-Reduction Yield <span className="spaced-symbol">+</span>{" "}
+            Risk Management <span className="spaced-symbol">=</span> Proposed
+            Public Policy
           </strong>
         </p>
         <br />

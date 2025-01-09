@@ -23,8 +23,8 @@ body {
   margin-bottom: 20px;
 }
 
-.bold-symbol {
-  font-weight: bold;
+.spaced-symbol {
+  margin: 0 0.5em;
 }
 
 .content {
