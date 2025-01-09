@@ -15,6 +15,18 @@ body {
   margin-bottom: 20px;
 }
 
+.equation {
+  color: #2067ad;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bold-symbol {
+  font-weight: bold;
+}
+
 .content {
   color: #afa0a0;
   max-width: 900px;

@@ -426,7 +426,7 @@ const Friction = () => {
           below formula as the basis of our rationale:
         </p>
         <br />
-        <p>
+        <p className="equation">
           <strong>
             {" "}
             Bureaucratic Friction + Friction-Reduction Yield + Risk Management =
