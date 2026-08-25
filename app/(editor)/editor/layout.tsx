@@ -1,3 +1,7 @@
+export const metadata = {
+  robots: { index: false, follow: false },
+}
+
 interface EditorProps {
   children?: React.ReactNode
 }

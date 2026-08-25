@@ -9,6 +9,7 @@ export const metadata = {
   title: "Guides",
   description:
     "This section includes guides for improving our politics through the use of the blockchain.",
+  alternates: { canonical: "/guides" },
 }
 
 export default function GuidesPage() {

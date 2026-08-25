@@ -7,6 +7,10 @@ import { DashboardNav } from "@/components/nav"
 import { SiteFooter } from "@/components/site-footer"
 import { UserAccountNav } from "@/components/user-account-nav"
 
+export const metadata = {
+  robots: { index: false, follow: false },
+}
+
 interface DashboardLayoutProps {
   children?: React.ReactNode
 }

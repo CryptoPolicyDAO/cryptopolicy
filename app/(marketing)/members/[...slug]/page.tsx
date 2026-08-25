@@ -52,6 +52,7 @@ export async function generateMetadata({
     authors: members.authors.map((author) => ({
       name: author,
     })),
+    alternates: { canonical: members.slug },
     openGraph: {
       title: members.title,
       description: members.description,

@@ -147,7 +147,11 @@ const components = {
       {...props}
     />
   ),
-  Image,
+  // Wrap next/image in a plain function so the MDX runtime never introspects
+  // the client-module proxy directly during server prerendering.
+  Image: ({ alt = "", ...props }: React.ComponentProps<typeof Image>) => (
+    <Image alt={alt} {...props} />
+  ),
   Callout,
   Card: MdxCard,
 }

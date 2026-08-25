@@ -54,7 +54,11 @@ export async function updateSession(request: NextRequest) {
     }
   )
 
-  await supabase.auth.getUser()
+  try {
+    await supabase.auth.getUser()
+  } catch {
+    // Auth backend unreachable — never let session refresh break page loads.
+  }
 
   return response
 }

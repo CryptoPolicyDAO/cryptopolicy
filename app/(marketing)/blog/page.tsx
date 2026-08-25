@@ -7,6 +7,9 @@ import { formatDate } from "@/lib/utils"
 
 export const metadata = {
   title: "Blog",
+  description:
+    "Analysis and essays on Web3 regulation: stablecoins, wallets, auditor liability, and the principle-based approach behind the Blockchain Regulation Matrix.",
+  alternates: { canonical: "/blog" },
 }
 
 export default async function BlogPage() {

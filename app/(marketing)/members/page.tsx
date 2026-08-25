@@ -7,6 +7,8 @@ import { formatDate } from "@/lib/utils"
 
 export const metadata = {
   title: "Members",
+  description: "Meet the members of the Crypto Policy Center.",
+  alternates: { canonical: "/members" },
 }
 
 export default async function Members() {
@@ -21,9 +23,11 @@ export default async function Members() {
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="quando-regular inline-block text-4xl tracking-tight lg:text-5xl">
-            DAO Members
+            Members
           </h1>
-          <p className="text-xl text-muted-foreground">Meet the DAO Members</p>
+          <p className="text-xl text-muted-foreground">
+            Meet the members of the Crypto Policy Center
+          </p>
         </div>
       </div>
       <hr className="my-8" />

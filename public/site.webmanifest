@@ -1,0 +1,14 @@
+{
+  "name": "Crypto Policy Center",
+  "short_name": "CryptoPolicy",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1e2a78",
+  "background_color": "#f0f5f9",
+  "display": "standalone"
+}

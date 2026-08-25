@@ -139,7 +139,10 @@
   --outline-color: #1e2a78;
 }
 
-[data-theme="Dark"] {
+/* Legacy palette, dark theme. next-themes toggles the `dark` class on <html>,
+   so this must key off `.dark` — and it must stay AFTER the unlayered :root
+   block above so it wins the cascade in dark mode. */
+.dark {
   /* Dark-themed colors */
   --nav1: #6987a0;
   --nav2: #7f9fb8;
@@ -173,10 +176,6 @@
 
   --outline-color: #a2b2c7;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .page-container {
   display: flex;

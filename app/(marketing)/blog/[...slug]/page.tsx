@@ -9,9 +9,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { env } from "@/env.mjs"
+import { siteConfig } from "@/config/site"
 import { absoluteUrl, cn, formatDate } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
+import { JsonLd } from "@/components/json-ld"
 
 interface PostPageProps {
   params: {
@@ -21,13 +23,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params) {
   const slug = params?.slug?.join("/")
-  const post = allPosts.find((post) => post.slugAsParams === slug)
-
-  if (!post) {
-    null
-  }
-
-  return post
+  return allPosts.find((post) => post.slugAsParams === slug) ?? null
 }
 
 export async function generateMetadata({
@@ -41,10 +37,8 @@ export async function generateMetadata({
 
   const url = env.NEXT_PUBLIC_APP_URL
 
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("heading", post.title)
-  ogUrl.searchParams.set("type", "Blog Post")
-  ogUrl.searchParams.set("mode", "dark")
+  // Use the post's cover image directly — there is no /api/og route.
+  const ogUrl = new URL(`${url}${post.image}`)
 
   return {
     title: post.title,
@@ -52,6 +46,7 @@ export async function generateMetadata({
     authors: post.authors.map((author) => ({
       name: author,
     })),
+    alternates: { canonical: post.slug },
     openGraph: {
       title: post.title,
       description: post.description,
@@ -96,6 +91,30 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date,
+          url: `${siteConfig.url}${post.slug}`,
+          image: `${siteConfig.url}${post.image}`,
+          author: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            url: siteConfig.url,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: siteConfig.name,
+            logo: {
+              "@type": "ImageObject",
+              url: `${siteConfig.url}/images/logo.png`,
+            },
+          },
+        }}
+      />
       <Link
         href="/blog"
         className={cn(

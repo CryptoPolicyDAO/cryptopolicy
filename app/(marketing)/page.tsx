@@ -5,6 +5,10 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
+export const metadata = {
+  alternates: { canonical: "/" },
+}
+
 async function getGitHubStars(): Promise<string | null> {
   try {
     const response = await fetch(

@@ -4,408 +4,206 @@ import React, { useEffect, useState } from "react"
 
 import "./friction.css"
 
+// ---------- research model shape ----------
+
+interface BeforeAfter {
+  Before: number
+  After: number
+}
+type QuestionSet = Record<string, BeforeAfter>
+type SubjectMap = Record<string, QuestionSet>
+type AreaMap = Record<string, SubjectMap>
+type ResearchAreaMap = Record<string, AreaMap>
+type CategoryMap = Record<string, ResearchAreaMap>
+type MatrixState = Record<string, CategoryMap>
+
+const TOPICS = [
+  "Stablecoins",
+  "MedicalRecords",
+  "TrustlessVoting",
+  "IDVerification",
+  "DataStorage",
+  "Insurance",
+] as const
+
+const CATEGORIES = [
+  "MeasuringBureaucraticFriction",
+  "ReductionOfBureaucraticFriction",
+  "RiskManagement",
+] as const
+
+/** Research areas per category — these keys drive Part B and the aggregation. */
+const RESEARCH_AREAS: Record<(typeof CATEGORIES)[number], string[]> = {
+  MeasuringBureaucraticFriction: [
+    "Administrative",
+    "DataStorage",
+    "Security",
+    "IdVerification",
+    "TransactionExpediency",
+  ],
+  ReductionOfBureaucraticFriction: [
+    "IndividualRegulationEfficiency",
+    "DepartmentEfficiency",
+    "PerConstituent",
+    "PerEmployee",
+    "PerDollarTaxed",
+  ],
+  RiskManagement: ["Individual", "LocalGovt", "State", "Federal"],
+}
+
+const ba = (): BeforeAfter => ({ Before: 0, After: 0 })
+
+/** The question template applied to every measured research area. */
+function buildAreaTemplate(): AreaMap {
+  return {
+    Production: {
+      Response: {
+        "Increases response rate when requests > permitted with excess staff":
+          ba(),
+        "Increases response rate when requests > permitted with expected staff":
+          ba(),
+        "Increases response rate when requests > permitted with less than expected staff":
+          ba(),
+      },
+      Retrieval: {
+        "Increases retrieval rate when requests > permitted with excess staff":
+          ba(),
+        "Increases retrieval rate when requests > permitted with expected staff":
+          ba(),
+        "Increases retrieval rate when requests > permitted with less than expected staff":
+          ba(),
+      },
+    },
+    Implementation: {
+      Administrative: {
+        "Implemention training to current training ratio": ba(),
+        "Maintenance of processed records ratio": ba(),
+      },
+      Financial: {
+        "New cost per constituent ratio per use increase": ba(),
+        "Cost per constituent annual maintenance increase": ba(),
+      },
+    },
+    "Data Storage": {
+      "Per Use by Constituent": {
+        "Storage Consumption per use ratio": ba(),
+        "Storage Consumption per constituent ratio": ba(),
+        "Storage per update ratio": ba(),
+      },
+    },
+  }
+}
+
+/**
+ * Part C state: every topic gets the full measured-friction question set for
+ * each research area. (Reduction and Risk Management research areas are
+ * scored in Part B but do not yet have Part C question templates.)
+ */
+function buildInitialMatrix(): MatrixState {
+  const matrix: MatrixState = {}
+  for (const topic of TOPICS) {
+    matrix[topic] = {
+      MeasuringBureaucraticFriction: Object.fromEntries(
+        RESEARCH_AREAS.MeasuringBureaucraticFriction.map((area) => [
+          area,
+          buildAreaTemplate(),
+        ])
+      ),
+    }
+  }
+  return matrix
+}
+
+function buildInitialModels(): Record<
+  string,
+  Record<string, Record<string, number>>
+> {
+  return Object.fromEntries(
+    TOPICS.map((topic) => [
+      topic,
+      Object.fromEntries(
+        CATEGORIES.map((category) => [
+          category,
+          Object.fromEntries(RESEARCH_AREAS[category].map((a) => [a, 0])),
+        ])
+      ),
+    ])
+  )
+}
+
+function buildInitialPriority(): Record<string, Record<string, number>> {
+  return Object.fromEntries(
+    TOPICS.map((topic) => [
+      topic,
+      Object.fromEntries(CATEGORIES.map((c) => [c, 0])),
+    ])
+  )
+}
+
+/** "MeasuringBureaucraticFriction" -> "Measuring Bureaucratic Friction" */
+function formatLabel(key: string): string {
+  return key.replace(/([a-z])([A-Z])/g, "$1 $2")
+}
+
 const Friction = () => {
-  // State for Part A (Research Priority)
-  const [researchPriority, setResearchPriority] = useState({
-    Stablecoins: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-    MedicalRecords: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-    TrustlessVoting: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-    IDVerification: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-    DataStorage: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-    Insurance: {
-      MeasuringBureaucraticFriction: 0,
-      ReductionOfBureaucraticFriction: 0,
-      RiskManagement: 0,
-    },
-  })
-  // State for Part B (Models)
-  const [models, setModels] = useState({
-    Stablecoins: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-    MedicalRecords: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-    TrustlessVoting: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-    IDVerification: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-    DataStorage: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-    Insurance: {
-      MeasuringBureaucraticFriction: {
-        Administrative: 0,
-        DataStorage: 0,
-        Security: 0,
-        IdVerification: 0,
-        TransactionExpediency: 0,
-      },
-      ReductionOfBureaucraticFriction: {
-        IndividualRegulationEfficiency: 0,
-        DepartmentEfficiency: 0,
-        PerConstituent: 0,
-        PerEmployee: 0,
-        PerDollarTaxed: 0,
-      },
-      RiskManagement: {
-        Individual: 0,
-        LocalGovt: 0,
-        State: 0,
-        Federal: 0,
-      },
-    },
-  })
+  const [researchPriority, setResearchPriority] = useState(buildInitialPriority)
+  const [models, setModels] = useState(buildInitialModels)
+  const [matrix, setMatrix] = useState<MatrixState>(buildInitialMatrix)
 
-  // State for Part C (Matrix)
-  const [matrix, setMatrix] = useState({
-    Stablecoins: {
-      MeasuringBureaucraticFriction: {
-        Administrative: {
-          Production: {
-            Response: {
-              "Increases response rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-            Retrieval: {
-              "Increases retrieval rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-          },
-          Implementation: {
-            Administrative: {
-              "Implemention training to current training ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Maintenance of processed records ratio": { Before: 0, After: 0 },
-            },
-            Financial: {
-              "New cost per constituent ratio per use increase": {
-                Before: 0,
-                After: 0,
-              },
-              "Cost per constituent annual maintenance increase": {
-                Before: 0,
-                After: 0,
-              },
-            },
-          },
-          "Data Storage": {
-            "Per Use by Constituent": {
-              "Storage Consumption per use ratio": { Before: 0, After: 0 },
-              "Storage Consumption per constituent ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Storage per update ratio": { Before: 0, After: 0 },
-            },
-          },
-        },
-        "Data Storage": {
-          Production: {
-            Response: {
-              "Increases response rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-            Retrieval: {
-              "Increases retrieval rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-          },
-          Implementation: {
-            Administrative: {
-              "Implemention training to current training ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Maintenance of processed records ratio": { Before: 0, After: 0 },
-            },
-            Financial: {
-              "New cost per constituent ratio per use increase": {
-                Before: 0,
-                After: 0,
-              },
-              "Cost per constituent annual maintenance increase": {
-                Before: 0,
-                After: 0,
-              },
-            },
-          },
-          "Data Storage": {
-            "Per Use by Constituent": {
-              "Storage Consumption per use ratio": { Before: 0, After: 0 },
-              "Storage Consumption per constituent ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Storage per update ratio": { Before: 0, After: 0 },
-            },
-          },
-        },
-        Security: {
-          Production: {
-            Response: {
-              "Increases response rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases response rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-            Retrieval: {
-              "Increases retrieval rate when requests > permitted with excess staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with expected staff":
-                { Before: 0, After: 0 },
-              "Increases retrieval rate when requests > permitted with less than expected staff":
-                { Before: 0, After: 0 },
-            },
-          },
-          Implementation: {
-            Administrative: {
-              "Implemention training to current training ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Maintenance of processed records ratio": { Before: 0, After: 0 },
-            },
-            Financial: {
-              "New cost per constituent ratio per use increase": {
-                Before: 0,
-                After: 0,
-              },
-              "Cost per constituent annual maintenance increase": {
-                Before: 0,
-                After: 0,
-              },
-            },
-          },
-          "Data Storage": {
-            "Per Use by Constituent": {
-              "Storage Consumption per use ratio": { Before: 0, After: 0 },
-              "Storage Consumption per constituent ratio": {
-                Before: 0,
-                After: 0,
-              },
-              "Storage per update ratio": { Before: 0, After: 0 },
-            },
-          },
-        },
-      },
-      ReductionOfBureaucraticFriction: {
-        // Same structure as MeasuringBureaucraticFriction
-      },
-      RiskManagement: {
-        // Same structure as MeasuringBureaucraticFriction
-      },
-    },
-    MedicalRecords: {
-      // Same structure as Stablecoins
-    },
-    TrustlessVoting: {
-      // Same structure as Stablecoins
-    },
-    IDVerification: {
-      // Same structure as Stablecoins
-    },
-    DataStorage: {
-      // Same structure as Stablecoins
-    },
-    Insurance: {
-      // Same structure as Stablecoins
-    },
-  })
-
-  // Update models based on matrix input
+  // Aggregate Part C answers up into Part B research-area scores.
   useEffect(() => {
-    const newModels = JSON.parse(JSON.stringify(models))
-    Object.entries(matrix).forEach(([topic, categories]) => {
-      Object.entries(categories).forEach(([category, researchAreas]) => {
-        Object.entries(researchAreas).forEach(([researchArea, areas]) => {
-          const areaTotal = Object.values(areas).reduce(
-            (acc, area) =>
-              acc +
-              Object.values(area).reduce(
-                (subAcc, subject) =>
-                  subAcc +
-                  Object.values(subject).reduce(
-                    (sum, q) => sum + (q.After - q.Before),
-                    0
-                  ),
-                0
-              ),
-            0
-          )
-          newModels[topic][category][researchArea] = areaTotal
-        })
-      })
+    setModels((prev) => {
+      const next = JSON.parse(JSON.stringify(prev)) as typeof prev
+      for (const [topic, categories] of Object.entries(matrix)) {
+        for (const [category, researchAreas] of Object.entries(categories)) {
+          for (const [researchArea, areas] of Object.entries(researchAreas)) {
+            let total = 0
+            for (const subjects of Object.values(areas)) {
+              for (const questions of Object.values(subjects)) {
+                for (const q of Object.values(questions)) {
+                  total += q.After - q.Before
+                }
+              }
+            }
+            next[topic][category][researchArea] = total
+          }
+        }
+      }
+      return next
     })
-    setModels(newModels)
   }, [matrix])
 
-  // Update research priority based on models
+  // Aggregate Part B scores up into Part A priorities.
   useEffect(() => {
-    const newResearchPriority = JSON.parse(JSON.stringify(researchPriority))
-    Object.entries(models).forEach(([topic, categories]) => {
-      Object.entries(categories).forEach(([category, areas]) => {
-        newResearchPriority[topic][category] = Object.values(areas).reduce(
-          (sum, value) => sum + value,
-          0
-        )
-      })
+    setResearchPriority((prev) => {
+      const next = JSON.parse(JSON.stringify(prev)) as typeof prev
+      for (const [topic, categories] of Object.entries(models)) {
+        for (const [category, areas] of Object.entries(categories)) {
+          next[topic][category] = Object.values(areas).reduce(
+            (sum, value) => sum + value,
+            0
+          )
+        }
+      }
+      return next
     })
-    setResearchPriority(newResearchPriority)
   }, [models])
 
   // Handler for matrix input changes
   const handleMatrixChange = (
-    topic,
-    category,
-    researchArea,
-    area,
-    subject,
-    question,
-    field,
-    value
+    topic: string,
+    category: string,
+    researchArea: string,
+    area: string,
+    subject: string,
+    question: string,
+    field: "Before" | "After",
+    value: string
   ) => {
     setMatrix((prevMatrix) => {
-      const newMatrix = JSON.parse(JSON.stringify(prevMatrix))
+      const newMatrix = JSON.parse(JSON.stringify(prevMatrix)) as MatrixState
       newMatrix[topic][category][researchArea][area][subject][question][field] =
-        parseInt(value) || 0
+        parseFloat(value) || 0
       return newMatrix
     })
   }
@@ -469,11 +267,11 @@ const Friction = () => {
         </p>
         <br />
         <p>
-          In summary, CryptoPolicyDAO would not propose public policy unless it
-          satisfies all three variables above to their fullest concurrently. The
-          point is to introduce public policy that increases the efficiency of
-          our government and decreases bureaucratic red tape and not just for
-          the sake of introducing blockchain technology.
+          In summary, the Crypto Policy Center would not propose public policy
+          unless it satisfies all three variables above to their fullest
+          concurrently. The point is to introduce public policy that increases
+          the efficiency of our government and decreases bureaucratic red tape
+          and not just for the sake of introducing blockchain technology.
         </p>
         <br />
 
@@ -674,9 +472,9 @@ const Friction = () => {
           <br />
           <h2>Part A:</h2>
           <p>
-            These are the topics for you to update to your choice, though at
-            Crypto Policy DAO, the currently listed 6 topics are the ones we are
-            going to research ourselves using this model. The scores to the
+            These are the topics for you to update to your choice, though at the
+            Crypto Policy Center, the currently listed 6 topics are the ones we
+            are going to research ourselves using this model. The scores to the
             right of each topic are the final scores that are being aggregated
             from what is entered in Part C.
           </p>
@@ -694,7 +492,7 @@ const Friction = () => {
               <tbody>
                 {Object.entries(researchPriority).map(([topic, scores]) => (
                   <tr key={topic}>
-                    <td>{topic}</td>
+                    <td>{formatLabel(topic)}</td>
                     <td>{scores.MeasuringBureaucraticFriction}</td>
                     <td>{scores.ReductionOfBureaucraticFriction}</td>
                     <td>{scores.RiskManagement}</td>
@@ -717,9 +515,9 @@ const Friction = () => {
               <thead>
                 <tr>
                   <th>Research Topic</th>
-                  <th colSpan="2">Measuring Bureaucratic Friction</th>
-                  <th colSpan="2">Reduction of Bureaucratic Friction</th>
-                  <th colSpan="2">Risk Management</th>
+                  <th colSpan={2}>Measuring Bureaucratic Friction</th>
+                  <th colSpan={2}>Reduction of Bureaucratic Friction</th>
+                  <th colSpan={2}>Risk Management</th>
                 </tr>
                 <tr>
                   <th></th>
@@ -734,12 +532,12 @@ const Friction = () => {
               <tbody>
                 {Object.entries(models).map(([topic, categories]) => (
                   <tr key={topic}>
-                    <td>{topic}</td>
+                    <td>{formatLabel(topic)}</td>
                     <td>
                       {Object.keys(
                         categories.MeasuringBureaucraticFriction
                       ).map((area) => (
-                        <div key={area}>{area}</div>
+                        <div key={area}>{formatLabel(area)}</div>
                       ))}
                     </td>
                     <td>
@@ -753,7 +551,7 @@ const Friction = () => {
                       {Object.keys(
                         categories.ReductionOfBureaucraticFriction
                       ).map((area) => (
-                        <div key={area}>{area}</div>
+                        <div key={area}>{formatLabel(area)}</div>
                       ))}
                     </td>
                     <td>
@@ -765,7 +563,7 @@ const Friction = () => {
                     </td>
                     <td>
                       {Object.keys(categories.RiskManagement).map((area) => (
-                        <div key={area}>{area}</div>
+                        <div key={area}>{formatLabel(area)}</div>
                       ))}
                     </td>
                     <td>
@@ -797,10 +595,10 @@ const Friction = () => {
         <div className="matrix-container">
           {Object.entries(matrix).map(([topic, categories]) => (
             <div key={topic}>
-              <h3>{topic}</h3>
+              <h3>{formatLabel(topic)}</h3>
               {Object.entries(categories).map(([category, researchAreas]) => (
                 <div key={`${topic}-${category}`}>
-                  <h4>{category}</h4>
+                  <h4>{formatLabel(category)}</h4>
                   <table>
                     <thead>
                       <tr>
@@ -860,7 +658,7 @@ const Friction = () => {
                                                       0
                                                     )}
                                                   >
-                                                    {topic}
+                                                    {formatLabel(topic)}
                                                   </td>
                                                 )}
                                               {areaIndex === 0 &&
@@ -884,7 +682,7 @@ const Friction = () => {
                                                       0
                                                     )}
                                                   >
-                                                    {researchArea}
+                                                    {formatLabel(researchArea)}
                                                   </td>
                                                 )}
                                               {subjectIndex === 0 &&

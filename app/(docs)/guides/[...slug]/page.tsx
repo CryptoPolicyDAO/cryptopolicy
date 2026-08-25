@@ -51,6 +51,7 @@ export async function generateMetadata({
   return {
     title: guide.title,
     description: guide.description,
+    alternates: { canonical: guide.slug },
     openGraph: {
       title: guide.title,
       description: guide.description,
