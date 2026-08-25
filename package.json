@@ -2,6 +2,9 @@
   "name": "crypto-policy-center",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "author": {
     "name": "Crypto Policy Center",
     "url": "https://cryptopolicy.center"
